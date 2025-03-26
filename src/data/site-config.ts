@@ -42,7 +42,7 @@ export type SiteConfig = {
 const siteConfig: SiteConfig = {
     title: "Samantha Klasfeld",
     subtitle: "Postdoctoral Research Fellow, Internal Medicine Research Unit at Pfizer",
-    description: 'Astro.js and Tailwind CSS theme for blog and portfolio by justgoodui.com',
+    description: 'Samantha Klasfeld\'s Site',
     image: {
         src: '/dante-preview.jpg',
         alt: 'Samantha Klasfeld Professional Photo'
@@ -107,7 +107,7 @@ const siteConfig: SiteConfig = {
         text: "A computational biologist with expertise in statistical genetics \
         and genomics analysis, I am committed to solving complex questions through \
         data analysis, statistical inference, collaboration, and creativity.<br><br>\
-        I am a completing my postdoctoral research fellowship at Pfizer in the Integrative Biology Group \
+        I am completing my postdoctoral research fellowship at Pfizer in the Integrative Biology Group \
         within the Internal Medicine Research Unit. \
         <div class='underline'> \
         [Check out the preprint for my postdoc project at MedRx](https://www.medrxiv.org/content/10.1101/2024.12.17.24318501v1)! \
