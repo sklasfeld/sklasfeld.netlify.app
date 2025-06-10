@@ -25,7 +25,7 @@
   "devDependencies": {
     "@playwright/test": "^1.49.1",
     "@tailwindcss/typography": "^0.5.15",
-    "prettier": "^3.4.2",
+    "prettier": "3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.9"
   },
   "description": "Dante is a single-author blog and portfolio theme for Astro.js. Featuring a minimal, slick, responsive and content-focused design. For more Astro.js themes please check [justgoodui.com](https://justgoodui.com/).",
