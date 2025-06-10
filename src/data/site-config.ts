@@ -27,7 +27,8 @@ export type Subscribe = {
 export type SiteConfig = {
     logo?: Image;
     title?: string;
-    subtitle?: string;
+    job?: string;
+    company?: string;
     description?: string;
     image?: Image;
     headerNavLinks?: Link[];
@@ -41,7 +42,8 @@ export type SiteConfig = {
 
 const siteConfig: SiteConfig = {
     title: "Samantha Klasfeld",
-    subtitle: "Postdoctoral Research Fellow, Internal Medicine Research Unit at Pfizer",
+    job: "Postdoctoral Research Fellow",
+    company: "Internal Medicine Research Unit at Pfizer",
     description: 'Samantha Klasfeld\'s Site',
     image: {
         src: '/dante-preview.jpg',
