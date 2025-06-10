@@ -12,7 +12,7 @@
     "check:astro": "astro check",
     "check:eslint": "eslint .",
     "check:prettier": "prettier --check .",
-    "fix": "npm run fix:eslint && npm run fix:prettier",
+    "fix": "npm run fix:prettier",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier -w ."
   },
@@ -26,17 +26,21 @@
     "@fontsource-variable/newsreader": "^5.1.0",
     "astro": "^5.1.2",
     "astro-expressive-code": "^0.38.3",
-    "eslint": "^9.28.0",
     "marked": "^15.0.4",
     "remark-mermaidjs": "^7.0.0",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3"
   },
   "devDependencies": {
+    "@eslint/js": "^9.28.0",
     "@playwright/test": "^1.49.1",
     "@tailwindcss/typography": "^0.5.15",
+    "eslint": "^9.28.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.2.0",
     "prettier": "3.5.3",
-    "prettier-plugin-tailwindcss": "^0.6.9"
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "typescript-eslint": "^8.34.0"
   },
   "description": "Dante is a single-author blog and portfolio theme for Astro.js. Featuring a minimal, slick, responsive and content-focused design. For more Astro.js themes please check [justgoodui.com](https://justgoodui.com/).",
   "main": "index.js",

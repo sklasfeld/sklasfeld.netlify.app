@@ -12,7 +12,7 @@ const projects = (await getCollection('projects')).sort(sortItemsByDateDesc);
 const featuredProjects = projects.filter(({ data }) => data.isFeatured);
 
 const posts = (await getCollection('blog')).sort(sortItemsByDateDesc);
-//const featuredPosts = posts.filter(({ data }) => data.isFeatured);
+const featuredPosts = posts.filter(({ data }) => data.isFeatured);
 ---
 
 <BaseLayout description={siteConfig.description} image={siteConfig.image}>

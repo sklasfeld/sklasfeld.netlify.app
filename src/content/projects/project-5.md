@@ -1,11 +1,11 @@
 ---
-title: 'Summer Undergraduate Researcher'
-timeperiod: 'June 2012 – August 2012 (3 months)'
-company: 'Boyce Thompson Institute, Ithaca, NY'
-publishDate: 'Jun 25 2012'
+title: "Summer Undergraduate Researcher"
+timeperiod: "June 2012 – August 2012 (3 months)"
+company: "Boyce Thompson Institute, Ithaca, NY"
+publishDate: "Jun 25 2012"
 seo:
   image:
-    src: '/project_5.png'
+    src: "/project_5.png"
 ---
 
 <!---
@@ -41,19 +41,18 @@ graph TD;
             G
           end
 ```
--->            
+-->
 <p align="center">
 <img class="block dark:hidden" src="/project-5.png" alt="modifersimage" width="350"/>
 <img class="hidden dark:block" src="/project-5_invert.png" alt="modifersimage" width="350"/>
 </p>
 
-
 **Figure**. The pipeline I used for alignment of known sweet potato viruses genomes (left) and assembly of novel ones (right).
 
 ## Summary:
 
-*  [Improved methods to classify known and novel virus siRNA sequences from sweet potato samples more effectively](http://bioinfo.bti.cornell.edu/virome)
+- [Improved methods to classify known and novel virus siRNA sequences from sweet potato samples more effectively](http://bioinfo.bti.cornell.edu/virome)
 
 ## Relevant Publications
 
-* [Gutierrez, D., Tachin, M., Schulz, S., Miano, D., Ndunguru, J., Mukassa, S., ... & Kreuze, J. F. (2012). Determining the pan-African sweetpotato virome: Understanding virus diversity, distribution and evolution and their impacts on sweetpotato production in Africa.](https://cgspace.cgiar.org/server/api/core/bitstreams/4947f05c-9ebe-4d8e-9ca8-d17b3e13708d/content)
+- [Gutierrez, D., Tachin, M., Schulz, S., Miano, D., Ndunguru, J., Mukassa, S., ... & Kreuze, J. F. (2012). Determining the pan-African sweetpotato virome: Understanding virus diversity, distribution and evolution and their impacts on sweetpotato production in Africa.](https://cgspace.cgiar.org/server/api/core/bitstreams/4947f05c-9ebe-4d8e-9ca8-d17b3e13708d/content)
