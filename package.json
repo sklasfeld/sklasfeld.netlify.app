@@ -5,11 +5,19 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "check": "npm run check:astro && npm run check:eslint && npm run check:prettier",
+    "check:astro": "astro check",
+    "check:eslint": "eslint .",
+    "check:prettier": "prettier --check .",
+    "fix": "npm run fix:prettier",
+    "fix:eslint": "eslint --fix .",
+    "fix:prettier": "prettier -w ."
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.4",
     "@astrojs/mdx": "^4.0.2",
     "@astrojs/rss": "^4.0.10",
     "@astrojs/sitemap": "^3.2.1",
@@ -20,13 +28,19 @@
     "astro-expressive-code": "^0.38.3",
     "marked": "^15.0.4",
     "remark-mermaidjs": "^7.0.0",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3"
   },
   "devDependencies": {
+    "@eslint/js": "^9.28.0",
     "@playwright/test": "^1.49.1",
     "@tailwindcss/typography": "^0.5.15",
-    "prettier": "^3.4.2",
-    "prettier-plugin-tailwindcss": "^0.6.9"
+    "eslint": "^9.28.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.2.0",
+    "prettier": "3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "typescript-eslint": "^8.34.0"
   },
   "description": "Dante is a single-author blog and portfolio theme for Astro.js. Featuring a minimal, slick, responsive and content-focused design. For more Astro.js themes please check [justgoodui.com](https://justgoodui.com/).",
   "main": "index.js",

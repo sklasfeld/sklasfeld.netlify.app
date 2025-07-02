@@ -5,7 +5,7 @@ import ArrowRight from '../icons/ArrowRight.astro';
 type Props = { project: CollectionEntry<'projects'>; class?: string; headingLevel?: 'h2' | 'h3' };
 
 const { project, class: className, headingLevel = 'h2' } = Astro.props;
-const { title, timeperiod, company, description } = project.data;
+const { title, timeperiod, company } = project.data;
 const TitleTag = headingLevel;
 ---
 
