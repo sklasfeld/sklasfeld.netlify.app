@@ -55,12 +55,12 @@ const siteConfig: SiteConfig = {
         {
             text: 'Experiences',
             href: '/projects'
+        },
+        {
+            text: 'Contact',
+            href: '/contact'
         }
         /*,
-        {
-            text: 'Publications',
-            href: '/blog'
-        },
         {
             text: 'Tags',
             href: '/tags'
@@ -107,10 +107,10 @@ const siteConfig: SiteConfig = {
         text: "A computational biologist with expertise in statistical genetics \
         and genomics analysis, I am committed to solving complex questions through \
         data analysis, statistical inference, collaboration, and creativity.<br><br>\
-        I am completing my postdoctoral research fellowship at Pfizer in the Integrative Biology Group \
+        I completed my postdoctoral research fellowship at Pfizer in the Integrative Biology Group \
         within the Internal Medicine Research Unit. \
         <div class='underline'> \
-        [Check out the preprint for my postdoc project at MedRx](https://www.medrxiv.org/content/10.1101/2024.12.17.24318501v1)! \
+        [Check out my postdoc project in Human Genetics and Genomics Advances](https://www.cell.com/hgg-advances/fulltext/S2666-2477(25)00063-6)! \
         </div>",
         image: {
             src: '/sklasfeld_cartoon.jpg',
