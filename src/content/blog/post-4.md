@@ -1,14 +1,14 @@
 ---
-title: "Ensuring Cross-Browser Compatibility for a Seamless User Experience"
+title: 'Ensuring Cross-Browser Compatibility for a Seamless User Experience'
 excerpt: A website that functions flawlessly across different browsers not only enhances user satisfaction but also broadens its reach.
-publishDate: "October 7 2023"
+publishDate: 'October 7 2023'
 tags:
   - Web
   - UX
   - Web development
 seo:
   image:
-    src: "/post-4.jpg"
+    src: '/post-4.jpg'
     alt: Wavy lines on a dark background
 ---
 

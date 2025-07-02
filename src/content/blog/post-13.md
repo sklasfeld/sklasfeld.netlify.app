@@ -1,14 +1,14 @@
 ---
-title: "A Guide to Web Performance Metrics"
+title: 'A Guide to Web Performance Metrics'
 excerpt: Dive deep into web performance metrics, including tools and techniques for measuring and optimizing loading times. Discuss the significance of metrics like First Contentful Paint, Time to Interactive, and more.
-publishDate: "Jan 03 2024"
+publishDate: 'Jan 03 2024'
 tags:
   - Web
   - Guide
 isFeatured: true
 seo:
   image:
-    src: "/post-13.jpg"
+    src: '/post-13.jpg'
     alt: Abstract snow
 ---
 
