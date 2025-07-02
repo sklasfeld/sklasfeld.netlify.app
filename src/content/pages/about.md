@@ -4,7 +4,7 @@ seo:
   title: About Me
   description: Learn more about the person behind the website and embark on a journey of inspiration and shared experiences.
   image:
-    src: "/professional_photo_sklasfeld.jpeg"
+    src: '/professional_photo_sklasfeld.jpeg'
     alt: Samantha Klasfeld
 ---
 
@@ -17,22 +17,21 @@ seo:
 **Greetings!** I'm Samantha Klasfeld, I am working on building this website to showcase my career as I pursue my next professional opportunity.
 
 ## Education
+* University of Pennsylvania | Perelman School of Medicine | Philadelphia, PA
+Doctor of Philosophy in Genomics and Computational Biology, 2015-2021
 
-- University of Pennsylvania | Perelman School of Medicine | Philadelphia, PA
-  Doctor of Philosophy in Genomics and Computational Biology, 2015-2021
-
-- Cornell University | College of Agriculture and Life Sciences | Ithaca, NY
-  Bachelor of Science in Biology, Concentration in Computational Biology, 2010-2014
+* Cornell University | College of Agriculture and Life Sciences | Ithaca, NY
+Bachelor of Science in Biology, Concentration in Computational Biology, 2010-2014
 
 ## Skills and Expertise
 
-- Workflow development: published ChIP-seq methods, experience with Github, Docker, conda, Nextflow, Snakemake
-- Programming languages: Unix/Linux, Python, R programming, command line, git, SQL, Apache spark, Matlab, Perl, and Java
-- Genomics software: BWA, Bowtie, Bowtie2, STAR, kallisto, MACS2, UMAP, Blacklist, DiffBind, DESeq2, EdgeR, sleuth,
-  DANPOS2, DANPOS3, FASTQC, bedtools, samtools, deeptools, MEME, HOMER, AHA, PBJelly, miRDeep2, miRDeep\*, miREAP,
-  miRdentify, Centroidfold, CAP-miRSeq
-- Databases: UK Biobank, gnomAD, GTex, ClinVar, dbNSFP, Clingen, Genebass, dbSNP
-- Genetics software: PLINK, VCFtools, bcftools, VEP, LOFTEE, MutPred2, ESM1b, AlphaMissense
+* Workflow development: published ChIP-seq methods, experience with Github, Docker, conda, Nextflow, Snakemake
+* Programming languages: Unix/Linux, Python, R programming, command line, git, SQL, Apache spark, Matlab, Perl, and Java
+* Genomics software: BWA, Bowtie, Bowtie2, STAR, kallisto, MACS2, UMAP, Blacklist, DiffBind, DESeq2, EdgeR, sleuth,
+DANPOS2, DANPOS3, FASTQC, bedtools, samtools, deeptools, MEME, HOMER, AHA, PBJelly, miRDeep2, miRDeep*, miREAP,
+miRdentify, Centroidfold, CAP-miRSeq
+* Databases: UK Biobank, gnomAD, GTex, ClinVar, dbNSFP, Clingen, Genebass, dbSNP
+* Genetics software: PLINK, VCFtools, bcftools, VEP, LOFTEE, MutPred2, ESM1b, AlphaMissense
 
 <!---
 
