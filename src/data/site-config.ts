@@ -44,7 +44,7 @@ const siteConfig: SiteConfig = {
     subtitle: "Postdoctoral Research Fellow, Internal Medicine Research Unit at Pfizer",
     description: 'Samantha Klasfeld\'s Site',
     image: {
-        src: '/dante-preview.jpg',
+        src: '/favicon.png',
         alt: 'Samantha Klasfeld Professional Photo'
     },
     headerNavLinks: [
