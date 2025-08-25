@@ -41,11 +41,11 @@ export type SiteConfig = {
 
 const siteConfig: SiteConfig = {
     title: "Samantha Klasfeld",
-    subtitle: "Postdoctoral Research Fellow, Internal Medicine Research Unit at Pfizer",
-    description: 'Samantha Klasfeld\'s Site',
+    subtitle: "Computational Biologist, Bioinformatics Scientist",
+    description: 'Samantha Klasfeld\'s Professional Portfolio',
     image: {
         src: '/favicon.png',
-        alt: 'Samantha Klasfeld Professional Photo'
+        alt: 'Samantha Klasfeld logo'
     },
     headerNavLinks: [
         {

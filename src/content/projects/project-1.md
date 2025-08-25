@@ -1,6 +1,6 @@
 ---
 title: "Postdoctoral Fellow"
-timeperiod: "Feb 2022 – Present (3 years)"
+timeperiod: "Feb 2022 – Feb 2025 (3 years)"
 company: "Pfizer, Internal Medicine Research Unit and Rare Disease Research Unit, Cambridge, MA"
 publishDate: "Feb 28 2022"
 isFeatured: true
