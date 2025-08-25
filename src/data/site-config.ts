@@ -44,8 +44,8 @@ const siteConfig: SiteConfig = {
     subtitle: "Computational Biologist, Bioinformatics Scientist",
     description: 'Samantha Klasfeld\'s Professional Portfolio',
     image: {
-        src: '/sklasfeld_cartoon.jpg',
-        alt: 'a cartoon of a woman in bioinformatics'
+        src: '/favicon.png',
+        alt: 'Samantha Klasfeld logo'
     },
     headerNavLinks: [
         {
