@@ -107,8 +107,7 @@ const siteConfig: SiteConfig = {
         text: "A computational biologist with expertise in statistical genetics \
         and genomics analysis, I am committed to solving complex questions through \
         data analysis, statistical inference, collaboration, and creativity.<br><br>\
-        I completed my postdoctoral research fellowship at Pfizer in the Integrative Biology Group \
-        within the Internal Medicine Research Unit. \
+        I am currently working as an Independent Contractor at Genscience. \
         <div class='underline'> \
         [Check out my postdoc project in Human Genetics and Genomics Advances](https://www.cell.com/hgg-advances/fulltext/S2666-2477(25)00063-6)! \
         </div>",

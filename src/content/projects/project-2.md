@@ -1,51 +1,54 @@
 ---
-title: 'Graduate Student Researcher'
-timeperiod: 'Aug 2015 – Feb 2022 (6 years)'
-company: 'University of Pennsylvania, Philadelphia, PA'
-publishDate: 'Aug 25 2015'
+title: "Postdoctoral Fellow"
+timeperiod: "Feb 2022 – Feb 2025 (3 years)"
+company: "Pfizer, Internal Medicine Research Unit and Rare Disease Research Unit, Cambridge, MA"
+publishDate: "Feb 28 2022"
 isFeatured: true
 seo:
   image:
-    src: '/project-2.png'
+    src: "public/modifier_barchart_invert_V6.png"
     alt: Project preview
+    width: 200
+    height: 150
 ---
 
-![Project preview](/project-2.png)
+<p align="center">
+<img class="block dark:hidden" src="/modifier_barchart_V6.png" alt="modifersimage" width="350"/>
+<img class="hidden dark:block" src="/modifier_barchart_invert_V6.png" alt="modifersimage" width="350"/>
+</p>
 
-**Figure**. Cut & Run reads mapped to *Arabidopsis* genome show that greenscreen regions identify regions of ultra-high artifacts in both ChIP-seq and Cut & Run sequencing experiments (Klasfeld *et al* 2022). 
+**Figure**. _Inherited threshold model of disease_. This model illustrates how common genetic modifiers can influence the penetrance and severity of rare monogenic diseases (Klasfeld et al., 2025; Kingdom & Wright, 2022). In the left-most bar, the disease exhibits complete penetrance: all individuals carrying a rare pathogenic variant (blue) develop the disease. In contrast, the remaining bars represent diseases with variable penetrance, such as cardiomyopathies. In these cases, carriers of the rare variant may or may not develop disease, depending on their burden of common modifier variants (red). The inherited threshold model proposes that the cumulative effect of these common variants shifts an individual's liability toward or away from a disease threshold, resulting in heterogeneous clinical outcomes among genetically similar individuals.
 
 ## Summary:
 
-* Developed [Greenscreen method](https://github.com/sklasfeld/GreenscreenProject) to accurately identify and mask false-positive ChIP-seq peaks with efficacy in *Arabidopsis*, *Drosophila*, and *Oryza sativa* resulting in 1st author publication
+- Organized genetic and medical data leveraged from self-reports, electronic health records, and ~500K exomes in the [UK biobank](https://www.ukbiobank.ac.uk/) and generated version-controlled code with [git](https://git-scm.com/) to ensure reproducibility
 
-* Designed and orchestrated Next Generation Sequencing (NGS) data analysis (eg. ChIP-Seq, RNA-seq, MNase-seq) to measure the activity and outcomes of mobile and DNA binding proteins functional in cellular reprogramming, resulting in three 2nd author publications
+- Leveraged latest update of [UK biobank](https://www.ukbiobank.ac.uk/) to identify a sufficiently sized cohort of known and novel cardiomyopathy variant carriers to improve upon previous studies without adequate statistical power
+
+- Calculated [PRS](https://www.genome.gov/Health/Genomics-and-Medicine/Polygenic-risk-scores) from relevant GWAS and evaluated logistic, cox, and linear regression to quantify the association of common variants on disease penetrance, onset, and severity among the rare pathogenic variant carriers and use the results to provide
+  genetic insight for decreasing disease outcomes
+
+- Articulated technical genetic study in internal symposiums to showcase my work to multidisciplinary audiences including nonsubject
+  matter experts (eg. biologists, leadership)
 
 ## Publications
 
-* [**Klasfeld, S.**, & Wagner, D. (2022). Greenscreen decreases Type I Errors and increases true peak detection in genomic datasets
-including ChIP-seq. bioRxiv.](https://doi.org/10.1093/plcell/koac282)
-* [Zhu, Y., **Klasfeld, S.**, & Wagner, D. (2021). Molecular regulation of plant developmental transitions and plant architecture via PEPB
-family proteins–an update on mechanism of action. Journal of Experimental Botany.](https://doi.org/10.1093/jxb/eraa598)
-* [Jin, R., **Klasfeld, S.**, ... & Wagner, D., (2021). LEAFY is a pioneer transcription factor and licenses cell reprogramming to floral fate. Nature communications, 12(1), 1-14.](https://www.nature.com/articles/s41467-020-20883-w)
-* [Zhu, Y., **Klasfeld, S.**, ..., & Wagner, D. (2020). TERMINAL FLOWER 1-FD complex target genes and competition with
-FLOWERING LOCUS T. Nature communications, 11(1), 1-12](https://www.nature.com/articles/s41467-020-18782-1)
-* [Xiao, J., ..., **Klasfeld, S.**, ..., & Wagner, D., (2017). Cis and trans determinants of epigenetic silencing by Polycomb repressive
-complex 2 in Arabidopsis. Nature genetics, 49(10), p.1546.](https://www.nature.com/articles/ng.3937)
+[**Klasfeld, S. J.**, Knutson, K. A., Miller, M. R., Fauman, E. B., Berghout, J., Moccia, R., & Kim, H. I. (2025). Common genetic modifiers influence cardiomyopathy susceptibility among the carriers of rare pathogenic variants. Human Genetics and Genomics Advances.](https://www.medrxiv.org/content/10.1101/2024.12.17.24318501v1)
 
 ## Presentations
 
-*  **Klasfeld, S.**, & Wagner, D. (2019, June 12). Improving resolution
-of protein binding sites by filtering conserved ultra-high signal in Arabidopsis [Poster]. University of Pennsylvania Genomics and
-Computational Biology Graduate Group Retreat, The College of Physicians of Philadelphia, Philadelphia, PA.
-* **Klasfeld, S.**, & Wagner, D. (2018, November 15). Resolving the mechanism of PRC2 during plant stress [Poster]. University of
-Pennsylvania Epigenetics Retreat, Independence Seaport Museum, Philadelphia, PA.
-* **Klasfeld, S.**, & Wagner, D. (2017, October 13). The characterization and discovery of novel Polycomb and Trithorax Recruitment
-Elements in plants [Poster]. University of Pennsylvania Epigenetics Retreat, Citizens Bank Park, Philadelphia, PA.
+- **Klasfeld, S.**, Fauman, E.B., Miller, M.R., Moccia, R., & Kim, H.I. (2024, November 5). Coding cis pQTLs from proteogenomic data
+  allow evaluation of the performance of missense variant effect predictions and the utility of their application to rare variant
+  association analyses. [Poster]. American Society of Human Genetics, Denver, CO.
 
-## Selected Awards
+- **Klasfeld, S.**, Moccia, R., Knutson, A., Berghout, J., & Kim, H.I. (2023, November 1). Common genetic modifiers influence disease
+  risk in carriers of rare pathogenic cardiomyopathy variants [Poster]. Pfizer Worldwide Research, Development and Medical Postdoc
+  Symposium, Cambridge, MA.
 
-* Honorable Mention of the 2016 National Science Foundation (NSF) Graduate Research Fellowship
+- **Klasfeld, S.**, Moccia, R., Knutson, A., Berghout, J., & Kim, H.I. (2023, November 2). Genetic modifiers illuminate clinical phenotype
+  penetrance in carriers of rare cardiomyopathy-causal variants [PowerPoint slides]. Pfizer Worldwide Research, Development and
+  Medical Postdoc Symposium, Cambridge, MA.
 
-# References
-
-* Lab website: [https://web.sas.upenn.edu/wagner-lab/](https://web.sas.upenn.edu/wagner-lab/)
+- **Klasfeld, S.**, Moccia, R., & Berghout, J. (2022, November 2). Genetic modifiers illuminate frequency and penetrance of clinical and
+  subclinical phenotypes in carriers of rare cardiomyopathy-causal variants [Poster]. Pfizer Worldwide Research, Development and
+  Medical Postdoc Symposium, Cambridge, MA.

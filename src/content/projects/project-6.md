@@ -1,27 +1,59 @@
 ---
-title: 'Undergraduate Researcher'
+title: 'Summer Undergraduate Researcher'
 timeperiod: 'June 2012 – August 2012 (3 months)'
-company: 'Cornell University, Plant Breeding Department, Ithaca, NY'
-publishDate: 'May 20 2010'
+company: 'Boyce Thompson Institute, Ithaca, NY'
+publishDate: 'Jun 25 2012'
 seo:
   image:
-    src: 'project-6.png'
+    src: '/project_5.png'
 ---
 
-![Project preview](/project-6.png)
+<!---
+```mermaid
+%%{
+  init: { 
+    "theme": "base",
+    'themeVariables': {
+      'primaryColor': '#fff',
+      'primaryTextColor': '#000000',
+      'primaryBorderColor': '#b7b7b7',
+      'lineColor': '#b7b7b7'
+    }
+ }
+}%%
+graph TD;
+    A[Clean the raw data by removing barcode and adapters]-> B[Align reads to the virus database];
+    B->C[Contigs correction];
+    C->D[Remove redundant sequences];
+    A -> E[Assemble contigs using velvet assembly];
+    E -> F[Blast against non-redundant protein Sequences]
+    F -> G[Compare results back to virus genome contigs]
 
-**Figure**. Casual mutation in disease resistance genes using KASP_*pvr1* and KASP_*Bs3* markers in peppers(Holdsworth & Mazourek 2015)
+    subgraph ALIGNMENT
+            B
+            C
+            D
+          end
+
+    subgraph ASSEMBLY
+            E
+            F
+            G
+          end
+```
+-->            
+<p align="center">
+<img class="block dark:hidden" src="/project-5.png" alt="modifersimage" width="350"/>
+<img class="hidden dark:block" src="/project-5_invert.png" alt="modifersimage" width="350"/>
+</p>
+
+
+**Figure**. The pipeline I used for alignment of known sweet potato viruses genomes (left) and assembly of novel ones (right).
 
 ## Summary:
 
-* Compared Genotype by Sequencing data from different restriction enzymes to *Cucurbita pepo* transcript sequences using [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
-
-* Developed and tested [KASP markers](https://www.protocols.io/view/kasp-genotyping-kqdg39qr7g25/v1) for relevant genes in peppers to make available for breeding work
-
-* Extracted DNA and utilized PCR and DNA sequencing to determine whether a mutation in a predicted gene was responsible for the observed phenotype in peppers.
+*  [Improved methods to classify known and novel virus siRNA sequences from sweet potato samples more effectively](http://bioinfo.bti.cornell.edu/virome)
 
 ## Relevant Publications
 
-* [Wyatt, L. E., Eannetta, N. T., Stellari, G. M., & Mazourek, M. (2012). Development and application of a suite of non-pungency markers for the Pun1 gene in pepper (Capsicum spp.). Molecular Breeding, 30, 1525-1529.](https://link.springer.com/article/10.1007/s11032-012-9716-9)
-
-* [Holdsworth, W. L., & Mazourek, M. (2015). Development of user-friendly markers for the *pvr1* and *Bs3* disease resistance genes in pepper. Molecular breeding, 35, 1-5.](https://link.springer.com/article/10.1007/s11032-015-0260-2)
+* [Gutierrez, D., Tachin, M., Schulz, S., Miano, D., Ndunguru, J., Mukassa, S., ... & Kreuze, J. F. (2012). Determining the pan-African sweetpotato virome: Understanding virus diversity, distribution and evolution and their impacts on sweetpotato production in Africa.](https://cgspace.cgiar.org/server/api/core/bitstreams/4947f05c-9ebe-4d8e-9ca8-d17b3e13708d/content)
