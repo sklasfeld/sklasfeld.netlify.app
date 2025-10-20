@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Button from '../components/Button.astro';
 import Hero from '../components/Hero.astro';
-import PostPreview from '../components/PostPreview.astro';
+//import PostPreview from '../components/PostPreview.astro';
 import ProjectPreview from '../components/ProjectPreview.astro';
 import siteConfig from '../data/site-config';
 import { sortItemsByDateDesc } from '../utils/data-utils';
@@ -16,35 +16,47 @@ const featuredPosts = posts.filter(({ data }) => data.isFeatured);
 ---
 
 <BaseLayout description={siteConfig.description} image={siteConfig.image}>
-    <Hero />
-    <section class="w-full flex flex-col mb-8 sm:mb-16">
-        <h2 class="text-2xl leading-tight font-serif font-medium underline sm:mb-8 sm:text-2xl">Education</h2>
-        <div class="font-serif">
-            <div class="text-xl font-medium">University of Pennsylvania</div></br>
-            Perelman School of Medicine, Philadelphia, PA</br>
-            Doctor of Philosophy in Genomics and Computational Biology, 2015-2021
+  <Hero />
+  <div class="mb-16 sm:mb-24">
+    <h2
+      class="text-2xl leading-tight font-serif font-medium underline mb-2 sm:mb-4"
+    >
+      Education
+    </h2>
+    <div class="mb-4 sm:mb-8">
+      <div class="font-serif">
+        <div class="text-xl font-medium">University of Pennsylvania</div>
+      </div>
+      Perelman School of Medicine, Philadelphia, PA Doctor of Philosophy in Genomics
+      and Computational Biology, 2015-2021
+    </div>
+    <div class="font-serif">
+      <div class="text-xl font-medium">Cornell University</div>
+    </div>
+    College of Agriculture and Life Sciences, Ithaca, NY Bachelor of Science in Biology,
+    Concentration in Computational Biology, 2010-2014
+  </div>
+  {
+    featuredProjects?.length > 0 && (
+      <div class="mb-16 sm:mb-24">
+        <h2 class="mb-12 text-2xl leading-tight font-serif font-medium underline sm:mb-8 sm:text-2xl">
+          Work Experiences
+        </h2>
+        {featuredProjects.map((project) => (
+          <ProjectPreview
+            project={project}
+            class="mb-10 sm:mb-12"
+            headingLevel="h3"
+          />
+        ))}
+        <div class="mt-12 sm:mt-16">
+          <Button href="/projects">View All Work Experiences</Button>
         </div>
-        </br>
-        <div class="font-serif">
-            <div class="text-xl font-medium">Cornell University </div></br>
-            College of Agriculture and Life Sciences, Ithaca, NY</br>
-            Bachelor of Science in Biology, Concentration in Computational Biology, 2010-2014
-        </div>
-    </section>
-    {
-        featuredProjects?.length > 0 && (
-            <div class="mb-16 sm:mb-24">
-                <h2 class="mb-12 text-2xl leading-tight font-serif font-medium underline sm:mb-8 sm:text-2xl">Work Experiences</h2>
-                {featuredProjects.map((project) => (
-                    <ProjectPreview project={project} class="mb-10 sm:mb-12" headingLevel="h3" />
-                ))}
-                <div class="mt-12 sm:mt-16">
-                    <Button href="/projects">View All Work Experiences</Button>
-                </div>
-            </div>
-        )
-    }
-{/* 
+      </div>
+    )
+  }
+  {
+    /* 
     {
         featuredPosts?.length > 0 && (
             <div class="mb-16 sm:mb-24">
@@ -57,6 +69,6 @@ const featuredPosts = posts.filter(({ data }) => data.isFeatured);
                 </div>
             </div>
         )
-*/}
-
+*/
+  }
 </BaseLayout>
