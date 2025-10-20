@@ -1,0 +1,21 @@
+# Node modules (if using Prettier via npm)
+node_modules/
+
+# Prettier cache (if using Prettier with lint-staged or caching)
+.prettier-cache/
+
+# Editor settings
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Optional: lock files if you don’t want to commit them
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
