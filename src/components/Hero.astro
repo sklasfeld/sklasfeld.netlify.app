@@ -11,7 +11,7 @@ const hero = siteConfig.hero;
     hero?.image?.src ||
     hero?.text ||
     (hero?.actions && hero.actions.length > 0)) && (
-    <section class="w-full flex flex-row gap-4 mt-8 mb-16 sm:mt-8 sm:mb-24">
+    <section class="lg:max-w-5xl max-w-full mx-auto flex flex-row gap-4 mt-8 mb-16 sm:mb-24">
       <div class="flex flex-col gap-8">
         {hero.image?.src && (
           <figure>

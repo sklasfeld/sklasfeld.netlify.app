@@ -17,7 +17,7 @@ const featuredPosts = posts.filter(({ data }) => data.isFeatured);
 
 <BaseLayout description={siteConfig.description} image={siteConfig.image}>
   <Hero />
-  <div class="mb-16 sm:mb-24">
+  <div class="mb-16 sm:mb-24 lg:max-w-5xl max-w-full mx-auto">
     <h2
       class="text-2xl leading-tight font-serif font-medium underline mb-2 sm:mb-4"
     >
@@ -38,7 +38,7 @@ const featuredPosts = posts.filter(({ data }) => data.isFeatured);
   </div>
   {
     featuredProjects?.length > 0 && (
-      <div class="mb-16 sm:mb-24">
+      <div class="mb-16 sm:mb-24 lg:max-w-5xl max-w-full mx-auto">
         <h2 class="mb-12 text-2xl leading-tight font-serif font-medium underline sm:mb-8 sm:text-2xl">
           Work Experiences
         </h2>

@@ -3,7 +3,7 @@ import siteConfig from '../data/site-config';
 ---
 
 <header
-  class="w-full max-w-full mx-auto sm:my-4 py-4 border-t border-b border-dashed border-main"
+  class="w-full lg:max-w-5xl mx-auto sm:my-4 py-4 border-t border-b border-dashed border-main"
 >
   <div class="max-w-full text-left mx-auto">
     {
@@ -17,7 +17,7 @@ import siteConfig from '../data/site-config';
         </a>
       ) : (
         <a
-          class="font-serif text-2xl leading-tight font-medium text-theme-foreground"
+          class="font-serif text-2xl lg:text-3xl leading-tight font-medium text-theme-foreground"
           href="/"
         >
           {siteConfig.title}
@@ -26,7 +26,9 @@ import siteConfig from '../data/site-config';
     }
     {
       siteConfig.subtitle && (
-        <p class="text-lg leading-tight mt-1">{siteConfig.subtitle}</p>
+        <p class="text-lg lg:text-xl leading-tight mt-1">
+          {siteConfig.subtitle}
+        </p>
       )
     }
   </div>
