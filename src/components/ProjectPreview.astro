@@ -14,7 +14,10 @@ const TitleTag = headingLevel;
 ---
 
 <a
-  class:list={['flex justify-between items-start gap-8 group', className]}
+  class:list={[
+    'flex justify-between items-start gap-8 group p-6 rounded-lg border border-transparent hover:border-main hover:bg-muted transition-all duration-200',
+    className
+  ]}
   href={`/projects/${project.id}/`}
 >
   <div class="grow">
@@ -23,11 +26,11 @@ const TitleTag = headingLevel;
     >
       {title}
     </TitleTag>
-    {timeperiod && <div class="mt-1 text-md leading-normal">{timeperiod}</div>}
-    {company && <div class="mt-1 text-md leading-normal">{company}</div>}
+    {timeperiod && <div class="mt-2 text-base leading-normal opacity-80">{timeperiod}</div>}
+    {company && <div class="mt-1 text-base leading-normal font-medium">{company}</div>}
   </div>
   <div
-    class="hidden font-serif italic opacity-0 transition group-hover:opacity-100 sm:inline-flex sm:gap-1 sm:items-center sm:shrink-0"
+    class="font-serif italic opacity-0 transition-opacity group-hover:opacity-100 inline-flex gap-1 items-center shrink-0"
   >
     View More <ArrowRight class="fill-current w-4 h-4" />
   </div>
