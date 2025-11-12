@@ -1,59 +1,68 @@
 ---
 import { marked } from 'marked';
 import Button from './Button.astro';
-import siteConfig from '../data/site-config';
 
-const hero = siteConfig.hero;
+export interface HeroImage {
+  src: string;
+  alt?: string;
+  caption?: string;
+}
+
+export interface HeroAction {
+  text: string;
+  href: string;
+}
+
+export interface Props {
+  title?: string;
+  text?: string;
+  image?: HeroImage;
+  actions?: HeroAction[];
+}
+
+const { title, text, image, actions } = Astro.props;
 ---
 
 {
-  (hero?.title ||
-    hero?.image?.src ||
-    hero?.text ||
-    (hero?.actions && hero.actions.length > 0)) && (
-    <section class="lg:max-w-5xl max-w-full mx-auto flex flex-row gap-4 mt-8 mb-16 sm:mb-24">
-      <div class="flex flex-col gap-8">
-        {hero.image?.src && (
-          <figure>
+  (title || image?.src || text || (actions && actions.length > 0)) && (
+    <section class="lg:max-w-5xl max-w-full mx-auto mt-8 mb-16 sm:mb-24">
+      <div class="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-8 items-start">
+        {image?.src && (
+          <figure class="flex flex-col gap-2">
             <img
-              class="w-18 float-left"
-              src={hero.image.src}
+              class="w-48 h-48 sm:w-56 sm:h-56 rounded-full object-cover border-2 border-main"
+              src={image.src}
               loading="lazy"
               decoding="async"
-              alt={hero.image.alt || ''}
+              alt={image.alt || ''}
             />
-            {hero.image.caption && (
-              <figcaption class="mt-1.5 text-xs sm:text-sm">
-                {hero.image.caption}
+            {image.caption && (
+              <figcaption class="text-xs sm:text-sm text-center">
+                {image.caption}
               </figcaption>
             )}
           </figure>
         )}
-        {hero.actions && hero.actions.length > 0 && (
-          <div class="flex flex-wrap gap-4">
-            {hero.actions.map((action) => (
-              <Button
-                href={action.href}
-                class="flex-auto justify-center items-center"
-              >
-                {action.text}
-              </Button>
-            ))}
-          </div>
-        )}
-      </div>
-      <div class="flex flex-col gap-8">
-        {hero.title && (
-          <h1 class="text-2xl leading-tight font-serif font-medium underline sm:text-2xl sm:leading-tight">
-            {hero.title}
-          </h1>
-        )}
-        {hero.text && (
-          <div
-            class="max-w-none font-serif sm:prose-lg"
-            set:html={marked.parse(hero.text)}
-          />
-        )}
+        <div class="flex flex-col gap-8">
+          {title && (
+            <h1 class="text-3xl leading-tight font-serif font-medium underline sm:text-4xl sm:leading-tight">
+              {title}
+            </h1>
+          )}
+          {text && (
+            <div
+              class="max-w-none font-serif text-lg sm:text-xl leading-relaxed"
+              set:html={marked.parse(text)}
+            />
+          )}
+          {actions && actions.length > 0 && (
+            <div class="flex flex-wrap gap-4">
+              {actions.map((action) => (
+                <Button href={action.href}>{action.text}</Button>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </section>
   )
