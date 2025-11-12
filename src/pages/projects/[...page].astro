@@ -18,22 +18,18 @@ const { page } = Astro.props;
 const portfolio = page.data;
 ---
 
-<BaseLayout
-  description={siteConfig.description}
-  image={siteConfig.image}
-  showHeader={false}
->
-  <div class="isolate px-6 py-12 sm:py-24 lg:px-8">
+<BaseLayout description={siteConfig.description} image={siteConfig.image}>
+  <div class="mb-16 sm:mb-24 lg:max-w-5xl max-w-full mx-auto">
     <h1
-      class="text-4xl font-serif tracking-tight text-balance sm:text-5xl mb-5 sm:mb-10"
+      class="text-4xl font-serif font-medium underline tracking-tight mb-12 sm:text-5xl sm:mb-16"
     >
       Work Experiences
     </h1>
     {
       portfolio.map((project) => (
-        <ProjectPreview project={project} class="mb-10 sm:mb-12" />
+        <ProjectPreview project={project} class="mb-6 sm:mb-8" />
       ))
     }
-    <Pagination page={page} class="my-16 sm:my-24" />
+    <Pagination page={page} class="mt-16 sm:mt-24" />
   </div>
 </BaseLayout>
