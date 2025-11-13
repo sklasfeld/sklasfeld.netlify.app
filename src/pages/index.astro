@@ -2,7 +2,6 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Button from '../components/Button.astro';
-import Hero from '../components/Hero.astro';
 //import PostPreview from '../components/PostPreview.astro';
 import ProjectPreview from '../components/ProjectPreview.astro';
 import siteConfig from '../data/site-config';
@@ -17,96 +16,84 @@ const featuredPosts = posts.filter(({ data }) => data.isFeatured);
 
 <BaseLayout description={siteConfig.description} image={siteConfig.image}>
   <header class="lg:max-w-5xl max-w-full mx-auto mb-12 sm:mb-16">
-    <div class="text-center py-8 sm:py-10">
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium mb-3">
-        Samantha Klasfeld
-      </h1>
-      <p class="text-xl sm:text-2xl text-main opacity-80 mb-6">
-        Computational Biologist, Bioinformatics Scientist
-      </p>
-      <div class="flex justify-center gap-4">
-        <Button href="Samantha_Klasfeld_CV.pdf">Download Resume</Button>
-        <Button href="/contact">Contact Me</Button>
+    <div
+      class="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-8 items-center py-8 sm:py-10"
+    >
+      <figure class="flex justify-center md:justify-start">
+        <img
+          class="w-48 h-48 sm:w-56 sm:h-56 rounded-full object-cover border-2 border-main"
+          src="/sklasfeld_cartoon.jpg"
+          alt="Illustration of Samantha Klasfeld"
+          loading="eager"
+        />
+      </figure>
+      <div class="text-center md:text-left">
+        <h1
+          class="text-4xl sm:text-5xl lg:text-6xl font-sans font-semibold mb-3"
+        >
+          Samantha Klasfeld
+        </h1>
+        <p class="text-xl sm:text-2xl text-main opacity-80 mb-6">
+          Computational Biologist, Bioinformatics Scientist
+        </p>
+        <div class="flex justify-center md:justify-start gap-4">
+          <Button href="Samantha_Klasfeld_CV.pdf">Download Resume</Button>
+          <Button href="/contact">Contact Me</Button>
+        </div>
       </div>
     </div>
   </header>
 
+  <!-- Divider -->
+  <div class="lg:max-w-5xl max-w-full mx-auto mb-16 sm:mb-20">
+    <div class="h-px bg-main opacity-20"></div>
+  </div>
+
   <!-- Technical Skills Section -->
   <section class="mb-16 sm:mb-20 lg:max-w-5xl max-w-full mx-auto">
     <h2
-      class="text-2xl leading-tight font-serif font-medium underline mb-6 sm:text-3xl"
+      class="mb-8 text-3xl leading-tight font-sans font-semibold underline sm:mb-10 sm:text-4xl"
     >
       Technical Expertise
     </h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-base">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div>
-        <h3 class="font-medium mb-2">Programming</h3>
-        <p class="opacity-80">Python, R, Bash</p>
+        <h3 class="font-semibold mb-2 text-xl sm:text-2xl">Programming</h3>
+        <p class="text-lg opacity-80">Python, R, Bash</p>
       </div>
       <div>
-        <h3 class="font-medium mb-2">Analysis</h3>
-        <p class="opacity-80">GWAS, ChIP-seq, RNA-seq, ATAC-seq</p>
+        <h3 class="font-semibold mb-2 text-xl sm:text-2xl">Analysis</h3>
+        <p class="text-lg opacity-80">GWAS, ChIP-seq, RNA-seq, ATAC-seq</p>
       </div>
       <div>
-        <h3 class="font-medium mb-2">Databases</h3>
-        <p class="opacity-80">UK Biobank, All of Us, FinnGen, gnomAD</p>
+        <h3 class="font-semibold mb-2 text-xl sm:text-2xl">Databases</h3>
+        <p class="text-lg opacity-80">UK Biobank, All of Us, FinnGen, gnomAD</p>
       </div>
     </div>
-    <p class="mt-6 text-sm opacity-70">
+    <p class="mt-6 text-lg opacity-70">
       See full technical skills list in my <a
         href="Samantha_Klasfeld_CV.pdf"
-        class="underline decoration-dashed hover:decoration-solid">resume</a
+        class="underline hover:opacity-70">resume</a
       >
     </p>
   </section>
 
-  <Hero
-    title="About Me"
-    text="A computational biologist with expertise in statistical genetics and genomics analysis, I am committed to solving complex questions through data analysis, statistical inference, collaboration, and creativity.<br><br>I am currently working as an Independent Contractor at Genscience. <div class='underline'>[Check out my postdoc project in Human Genetics and Genomics Advances](https://www.cell.com/hgg-advances/fulltext/S2666-2477(25)00063-6)!</div>"
-    image={{
-      src: '/sklasfeld_cartoon.jpg',
-      alt: 'Professional Photo of Samantha Klasfeld',
-    }}
-  />
-  <div class="mb-16 sm:mb-24 lg:max-w-5xl max-w-full mx-auto">
-    <h2
-      class="text-3xl leading-tight font-serif font-medium underline mb-8 sm:mb-10 sm:text-4xl"
-    >
-      Education
-    </h2>
-    <div class="mb-8 sm:mb-10">
-      <div class="font-serif">
-        <div class="text-xl font-medium mb-2 sm:text-2xl">
-          University of Pennsylvania
-        </div>
-      </div>
-      <p class="text-lg leading-relaxed">
-        Perelman School of Medicine, Philadelphia, PA<br />
-        Doctor of Philosophy in Genomics and Computational Biology, 2015-2021
-      </p>
-    </div>
-    <div>
-      <div class="font-serif">
-        <div class="text-xl font-medium mb-2 sm:text-2xl">
-          Cornell University
-        </div>
-      </div>
-      <p class="text-lg leading-relaxed">
-        College of Agriculture and Life Sciences, Ithaca, NY<br />
-        Bachelor of Science in Biology, Concentration in Computational Biology, 2010-2014
-      </p>
-    </div>
+  <!-- Divider -->
+  <div class="lg:max-w-5xl max-w-full mx-auto mb-16 sm:mb-20">
+    <div class="h-px bg-main opacity-20"></div>
   </div>
+
+  <!-- Work Experiences Section -->
   {
     featuredProjects?.length > 0 && (
       <div class="mb-16 sm:mb-24 lg:max-w-5xl max-w-full mx-auto">
-        <h2 class="mb-12 text-3xl leading-tight font-serif font-medium underline sm:mb-16 sm:text-4xl">
+        <h2 class="mb-8 text-3xl leading-tight font-sans font-semibold underline sm:mb-10 sm:text-4xl">
           Work Experiences
         </h2>
         {featuredProjects.map((project) => (
           <ProjectPreview
             project={project}
-            class="mb-10 sm:mb-12"
+            class="mb-4 sm:mb-6"
             headingLevel="h3"
           />
         ))}
@@ -116,6 +103,67 @@ const featuredPosts = posts.filter(({ data }) => data.isFeatured);
       </div>
     )
   }
+
+  <!-- Divider -->
+  <div class="lg:max-w-5xl max-w-full mx-auto mb-16 sm:mb-20">
+    <div class="h-px bg-main opacity-20"></div>
+  </div>
+
+  <div class="mb-16 sm:mb-24 lg:max-w-5xl max-w-full mx-auto">
+    <h2
+      class="text-3xl leading-tight font-sans font-semibold underline mb-6 sm:mb-8 sm:text-4xl"
+    >
+      Education
+    </h2>
+    <div class="mb-8 sm:mb-10">
+      <h3 class="text-xl font-semibold mb-3 sm:text-2xl">
+        University of Pennsylvania
+      </h3>
+      <p class="text-lg leading-relaxed">
+        Perelman School of Medicine, Philadelphia, PA<br />
+        Doctor of Philosophy in Genomics and Computational Biology, 2015-2021
+      </p>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold mb-3 sm:text-2xl">Cornell University</h3>
+      <p class="text-lg leading-relaxed">
+        College of Agriculture and Life Sciences, Ithaca, NY<br />
+        Bachelor of Science in Biology, Concentration in Computational Biology, 2010-2014
+      </p>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="lg:max-w-5xl max-w-full mx-auto mb-16 sm:mb-20">
+    <div class="h-px bg-main opacity-20"></div>
+  </div>
+
+  <!-- About Me Section -->
+  <section class="mb-16 sm:mb-20 lg:max-w-5xl max-w-full mx-auto">
+    <h2
+      class="text-3xl leading-tight font-sans font-semibold underline mb-6 sm:mb-8 sm:text-4xl"
+    >
+      About Me
+    </h2>
+    <div class="text-lg leading-relaxed space-y-4">
+      <p>
+        A computational biologist with expertise in statistical genetics and
+        genomics analysis, I am committed to solving complex questions through
+        data analysis, statistical inference, collaboration, and creativity.
+      </p>
+      <p>
+        I am currently working as an Independent Contractor at Genscience.
+        <a
+          href="https://www.cell.com/hgg-advances/fulltext/S2666-2477(25)00063-6"
+          class="underline hover:opacity-70"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Check out my postdoc project in Human Genetics and Genomics Advances!
+        </a>
+      </p>
+    </div>
+  </section>
   {
     /* 
     {
