@@ -1,27 +1,27 @@
 ---
-import type { GetStaticPathsOptions, Page } from "astro";
-import { type CollectionEntry, getCollection } from "astro:content";
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import Pagination from "../../components/Pagination.astro";
-import ProjectPreview from "../../components/ProjectPreview.astro";
-import siteConfig from "../../data/site-config";
-import { sortItemsByDateDesc } from "../../utils/data-utils";
+import type { GetStaticPathsOptions, Page } from 'astro';
+import { type CollectionEntry, getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Pagination from '../../components/Pagination.astro';
+import ProjectPreview from '../../components/ProjectPreview.astro';
+import siteConfig from '../../data/site-config';
+import { sortItemsByDateDesc } from '../../utils/data-utils';
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-  const projects = (await getCollection("projects")).sort(sortItemsByDateDesc);
+  const projects = (await getCollection('projects')).sort(sortItemsByDateDesc);
   return paginate(projects, { pageSize: siteConfig.projectsPerPage || 6 });
 }
 
-type Props = { page: Page<CollectionEntry<"projects">> };
+type Props = { page: Page<CollectionEntry<'projects'>> };
 
 const { page } = Astro.props;
 const portfolio = page.data;
 ---
 
 <BaseLayout description={siteConfig.description} image={siteConfig.image}>
-  <div class="mb-16 sm:mb-24 lg:max-w-5xl max-w-full mx-auto">
+  <div class="mb-16 sm:mb-24 lg:max-w-5xl max-w-full mx-auto py-8 sm:py-10">
     <h1
-      class="text-4xl font-serif font-medium underline tracking-tight mb-12 sm:text-5xl sm:mb-16"
+      class="text-4xl sm:text-5xl lg:text-6xl font-sans font-semibold mb-8 sm:mb-10"
     >
       Work Experiences
     </h1>

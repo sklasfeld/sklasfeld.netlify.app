@@ -5,13 +5,12 @@ import siteConfig from '../data/site-config';
 
 <BaseLayout description={siteConfig.description} image={siteConfig.image}>
   <div class="mb-16 sm:mb-24 lg:max-w-5xl max-w-full mx-auto">
-    <div class="mx-auto max-w-2xl text-center mb-12 sm:mb-16">
-      <h1 class="text-4xl font-serif font-medium underline mb-6 sm:text-5xl">
+    <div class="mx-auto max-w-2xl text-center mb-12 sm:mb-16 py-8 sm:py-10">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-sans font-semibold mb-6">
         Get in touch
       </h1>
-      <p class="text-lg leading-relaxed font-serif">
+      <p class="text-xl sm:text-2xl text-main opacity-80">
         Working on big scientific questions in genetics?<br />
-        Building tools to analyze Next-Generation sequencing data?<br />
         Just want to talk about taming messy data?<br />
         I'd love to hear from you!
       </p>
@@ -24,7 +23,9 @@ import siteConfig from '../data/site-config';
     >
       <div class="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2">
         <div class="sm:col-span-2">
-          <label for="full-name" class="block text-sm font-serif font-medium mb-2"
+          <label
+            for="full-name"
+            class="block text-xl sm:text-2xl font-serif font-medium mb-2"
             >Full Name</label
           >
           <input
@@ -36,8 +37,10 @@ import siteConfig from '../data/site-config';
           />
         </div>
         <div class="sm:col-span-2">
-          <label for="company" class="block text-sm font-serif font-medium mb-2"
-            >Company</label
+          <label
+            for="company"
+            class="block text-xl sm:text-2xl font-serif font-medium mb-2"
+            >Company (Optional)</label
           >
           <input
             id="company"
@@ -48,7 +51,9 @@ import siteConfig from '../data/site-config';
           />
         </div>
         <div class="sm:col-span-2">
-          <label for="email" class="block text-sm font-serif font-medium mb-2"
+          <label
+            for="email"
+            class="block text-xl sm:text-2xl font-serif font-medium mb-2"
             >Email</label
           >
           <input
@@ -60,45 +65,9 @@ import siteConfig from '../data/site-config';
           />
         </div>
         <div class="sm:col-span-2">
-          <label for="phone-number" class="block text-sm font-serif font-medium mb-2"
-            >Phone number</label
-          >
-          <div class="flex rounded-md border border-main overflow-hidden">
-            <div class="relative">
-              <select
-                id="country"
-                name="country"
-                autocomplete="country"
-                aria-label="Country"
-                class="h-full bg-muted text-main py-2.5 pl-4 pr-8 border-r border-main focus:outline-none focus:ring-2 focus:ring-main transition appearance-none"
-              >
-                <option>US</option>
-                <option>CA</option>
-                <option>EU</option>
-              </select>
-              <svg
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                aria-hidden="true"
-                class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 size-4 text-main"
-              >
-                <path
-                  d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
-                  clip-rule="evenodd"
-                  fill-rule="evenodd"></path>
-              </svg>
-            </div>
-            <input
-              id="phone-number"
-              type="text"
-              name="phone-number"
-              placeholder="123-456-7890"
-              class="block flex-1 bg-muted text-main py-2.5 px-4 focus:outline-none"
-            />
-          </div>
-        </div>
-        <div class="sm:col-span-2">
-          <label for="message" class="block text-sm font-serif font-medium mb-2"
+          <label
+            for="message"
+            class="block text-xl sm:text-2xl font-serif font-medium mb-2"
             >Message</label
           >
           <textarea
@@ -112,7 +81,7 @@ import siteConfig from '../data/site-config';
       <div class="mt-8">
         <button
           type="submit"
-          class="w-full px-6 py-3 text-lg font-serif font-medium bg-transparent text-main border-2 border-main rounded-full transition hover:bg-main hover:text-bg-main focus:outline-none focus:ring-2 focus:ring-main focus:ring-offset-2"
+          class="w-full px-8 py-3 text-xl font-sans font-medium bg-transparent text-main border-2 border-main rounded-full transition-all duration-200 hover:bg-main hover:text-bg-main hover:scale-105 focus:outline-none focus:ring-2 focus:ring-main focus:ring-offset-2"
         >
           Send Message
         </button>
