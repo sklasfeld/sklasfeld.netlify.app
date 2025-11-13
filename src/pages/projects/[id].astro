@@ -1,11 +1,11 @@
 ---
-import { type CollectionEntry, getCollection, render } from "astro:content";
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import ProjectPreview from "../../components/ProjectPreview.astro";
-import { sortItemsByDateDesc } from "../../utils/data-utils";
+import { type CollectionEntry, getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectPreview from '../../components/ProjectPreview.astro';
+import { sortItemsByDateDesc } from '../../utils/data-utils';
 
 export async function getStaticPaths() {
-  const projects = (await getCollection("projects")).sort(sortItemsByDateDesc);
+  const projects = (await getCollection('projects')).sort(sortItemsByDateDesc);
   const projectCount = projects.length;
   return projects.map((project, index) => ({
     params: { id: project.id },
@@ -18,9 +18,9 @@ export async function getStaticPaths() {
 }
 
 type Props = {
-  project: CollectionEntry<"projects">;
-  prevProject: CollectionEntry<"projects">;
-  nextProject: CollectionEntry<"projects">;
+  project: CollectionEntry<'projects'>;
+  prevProject: CollectionEntry<'projects'>;
+  nextProject: CollectionEntry<'projects'>;
 };
 
 const { project, prevProject, nextProject } = Astro.props;
@@ -35,44 +35,45 @@ const { Content } = await render(project);
   pageType="article"
   showHeader={false}
 >
-  <article class="mb-16 sm:mb-24">
-    <header class="mb-8">
+  <div class="mb-16 sm:mb-24 lg:max-w-5xl max-w-full mx-auto py-8 sm:py-10">
+    <header class="mb-8 sm:mb-10">
       <h1
-        class="text-xl leading-tight font-serif font-medium sm:text-2xl sm:leading-tight"
+        class="text-3xl sm:text-4xl lg:text-5xl leading-tight font-sans font-semibold mb-3"
       >
-        {title}, {timeperiod}
+        {title}
       </h1>
-      <h1
-        class="text-xl leading-tight font-serif font-medium sm:text-lg sm:leading-tight"
-      >
-        {company}
-      </h1>
+      <div class="text-lg sm:text-xl lg:text-2xl leading-relaxed">
+        <span class="font-medium">{company}</span>
+        {timeperiod && <span class="opacity-80"> | {timeperiod}</span>}
+      </div>
     </header>
-    <div class="max-w-none prose prose-dante sm:prose-lg">
+    <div class="max-w-none prose prose-lg sm:prose-xl lg:prose-2xl prose-headings:font-sans prose-headings:font-semibold prose-headings:text-main prose-h2:text-3xl prose-h2:sm:text-4xl prose-h2:leading-tight prose-p:text-main prose-p:text-lg sm:prose-p:text-xl prose-p:leading-relaxed prose-a:text-main prose-strong:text-main prose-code:text-main prose-li:text-main prose-ul:text-main prose-ol:text-main">
       <Content />
     </div>
-  </article>
-  {
-    (prevProject || nextProject) && (
-      <div class="my-16 sm:my-24">
-        <h2 class="mb-12 text-xl font-serif italic sm:mb-16 sm:text-2xl">
-          View Next
-        </h2>
-        {nextProject && (
-          <ProjectPreview
-            project={nextProject}
-            class="mb-10 sm:mb-12"
-            headingLevel="h3"
-          />
-        )}
-        {prevProject && (
-          <ProjectPreview
-            project={prevProject}
-            class="mb-10 sm:mb-12"
-            headingLevel="h3"
-          />
-        )}
-      </div>
-    )
-  }
+    {
+      (prevProject || nextProject) && (
+        <div class="mt-16 sm:mt-24 pt-12 sm:pt-16 border-t-2 border-main">
+          <div class="mb-16 sm:mb-24">
+            <h2 class="mb-8 text-3xl leading-tight font-sans font-semibold sm:mb-10 sm:text-4xl">
+              More Work Experiences
+            </h2>
+            {nextProject && (
+              <ProjectPreview
+                project={nextProject}
+                class="mb-6 sm:mb-8"
+                headingLevel="h3"
+              />
+            )}
+            {prevProject && (
+              <ProjectPreview
+                project={prevProject}
+                class="mb-6 sm:mb-8"
+                headingLevel="h3"
+              />
+            )}
+          </div>
+        </div>
+      )
+    }
+  </div>
 </BaseLayout>
