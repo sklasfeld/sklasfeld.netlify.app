@@ -1,0 +1,49 @@
+---
+type Presentation = {
+  title: string;
+  authors?: string;
+  type?: string;
+  venue?: string;
+  location?: string;
+  date?: string;
+};
+
+type Props = {
+  presentation: Presentation;
+};
+
+const { presentation } = Astro.props;
+---
+
+<article class="relative pl-6 border-l-4 border-accent/30 py-3">
+  <h4 class="text-base sm:text-lg font-medium text-main mb-2">
+    {presentation.title}
+  </h4>
+  {presentation.authors && (
+    <p class="text-sm sm:text-base text-main/70 mb-1">
+      {presentation.authors}
+    </p>
+  )}
+  <div class="text-sm text-main/60 flex flex-wrap items-center gap-2">
+    {presentation.type && (
+      <span class="inline-flex items-center px-2 py-0.5 rounded bg-accent/10 text-accent font-medium">
+        {presentation.type}
+      </span>
+    )}
+    {presentation.venue && (
+      <span class="italic">{presentation.venue}</span>
+    )}
+    {(presentation.venue && presentation.location) && (
+      <span class="text-accent">•</span>
+    )}
+    {presentation.location && (
+      <span>{presentation.location}</span>
+    )}
+    {((presentation.venue || presentation.location) && presentation.date) && (
+      <span class="text-accent">•</span>
+    )}
+    {presentation.date && (
+      <span class="font-medium">{presentation.date}</span>
+    )}
+  </div>
+</article>

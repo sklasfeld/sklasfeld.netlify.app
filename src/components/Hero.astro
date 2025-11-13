@@ -34,7 +34,8 @@ const { title, text, image, actions } = Astro.props;
               src={image.src}
               loading="lazy"
               decoding="async"
-              alt={image.alt || ''}
+              alt={image.alt || 'Profile photo'}
+              aria-label={image.alt || 'Profile photo'}
             />
             {image.caption && (
               <figcaption class="text-xs sm:text-sm text-center">

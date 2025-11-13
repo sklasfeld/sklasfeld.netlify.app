@@ -15,14 +15,19 @@ const TitleTag = headingLevel;
 
 <a
   class:list={[
-    'flex justify-between items-start gap-8 group transition-all duration-200',
+    'flex justify-between items-start gap-6 group',
+    'p-6 rounded-lg border-2 border-gray-200 dark:border-gray-700',
+    'bg-white dark:bg-gray-800/50',
+    'shadow-sm hover:shadow-md',
+    'transition-all duration-200',
+    'hover:-translate-y-1 hover:border-accent',
     className
   ]}
   href={`/projects/${project.id}/`}
 >
   <div class="grow">
     <TitleTag
-      class="text-2xl leading-tight font-sans font-semibold group-hover:underline group-hover:underline-offset-4 sm:text-3xl"
+      class="text-2xl leading-tight font-sans font-semibold text-accent group-hover:underline group-hover:underline-offset-4 sm:text-3xl"
     >
       {title}
     </TitleTag>
@@ -33,10 +38,13 @@ const TitleTag = headingLevel;
         {timeperiod && <span class="opacity-80">{timeperiod}</span>}
       </div>
     )}
+    {description && (
+      <p class="mt-3 text-base opacity-80 line-clamp-2">{description}</p>
+    )}
   </div>
   <div
-    class="font-sans text-lg opacity-0 transition-opacity group-hover:opacity-100 inline-flex gap-1 items-center shrink-0"
+    class="font-sans text-base opacity-60 transition-all group-hover:opacity-100 group-hover:translate-x-1 inline-flex gap-1 items-center shrink-0"
   >
-    View More <ArrowRight class="fill-current w-4 h-4" />
+    View <ArrowRight class="fill-current w-4 h-4" aria-hidden="true" />
   </div>
 </a>

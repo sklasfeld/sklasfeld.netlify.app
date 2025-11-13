@@ -42,9 +42,45 @@ const projects = defineCollection({
         title: z.string(),
         timeperiod: z.string().optional(),
         company: z.string().optional(),
+        headerImage: z.union([
+            z.string(),
+            z.object({
+                light: z.string(),
+                dark: z.string(),
+                alt: z.string().optional(),
+                caption: z.string().optional(),
+                longDescription: z.string().optional()
+            })
+        ]).optional(),
         description: z.string().optional(),
         publishDate: z.coerce.date(),
         isFeatured: z.boolean().default(false),
+        publications: z.array(z.object({
+            title: z.string(),
+            url: z.string().url(),
+            authors: z.string().optional(),
+            venue: z.string().optional(),
+            year: z.number().optional()
+        })).optional(),
+        relevantPublications: z.array(z.object({
+            title: z.string(),
+            url: z.string().url(),
+            authors: z.string().optional(),
+            venue: z.string().optional(),
+            year: z.number().optional()
+        })).optional(),
+        presentations: z.array(z.object({
+            title: z.string(),
+            authors: z.string().optional(),
+            type: z.string().optional(),
+            venue: z.string().optional(),
+            location: z.string().optional(),
+            date: z.string().optional()
+        })).optional(),
+        references: z.array(z.object({
+            label: z.string(),
+            url: z.string().url()
+        })).optional(),
         seo: seoSchema.optional()
     })
 });
