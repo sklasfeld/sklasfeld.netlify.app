@@ -15,7 +15,11 @@ Thumbs.db
 *.log
 *.tmp
 
-# Optional: lock files if you don’t want to commit them
+# Astro build artifacts
+.astro/
+dist/
+
+# Optional: lock files if you don't want to commit them
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
