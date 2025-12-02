@@ -12,12 +12,12 @@ tags:
   - genomics-equity
 seo:
   image:
-    src: '/ehimetalor-akhere-unuabona-Hf4QOGcnBnA-unsplash.jpg'
+    src: '/blog_images/ehimetalor-akhere-unuabona-Hf4QOGcnBnA-unsplash.jpg'
     alt: Photo of a Respect my HIV protest in London
 ---
 
 <figure> 
-  <img src="/ehimetalor-akhere-unuabona-Hf4QOGcnBnA-unsplash.jpg" alt="Photo of a Respect my HIV protest in London">
+  <img src="/blog_images/ehimetalor-akhere-unuabona-Hf4QOGcnBnA-unsplash.jpg" alt="Photo of a Respect my HIV protest in London">
   <figcaption><em>Recent studies on HIV included scientists from communities affected by HIV as an effort to improve ethical standards of this research. Photo by <a href="https://unsplash.com/@mettyunuabona?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ehimetalor Akhere Unuabona</a> on <a href="https://unsplash.com/photos/a-group-of-people-marching-down-a-street-holding-a-sign-Hf4QOGcnBnA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.</em></figcaption>
 </figure>
 
