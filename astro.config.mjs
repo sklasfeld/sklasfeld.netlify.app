@@ -9,7 +9,7 @@ import expressiveCode from 'astro-expressive-code';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://sklasfeld.github.io',
+    site: 'https://sklasfeld.netlify.app',
     markdown: {
         // Applied to .md and .mdx files
         remarkPlugins: [remarkMermaid],
