@@ -81,7 +81,7 @@ const siteConfig: SiteConfig = {
         }*/,
     {
       text: 'Source Code',
-      href: 'https://github.com/sklasfeld/sklasfeld.github.io',
+      href: 'https://github.com/sklasfeld/sklasfeld.netlify.app',
     },
   ],
   socialLinks: [

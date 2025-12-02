@@ -32,13 +32,13 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sklasfeld/sklasfeld.github.io.git"
+    "url": "git+https://github.com/sklasfeld/sklasfeld.netlify.app.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sklasfeld/sklasfeld.github.io/issues"
+    "url": "https://github.com/sklasfeld/sklasfeld.netlify.app/issues"
   },
-  "homepage": "https://github.com/sklasfeld/sklasfeld.github.io#readme"
+  "homepage": "https://sklasfeld.netlify.app"
 }
