@@ -23,5 +23,3 @@ dist/
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
-.astro/settings.json
-.astro/settings.json
