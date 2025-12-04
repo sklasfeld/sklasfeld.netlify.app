@@ -1,12 +1,11 @@
 ---
-title: 'Save a clock tick with the UK Biobank Showcase'
+title: 'Save a Clock Tick with the UK Biobank Showcase'
 excerpt: "How to navigate UK Biobank's field IDs"
-publishDate: 'Dec 3 2025'
+publishDate: 'Dec 2 2025'
 tags:
   - biobank
-  - research-strategy
-  - project-management
-  - consulting
+  - ukb-showcase
+  - phenotype-data
 draft: true
 seo:
   image:
@@ -16,7 +15,7 @@ seo:
 
 ![Papers tell you WHAT was used. Showcase tells you what's AVAILABLE NOW.](/blog_images/biobank1/ukbShowcaseGraphic.png)
 
-When I first started working with UK Biobank, I identified relevant field IDs by hunting through publications. [The UK Biobank Showcase](https://biobank.ndph.ox.ac.uk/showcase/) saved me hours of that detective work. The showcase not only explains data from older papers but surfaces newer measurements that weren't available when those studies were published.
+When I first started working with UK Biobank, identifying relevant phenotypes from publications was straightforward. Finding the actual field IDs? That meant digging through methods sections and supplemental materials. [The UK Biobank Showcase](https://biobank.ndph.ox.ac.uk/showcase/) saved me hours of that detective work and revealed newer measurements that weren't available when those studies were published.
 
 For example, searching "Left Ventricular Ejection Fraction" returns [three data fields](https://biobank.ndph.ox.ac.uk/showcase/search.cgi?wot=0&srch=Left+Ventricular+Ejection+Fraction&yfirst=2000&ylast=2025) (22420, 24103, and 31060). But which one should you use? This is where the Showcase becomes essential.
 
