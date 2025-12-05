@@ -1,6 +1,6 @@
 ---
-title: 'SQL Me Maybe: Loading Phenotype Data in UKB RAP'
-excerpt: "How to navigate UK Biobank's field IDs"
+title: 'Making Your Move with Phenotype Data in UK Biobank Research Analysis Platform (UKB-RAP)'
+excerpt: 'Tips and tricks to loading phenotype data in the UKB-RAP.'
 publishDate: 'Dec 3 2025'
 tags:
   - biobank
@@ -21,9 +21,9 @@ Once you've been browsing phenotype Field IDs on the [UK Biobank Showcase](/blog
 
 When you get approved for a UK Biobank project, you're handed a project ID, your VIP pass to a secure data wonderland where you can spin up coding environments (JupyterLab, RStudio, take your pick) and analyze data without the nightmare of downloading 500,000+ participant records to your poor laptop.
 
-Setting up your first environment in UKB RAP is its own special adventure involving worker configurations and instance types that we'll tackle in a future post. For now, let's assume you've already battled through that process and you've got JupyterLab humming along. Now you're ready to load some phenotype data. Cue the "SQL Me Maybe" montage.
+Setting up your first environment in UKB RAP is its own special adventure involving worker configurations and instance types that we'll tackle in a future post. For now, let's assume you've already battled through that process and you've got JupyterLab humming along. Now you're ready to load some phenotype data.
 
-I'm an avid bash and python user, so I work with a combination of terminal commands and JupyterLab notebooks. The command line makes loading data quick and straightforward, while Jupyter notebooks keep everything documented and reproducible.
+So what's the actual workflow? I'm an avid bash and python user, so I work with a combination of terminal commands and JupyterLab notebooks. The command line makes loading data quick and straightforward, while Jupyter notebooks keep everything documented and reproducible.
 
 To get started, you'll need your dataset name, which follows the format `{project ID}:{dispensed dataset ID}`.
 
