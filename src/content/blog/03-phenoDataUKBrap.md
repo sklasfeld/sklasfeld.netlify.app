@@ -8,7 +8,7 @@ tags:
   - ukb-rap
   - ehr-data
   - phenotype-data
-draft: false
+draft: true
 seo:
   image:
     src: '/blog_images/biobank1/notebook_v_commandline.png'
