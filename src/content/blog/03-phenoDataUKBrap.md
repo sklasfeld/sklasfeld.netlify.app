@@ -17,7 +17,7 @@ seo:
 
 ![Cat peering over a table in delight at two plates of kibble: one labeled 'Jupyter Notebook' and the other labeled 'Command Line'.](/blog_images/biobank1/notebook_v_commandline.png)
 
-Once you've been browsing phenotype Field IDs on the [UK Biobank Showcase](/blog/02-ukb-showcase), your're ready to pull the data into a workspace for analysis. When you get approved for a UK Biobank project you are gifted a VIP pass to a secure data wonderland called the UK Biobank Research Analysis Platform (UKB RAP). The UKB-RAP is a cloud-based venue (built on DNAnexus infrastructure) where you can spin up coding environments (JupyterLab, RStudio, take your pick) and analyze data without the nightmare of downloading 500,000+ participant records to your poor laptop.
+Once you've been browsing phenotype Field IDs on the [UK Biobank Showcase](/blog/02-ukb-showcase), you're ready to pull the data into a workspace for analysis. When you get approved for a UK Biobank project you are gifted a VIP pass to a secure data wonderland called the UK Biobank Research Analysis Platform (UKB RAP). The UKB-RAP is a cloud-based venue (built on DNAnexus infrastructure) where you can spin up coding environments (JupyterLab, RStudio, take your pick) and analyze data without the nightmare of downloading 500,000+ participant records to your poor laptop.
 
 Setting up your first environment in UKB RAP is its own special adventure involving worker configurations and instance types that we'll tackle in a future post. For now, let's assume you've already battled through that process and you've got JupyterLab humming along. Now you're ready to get your hands on some of that sweet, sweet phenotype data.
 
@@ -101,19 +101,16 @@ dataset = f"{project_id}:{dispensed_dataset_id}"
 ```
 
 **For quick field lookups:**
+
 Jump to terminal, use `dx extract_dataset <dataset> --entities participant --list-fields | grep <field_id>`
 
 **For systematic analysis:**
+
 Extract and load dictionaries in a notebook, then filter programmatically.
 
 **For actual data extraction:**
 
-```bash
-dx extract_dataset  \
-  --fields participant.eid,participant.p22420_i2,participant.p22420_i3 \
-  --delimiter "," \
-  --output lvef_pheno.csv
-```
+`dx extract_dataset` with `--fields` flag and your field names
 
 ## The Gotchas Nobody Tells You
 
