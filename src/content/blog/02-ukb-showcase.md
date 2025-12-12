@@ -59,7 +59,6 @@ After working with the Showcase on multiple projects, I've developed a workflow 
 
 **To save time:**
 
-- Download data coding files (e.g., ICD10 uses Data-Coding [19](https://biobank.ndph.ox.ac.uk/showcase/coding.cgi?id=19))
 - Use algorithmically-defined outcomes in Category [42](https://biobank.ndph.ox.ac.uk/showcase/label.cgi?id=42) instead of manually classifying from multiple sources
 - Watch for "Not available" status because sometimes fields are listed before release
 
