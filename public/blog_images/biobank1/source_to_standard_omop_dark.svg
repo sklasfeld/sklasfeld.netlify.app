@@ -7,9 +7,9 @@
    viewBox="0 0 362.32852 101.397"
    version="1.1"
    id="svg1"
-   sodipodi:docname="source_to_standard_omop.svg"
+   sodipodi:docname="source_to_standard_omop_dark.svg"
    inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
-   inkscape:export-filename="source_to_standard_omop.png"
+   inkscape:export-filename="source_to_standard_omop_dark.png"
    inkscape:export-xdpi="1000"
    inkscape:export-ydpi="1000"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -29,11 +29,11 @@
      inkscape:document-units="mm"
      showguides="true"
      inkscape:zoom="0.73"
-     inkscape:cx="248.63014"
+     inkscape:cx="551.36986"
      inkscape:cy="74.657534"
      inkscape:window-width="1728"
      inkscape:window-height="934"
-     inkscape:window-x="2112"
+     inkscape:window-x="269"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
@@ -1015,7 +1015,7 @@
        style="font-weight:bold;font-size:25.3333px;line-height:1;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect426);display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3.77953;stroke-miterlimit:4.9;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"><tspan
          x="52.227079"
          y="469.28133"
-         id="tspan4">HOSPITAL DATABASES </tspan></text>
+         id="tspan3">HOSPITAL DATABASES </tspan></text>
     <text
        xml:space="preserve"
        style="font-weight:bold;font-size:5.99791px;line-height:1;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:71.5812;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-miterlimit:4.9;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
@@ -1025,7 +1025,7 @@
        transform="matrix(1,0,0,1.1208494,-75.482438,-12.539986)"><tspan
          x="73.887344"
          y="125.62808"
-         id="tspan5">ICD Codes
+         id="tspan4">ICD Codes
 </tspan><tspan
          x="73.887344"
          y="131.62599"
@@ -1034,6 +1034,18 @@
          x="73.887344"
          y="137.6239"
          id="tspan7">Lab values</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:5.99791px;line-height:1;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:71.5812;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-miterlimit:4.9;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       x="73.887344"
+       y="125.62808"
+       id="text427-0"
+       transform="matrix(1,0,0,1.1208494,-75.729022,9.993617)"><tspan
+         x="73.887344"
+         y="125.62808"
+         id="tspan9">(<tspan
+   style="font-style:italic;-inkscape-font-specification:'Arial Bold Italic'"
+   id="tspan8">Inconsistent</tspan>)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
@@ -1046,7 +1058,7 @@
          x="296.13037"
          y="247.50034" /></text>
     <rect
-       style="fill:#fffcf0;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.26494;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       style="fill:#fff6d5;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.26494;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
        id="rect26-5"
        width="108.73506"
        height="100.13206"
@@ -1062,7 +1074,7 @@
        y="0"><tspan
          x="303.9742"
          y="274.81646"
-         id="tspan8">EXTRACT, TRANSFORM, LOAD</tspan></text>
+         id="tspan10">EXTRACT, TRANSFORM, LOAD</tspan></text>
     <g
        id="g29"
        transform="translate(9.423516,-2.0187921)">
@@ -1085,7 +1097,7 @@
            transform="matrix(1,0,0,1.1208494,41.294317,-51.087688)"><tspan
              x="73.887344"
              y="125.62808"
-             id="tspan9">1. Extract raw codes</tspan></text>
+             id="tspan11">1. Extract raw codes</tspan></text>
       </g>
     </g>
     <g
@@ -1108,7 +1120,7 @@
          transform="matrix(1,0,0,1.1208494,41.360212,-1.4790588)"><tspan
            x="73.887344"
            y="125.62808"
-           id="tspan10">3. Load into OMOP tables</tspan></text>
+           id="tspan12">3. Load into OMOP tables</tspan></text>
     </g>
     <g
        id="g28"
@@ -1130,7 +1142,7 @@
          transform="matrix(1,0,0,1.1208494,40.569431,-32.626656)"><tspan
            x="73.887344"
            y="125.62808"
-           id="tspan11">2. Map to OHDSI vocabulary</tspan></text>
+           id="tspan13">2. Map to OHDSI vocabulary</tspan></text>
       <rect
          style="fill:#f4f2e9;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.755886;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
          id="rect28"
@@ -1157,11 +1169,11 @@
            id="tspan28">&quot;Type 2 Diabetes&quot;</tspan></text>
     </g>
     <path
-       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-dasharray:none;stroke-opacity:1.0;marker-end:url(#ArrowWide);paint-order:markers stroke fill"
+       style="fill:#f4eed7;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWide);paint-order:markers stroke fill"
        d="m 53.782907,109.55276 13.77283,0.36244"
        id="path31" />
     <path
-       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-dasharray:none;stroke-opacity:1.0;marker-end:url(#ArrowWide-2);paint-order:markers stroke fill"
+       style="fill:#f4eed7;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:2;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWide-2);paint-order:markers stroke fill"
        d="m 180.59899,109.55276 13.77283,0.36244"
        id="path31-0" />
     <text
@@ -1173,7 +1185,7 @@
        y="0"><tspan
          x="315.42668"
          y="272.24422"
-         id="tspan12">OMOP COMMON DATA MODEL</tspan></text>
+         id="tspan14">OMOP COMMON DATA MODEL</tspan></text>
     <text
        xml:space="preserve"
        style="font-weight:bold;font-size:5.99791px;line-height:1;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:99.8517;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-miterlimit:4.9;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
@@ -1183,9 +1195,9 @@
        transform="matrix(1,0,0,1.1208494,177.75124,-63.433711)"><tspan
          x="73.887344"
          y="125.62808"
-         id="tspan14"><tspan
+         id="tspan16"><tspan
            style="font-style:italic;-inkscape-font-specification:'Arial Bold Italic'"
-           id="tspan13">Standardized relational tables</tspan></tspan></text>
+           id="tspan15">Standardized relational tables</tspan></tspan></text>
     <g
        id="g39"
        transform="translate(0,-3.5962783)">
@@ -1335,22 +1347,6 @@
          d="m 227.85272,139.26514 h 7.1264"
          id="path39-5-5"
          sodipodi:nodetypes="cc" />
-    </g>
-    <g
-       id="g1-5"
-       transform="translate(0.31833569,-0.04071434)">
-      <text
-         xml:space="preserve"
-         style="font-weight:bold;font-size:5.99791px;line-height:1;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;inline-size:71.5812;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-miterlimit:4.9;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
-         x="73.887344"
-         y="125.62808"
-         id="text427-0"
-         transform="matrix(1,0,0,1.1208494,-75.729022,9.993617)"><tspan
-           x="73.887344"
-           y="125.62808"
-           id="tspan16">(<tspan
-   style="font-style:italic;-inkscape-font-specification:'Arial Bold Italic'"
-   id="tspan15">Inconsistent</tspan>)</tspan></text>
     </g>
   </g>
 </svg>
