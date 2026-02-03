@@ -102,7 +102,7 @@ The data is already where it needs to be—in the cloud, on fast storage, ready 
 
 ## Tip #3: Avoid Hail Unless You Actually Need It
 
-When I first started with All of Us, I used Hail simply because it was the first genetic data file I could find. The VCFs were buried in the interface or sharded and disorganized (I'll show you how to navigate to them in the seventh installment of this series).
+When I first started with All of Us, I used Hail simply because it was the first genetic data file I could find. The VCFs were buried in the interface or sharded and disorganized (I'll show you how to navigate to them in the [8th installment of this series](../08-genotypeallofus)).
 
 **Why avoid Hail when possible:**
 
