@@ -1,6 +1,6 @@
 ---
-title: 'How to Do Biobank Analysis Without Losing Your Mind'
-excerpt: 'Data complexity matters, but the scientific question matters more'
+title: 'Biobank Intro Series: Getting Started'
+excerpt: 'How to do biobank analysis without losing your mind'
 publishDate: 'Dec 1 2025'
 tags:
   - biobank
