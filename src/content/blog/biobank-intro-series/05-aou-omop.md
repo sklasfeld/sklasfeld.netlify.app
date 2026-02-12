@@ -1,6 +1,6 @@
 ---
 title: 'Biobank Intro Series: All of Us Observational Data (Part I)'
-excerpt: 'How to navigate OMOP and find what observational data in All of Us'
+excerpt: 'Finding concept IDs for the All of Us Researcher Workbench'
 publishDate: 'Dec 5 2025'
 tags:
   - biobank
@@ -16,13 +16,13 @@ seo:
     alt: 'Flowchart showing hospital data being extracted, transformed via OHDSI vocabularies, and loaded into OMOP relational tables.'
 ---
 
-Coming from UK Biobank's straightforward system (search, grab field ID, query), All of Us requires a different approach. Data from surveys, enrollment visits, and EHRs gets transformed using Observational Health Data Sciences and Informatics (OHDSI) standardized vocabularies and loaded into the [Observational Medical Outcomes Partnership (OMOP) Common Data Model (CDM) structure](https://ohdsi.github.io/CommonDataModel/cdm53.html). Instead of intuitive field names, you're navigating concept IDs, vocabulary mappings, and relational tables.
+Coming from UK Biobank's straightforward system (search, grab field ID, query), All of Us requires a different approach. Clinical and survey data from enrollment visits, EHRs, and questionnaires gets transformed using Observational Health Data Sciences and Informatics (OHDSI) standardized vocabularies and loaded into the [Observational Medical Outcomes Partnership (OMOP) Common Data Model (CDM) structure](https://ohdsi.github.io/CommonDataModel/cdm53.html). Instead of intuitive field names, you're navigating concept IDs, vocabulary mappings, and relational tables. Additionally, some pre-computed data in the Researcher Workbench lives outside of SQL tables entirely. However, understanding OMOP concepts is the foundation for working with most of what's available.
 
 <figure class="my-8 !max-w-none">
 <img src="/blog_images/biobank1/source_to_standard_omop.png" alt="Flowchart showing the process of transforming hospital EHR data into OMOP format." class="block dark:hidden !max-w-none mx-auto w-full" >
 <img src="/blog_images/biobank1/source_to_standard_omop_dark.png" alt="Flowchart showing the process of transforming hospital EHR data into OMOP format." class="hidden dark:block !max-w-none mx-auto w-full">
 <figcaption class="text-center text-sm opacity-80 mt-2">
-   <strong>Figure 1:</strong> <em>Raw hospital data is transformed into standardized OHDSI vocabularies and loaded into OMOP relational tables.</em>
+   <em>Raw hospital data is transformed into standardized OHDSI vocabularies and loaded into OMOP relational tables.</em>
  </figcaption>
 </figure>
 
@@ -50,6 +50,7 @@ Query the `CONCEPT` table directly to translate medical concepts into IDs:
 import pandas as pd
 import os
 
+# Use environmental variable for the Controlled Tier
 CDR = os.environ['WORKSPACE_CDR']
 
 # Search by name
@@ -67,16 +68,6 @@ Use `CONCEPT_RELATIONSHIP` to explore how concepts relate - for example, which I
 
 **When to use:** Complex relationship queries, programmatic vocabulary exploration.
 
-## Your OMOP Workflow
+## What's Next
 
-**Start with Data Browser** → Check availability and find concept IDs quickly
-
-**Move to Athena** → Explore hierarchies and vocabulary mappings
-
-**Write SQL** → Custom analyses and complex joins
-
-The Cohort Builder is useful for exploration, but most serious analyses need custom SQL. Use it to learn the structure, then write your own queries.
-
-**Coming next:** Practical examples of querying OMOP tables - extracting measurements, linking observations across time, and handling messy EHR data.
-
-OMOP's complexity exists to standardize messy clinical data from hundreds of hospitals. Once you learn the patterns, the system becomes predictable. Start simple and build incrementally.
+Finding concept IDs is the first step, but there are multiple ways to actually pull data in the All of Us Researcher Workbench — and, as mentioned in the beginning of this post, not all of them require SQL. In [Part II](../06-aou-data), we'll walk through these different approaches and when each one makes sense.
