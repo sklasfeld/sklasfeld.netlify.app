@@ -17,6 +17,8 @@ seo:
 
 When I first started working with UK Biobank, identifying relevant phenotypes from publications was straightforward. Finding the actual field IDs? That meant digging through methods sections and supplemental materials. [The UK Biobank Showcase](https://biobank.ndph.ox.ac.uk/showcase/) saved me hours of that detective work and revealed newer measurements that weren't available when those studies were published.
 
+The UK Biobank as a resource spans clinical measurements, survey data, genomics, imaging, proteomics, metabolomics, and more. For a comprehensive overview of all available data types, see [What types of data are available in UK Biobank?](https://community.ukbiobank.ac.uk/hc/en-gb/articles/23472796568861-What-types-of-data-are-available-in-UK-Biobank) on the UK Biobank Community site. The Showcase is your tool for navigating all of it.
+
 For example, searching "Left Ventricular Ejection Fraction" returns [multiple relevant fields](https://biobank.ndph.ox.ac.uk/showcase/search.cgi?wot=0&srch=Left+Ventricular+Ejection+Fraction&yfirst=2000&ylast=2025) and three with the exact correct description (22420, 24103, and 31060). But which one should you use? This is where the Showcase becomes essential.
 
 ![UK Biobank Showcase search interface showing search results for left ventricular ejection fraction, with three data fields highlighted: 22420 (Left ventricular size and function category), 24103 (Cardiac and aortic function #1 category), and 31060 (Cardiac and aortic function #2 category)](/blog_images/biobank1/lvef_search.png)
