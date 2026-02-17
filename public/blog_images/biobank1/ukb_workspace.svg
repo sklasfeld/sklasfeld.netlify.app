@@ -28,29 +28,17 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      inkscape:zoom="0.63"
-     inkscape:cx="337.30159"
-     inkscape:cy="788.88889"
-     inkscape:window-width="1840"
+     inkscape:cx="338.09524"
+     inkscape:cy="534.92063"
+     inkscape:window-width="1648"
      inkscape:window-height="925"
-     inkscape:window-x="1920"
+     inkscape:window-x="2103"
      inkscape:window-y="30"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg1"
      inkscape:export-bgcolor="#efefefff" />
   <defs
      id="defs1">
-    <rect
-       x="371.42857"
-       y="817.46032"
-       width="193.65079"
-       height="74.603175"
-       id="rect3" />
-    <rect
-       x="392.06349"
-       y="719.04762"
-       width="166.66667"
-       height="46.031746"
-       id="rect2" />
     <marker
        style="overflow:visible"
        id="marker47"
@@ -356,9 +344,9 @@
        style="font-size:45.7638px;line-height:1.1;font-family:Monospace;-inkscape-font-specification:Monospace;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect20);display:inline;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"><tspan
          x="137.58203"
          y="620.78826"
-         id="tspan8"><tspan
+         id="tspan5"><tspan
            style="font-family:Helvetica;-inkscape-font-specification:Helvetica;fill:#000000;stroke:none"
-           id="tspan1">Temporary Files Only</tspan></tspan></text>
+           id="tspan4">Temporary Files Only</tspan></tspan></text>
     <g
        id="g23"
        transform="translate(6.1736111,-34.101852)">
@@ -382,9 +370,9 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:33.2828px;line-height:1.1;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect22);display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.26772;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"><tspan
          x="548.81836"
          y="348.48471"
-         id="tspan20"><tspan
+         id="tspan7"><tspan
            style="fill:#000000;stroke:none"
-           id="tspan9">script.py</tspan></tspan></text>
+           id="tspan6">script.py</tspan></tspan></text>
     <g
        id="g24"
        transform="translate(6.1736111,-34.101852)">
@@ -499,9 +487,9 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:33.2828px;line-height:1.1;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect22-0);display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.26772;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"><tspan
            x="548.81836"
            y="348.48471"
-           id="tspan22"><tspan
+           id="tspan11"><tspan
              style="stroke:none"
-             id="tspan21">results.csv</tspan></tspan></text>
+             id="tspan10">results.csv</tspan></tspan></text>
     </g>
     <rect
        style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.600001;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
@@ -528,9 +516,9 @@
        y="0"><tspan
          x="226.91699"
          y="620.78826"
-         id="tspan24"><tspan
+         id="tspan13"><tspan
            style="font-weight:bold;font-family:Helvetica;-inkscape-font-specification:Helvetica"
-           id="tspan23">Working Directory on UKB RAP</tspan></tspan></text>
+           id="tspan12">Working Directory on UKB RAP</tspan></tspan></text>
   </g>
   <g
      id="g27-7"
@@ -560,9 +548,9 @@
        y="0"><tspan
          x="364.15253"
          y="620.78826"
-         id="tspan26"><tspan
+         id="tspan15"><tspan
            style="font-weight:bold;font-family:Helvetica;-inkscape-font-specification:Helvetica"
-           id="tspan25">Project Workspace</tspan></tspan></text>
+           id="tspan14">Project Workspace</tspan></tspan></text>
     <g
        id="g30"
        transform="translate(6.1057692,-24.762286)">
@@ -628,15 +616,15 @@
        style="font-size:45.7638px;line-height:1.1;font-family:Monospace;-inkscape-font-specification:Monospace;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect20-3);display:inline;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"><tspan
          x="137.58203"
          y="620.78826"
-         id="tspan28"><tspan
+         id="tspan17"><tspan
            style="font-family:Helvetica;-inkscape-font-specification:Helvetica;fill:#000000;stroke:none"
-           id="tspan27">Saved Files
+           id="tspan16">Saved Files
 </tspan></tspan><tspan
          x="137.58203"
          y="672.87798"
-         id="tspan30"><tspan
+         id="tspan19"><tspan
            style="font-family:Helvetica;-inkscape-font-specification:Helvetica;fill:#000000;stroke:none"
-           id="tspan29">Persistent Storage</tspan></tspan></text>
+           id="tspan18">Persistent Storage</tspan></tspan></text>
     <circle
        style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.600001;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
        id="path27"
@@ -650,23 +638,43 @@
        cy="277.28333"
        r="1.175926" />
   </g>
-  <path
-     id="rect43"
-     style="fill:#0c6da3;fill-opacity:1;fill-rule:evenodd;stroke:#084a6d;stroke-width:0.840698;stroke-opacity:1;paint-order:markers stroke fill"
-     d="m 101.12311,184.44661 c 5.62134,3.65283 13.66656,6.29403 21.51329,6.18181 7.92772,-0.1134 16.49526,-1.96576 22.03514,-6.44731 v 10.12187 c -13.42103,4.12372 -14.44285,4.41317 -22.03514,4.52902 -7.5524,0.11527 -16.47233,-2.8526 -21.70928,-3.94106 z"
-     sodipodi:nodetypes="csccscc" />
-  <path
-     id="rect43-3"
-     style="fill:#0c6da3;fill-opacity:1;fill-rule:evenodd;stroke:#405d6e;stroke-width:0.840698;stroke-opacity:1;paint-order:markers stroke fill"
-     d="m 100.92712,194.12999 c 5.62134,3.65283 13.67673,5.27907 21.52346,5.16685 7.92772,-0.1134 16.49526,-1.96576 22.03514,-6.4473 v 10.12185 c -10.01821,5.56852 -13.95936,5.58469 -22.03514,6.14607 -9.10198,0.6327 -17.32748,-3.97854 -21.52346,-5.55811 z"
-     sodipodi:nodetypes="csccscc" />
-  <ellipse
-     style="fill:#94d9ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.840698;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
-     id="path31"
-     cx="122.85616"
-     cy="184.23886"
-     rx="22.340588"
-     ry="6.5969701" />
+  <g
+     id="g43"
+     transform="translate(-20.278702,-8.5194435)"
+     style="stroke:#10aaff;stroke-opacity:1">
+    <path
+       id="rect43"
+       style="fill:#0c6da3;fill-opacity:1;fill-rule:evenodd;stroke:#10aaff;stroke-width:0.840698;stroke-opacity:1;paint-order:markers stroke fill"
+       d="m 121.40181,192.96605 c 5.62134,3.65283 13.66656,6.29403 21.51329,6.18181 7.92772,-0.1134 16.49526,-1.96576 22.03514,-6.44731 v 10.12187 c -13.42103,4.12372 -14.44285,4.41317 -22.03514,4.52902 -7.5524,0.11527 -16.47233,-2.8526 -21.70928,-3.94106 z"
+       sodipodi:nodetypes="csccscc" />
+    <path
+       id="rect43-3"
+       style="fill:#0c6da3;fill-opacity:1;fill-rule:evenodd;stroke:#10aaff;stroke-width:0.840698;stroke-opacity:1;paint-order:markers stroke fill"
+       d="m 121.20582,202.64943 c 5.62134,3.65283 13.67673,5.27907 21.52346,5.16685 7.92772,-0.1134 16.49526,-1.96576 22.03514,-6.4473 v 10.12185 c -10.01821,5.56852 -13.95936,5.58469 -22.03514,6.14607 -9.10198,0.6327 -17.32748,-3.97854 -21.52346,-5.55811 z"
+       sodipodi:nodetypes="csccscc" />
+    <path
+       id="rect43-3-7"
+       style="fill:#0c6da3;fill-opacity:1;fill-rule:evenodd;stroke:#10aaff;stroke-width:0.840698;stroke-opacity:1;paint-order:markers stroke fill"
+       d="m 121.26171,212.25952 c 5.62134,3.65283 13.67673,5.27907 21.52346,5.16685 7.92772,-0.1134 16.49526,-1.96576 22.03514,-6.4473 v 10.12185 c -10.01821,5.56852 -13.95936,5.58469 -22.03514,6.14607 -9.10198,0.6327 -17.32748,-3.97854 -21.52346,-5.55811 z"
+       sodipodi:nodetypes="csccscc" />
+    <ellipse
+       style="fill:#94d9ff;fill-opacity:1;fill-rule:evenodd;stroke:#10aaff;stroke-width:0.840698;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="path31"
+       cx="143.13486"
+       cy="192.7583"
+       rx="22.340588"
+       ry="6.5969701" />
+  </g>
+  <text
+     xml:space="preserve"
+     transform="matrix(0.26458333,0,0,0.26458333,-28.428898,-0.53994576)"
+     id="text43"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.3333px;line-height:1.1;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect44);display:inline;fill:#000080;fill-opacity:1;fill-rule:evenodd;stroke:#94d9ff;stroke-width:2.26772;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"><tspan
+       x="508.63614"
+       y="779.35046"
+       id="tspan21"><tspan
+         style="fill:#ffffff;stroke:none"
+         id="tspan20">Bulk Data</tspan></tspan></text>
   <path
      style="fill:#a30c0c;fill-opacity:1;fill-rule:evenodd;stroke:#a30c0c;stroke-width:0.600001;stroke-dasharray:3.60001, 3.60001;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#ArrowWideHeavy);marker-end:url(#marker47);paint-order:markers stroke fill"
      d="m 91.225623,118.37759 v 19.45968"
@@ -693,22 +701,4 @@
        x="126.66056"
        y="134.84825"
        id="tspan47">upload/download</tspan></text>
-  <text
-     xml:space="preserve"
-     transform="scale(0.26458333)"
-     id="text2"
-     style="font-size:29.3333px;line-height:2.5;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:1.95px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect2);display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-opacity:1;paint-order:markers stroke fill"><tspan
-       x="392.0625"
-       y="810.9951"
-       id="tspan32"><tspan
-         dx="0 19.565083"
-         id="tspan31">BU</tspan></tspan></text>
-  <text
-     xml:space="preserve"
-     transform="matrix(0.26458333,0,0,0.26458333,-0.83994708,-28.138228)"
-     id="text3"
-     style="font-size:29.3333px;line-height:2.5;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;letter-spacing:1.95px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect3);display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.944882;stroke-opacity:1;paint-order:markers stroke fill"><tspan
-       x="396.86739"
-       y="863.37596"
-       id="tspan33">Bulk Data</tspan></text>
 </svg>
