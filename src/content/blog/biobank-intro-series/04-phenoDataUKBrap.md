@@ -20,6 +20,9 @@ seo:
 
 <figure class="my-8 !max-w-none">
 <img src="/blog_images/biobank1/ukb_fieldid_scent.png" alt="Cat following wafts of fresh kibble onto a table. The scent trails are labeled with UK Biobank Field IDs." />
+<figcaption class="text-center text-sm opacity-80 mt-2">
+   <em>When you finally know which field IDs you need and suddenly the whole dataset smells delicious.</em>
+</figcaption>
 </figure>
 
 Once you've been browsing phenotype Field IDs on the [UK Biobank Showcase](../03-ukb-showcase), you're ready to pull the data into a workspace for analysis. When you get approved for a UK Biobank project you are gifted a VIP pass to a secure data wonderland called the UK Biobank Research Analysis Platform (UKB RAP). The UKB-RAP is a cloud-based venue (built on DNAnexus infrastructure) where you can spin up coding environments (JupyterLab, RStudio, take your pick) and analyze data without the nightmare of downloading 500,000+ participant records to your poor laptop.
@@ -68,6 +71,9 @@ With that in hand, let's get some data.
 
 <figure class="my-8 !max-w-none">
 <img src="/blog_images/biobank1/notebook_v_commandline.png" alt="Cat peering over a table in delight at two plates of kibble: one labeled 'Jupyter Notebook' and the other labeled 'Command Line'." />
+<figcaption class="text-center text-sm opacity-80 mt-2">
+   <em>Two bowls, same feast: whether you import via Jupyter or the command line, you’re still getting the data you want.</em>
+</figcaption>
 </figure>
 
 With a list of field IDs you gathered from the UKB Showcase, your next step is to figure out their exact field names on the RAP (which aren't always identical to what the Showcase shows), and then extract the actual participant data for those fields. There are two different methods for this.
