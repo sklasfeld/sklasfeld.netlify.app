@@ -32,7 +32,7 @@ For example, searching "Left Ventricular Ejection Fraction" returns [multiple re
 ![UK Biobank Showcase search interface showing search results for left ventricular ejection fraction, with three data fields highlighted: 22420 (Left ventricular size and function category), 24103 (Cardiac and aortic function #1 category), and 31060 (Cardiac and aortic function #2 category)](/blog_images/biobank1/lvef_search.png)
 
 <figcaption class="text-center text-sm opacity-80 mt-2">
-   <strong>Image 2:</strong> UK Biobank Showcase search results showing three LVEF measurement fields in different categories
+   UK Biobank Showcase search results showing three LVEF measurement fields in different categories
 </figcaption>
 
 Notice the three highlighted fields measure the same thing but belong to different categories. Clicking into each field reveals why this matters:
