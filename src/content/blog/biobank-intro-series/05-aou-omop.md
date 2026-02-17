@@ -73,4 +73,4 @@ Use `CONCEPT_RELATIONSHIP` to explore how concepts relate - for example, which I
 
 ## What's Next
 
-Finding concept IDs is the first step, but there are multiple ways to actually pull data in the All of Us Researcher Workbench — and, as mentioned in the beginning of this post, not all of them require SQL. In [Part II](../06-aou-data), we'll walk through these different approaches and when each one makes sense.
+Finding concept IDs is the first step, but there are multiple ways to actually pull data in the All of Us Researcher Workbench — and, as mentioned in the beginning of this post, not all of them require SQL. In Part II, we'll walk through these different approaches and when each one makes sense.
