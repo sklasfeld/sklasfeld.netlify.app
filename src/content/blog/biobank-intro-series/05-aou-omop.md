@@ -1,7 +1,7 @@
 ---
 title: 'Biobank Intro Series: All of Us Observational Data (Part I)'
 excerpt: 'Finding concept IDs for the All of Us Researcher Workbench'
-publishDate: 'Dec 5 2025'
+publishDate: 'Mar 24 2026'
 tags:
   - biobank
   - all-of-us
@@ -10,6 +10,9 @@ tags:
   - ehr-data
   - observational-data
 draft: false
+series:
+  name: 'Biobank Intro Series'
+  order: 5
 seo:
   image:
     src: '/blog_images/biobank1/source_to_standard_omop.png'

@@ -1,13 +1,16 @@
 ---
 title: 'Biobank Intro Series: Getting Started'
 excerpt: 'How to do biobank analysis without losing your mind'
-publishDate: 'Dec 1 2025'
+publishDate: 'Feb 24 2026'
 tags:
   - biobank
   - research-strategy
   - project-management
   - consulting
-draft: true
+draft: false
+series:
+  name: 'Biobank Intro Series'
+  order: 1
 seo:
   image:
     src: '/blog_images/biobank1/biobank_iceberg.png'

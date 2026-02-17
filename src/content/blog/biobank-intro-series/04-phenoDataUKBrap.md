@@ -1,7 +1,7 @@
 ---
 title: 'Biobank Intro Series: UK Biobank Observational Data (Part II)'
 excerpt: 'Loading phenotype data in the UK Biobank RAP (Research Analysis Platform) environment'
-publishDate: 'Dec 4 2025'
+publishDate: 'Mar 17 2025'
 tags:
   - biobank
   - sql
@@ -9,6 +9,9 @@ tags:
   - ehr-data
   - phenotype-data
 draft: false
+series:
+  name: 'Biobank Intro Series'
+  order: 4
 seo:
   image:
     src: '/blog_images/biobank1/ukb_fieldid_scent.png'

@@ -1,7 +1,7 @@
 ---
 title: 'Biobank Intro Series: All of Us Observational Data (Part II)'
 excerpt: 'Loading observational data in the All of Us Researcher Workbench'
-publishDate: 'Dec 6 2025'
+publishDate: 'Apr 07 2026'
 tags:
   - biobank
   - all-of-us
@@ -10,6 +10,9 @@ tags:
   - ehr-data
   - observational-data
 draft: false
+series:
+  name: 'Biobank Intro Series'
+  order: 6
 seo:
   image:
     src: '/blog_images/biobank1/aou_observation_dataset_tools.png'

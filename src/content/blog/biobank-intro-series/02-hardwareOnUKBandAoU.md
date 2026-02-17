@@ -1,7 +1,7 @@
 ---
 title: 'Biobank Intro Series: Hardware Settings'
 excerpt: 'Hardware setup lessons for UK Biobank Research Analysis Platform and All of Us Workbench'
-publishDate: 'Dec 2 2025'
+publishDate: 'Mar 3 2026'
 tags:
   - biobank
   - uk-biobank
@@ -10,14 +10,22 @@ tags:
   - bioinformatics
   - tutorial
   - best-practices
-draft: true
+draft: false
+series:
+  name: 'Biobank Intro Series'
+  order: 2
 seo:
   image:
     src: '/blog_images/biobank1/stream_not_copy.png'
     alt: 'Comparison of downloading vs streaming biobank data: wrong way (slow download) versus right way (fast streaming).'
 ---
 
-![Comparison of downloading vs streaming biobank data: wrong way (slow download) versus right way (fast streaming).](/blog_images/biobank1/stream_not_copy.png)
+<figure class="my-8 !max-w-none">
+<img src="/blog_images/biobank1/stream_not_copy.png" alt="Comparison of downloading vs streaming biobank data: wrong way (slow download) versus right way (fast streaming)." class="!max-w-none mx-auto w-full">
+<figcaption class="text-center text-sm opacity-80 mt-2">
+   <em>Don't download massive biobank files — stream and filter directly on the platform.</em>
+</figcaption>
+</figure>
 
 After months of working across the UK Biobank RAP (Research Analysis Platform) and All of Us Researcher Workbench, I'm still no expert on these platforms' hardware, but I have learned some hard-won lessons about resource management. My mistakes came with relatively small price tags, yet when every cloud hour gets billed, I wish I could have skipped the futzing.
 

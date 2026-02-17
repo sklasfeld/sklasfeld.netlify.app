@@ -1,19 +1,27 @@
 ---
 title: 'Biobank Intro Series: UK Biobank Observational Data (Part I)'
 excerpt: 'Save a clock tick with the UK Biobank Showcase'
-publishDate: 'Dec 3 2025'
+publishDate: 'Mar 10 2026'
 tags:
   - biobank
   - ukb-showcase
   - phenotype-data
-draft: true
+draft: false
+series:
+  name: 'Biobank Intro Series'
+  order: 3
 seo:
   image:
-    src: 'public/blog_images/biobank1/stream_not_copy.png'
+    src: '/blog_images/biobank1/ukbShowcaseGraphic.png'
     alt: "Papers tell you WHAT was used. Showcase tells you what's AVAILABLE NOW."
 ---
 
-![Papers tell you WHAT was used. Showcase tells you what's AVAILABLE NOW.](/blog_images/biobank1/ukbShowcaseGraphic.png)
+<figure class="my-8 !max-w-none">
+<img src="/blog_images/biobank1/ukbShowcaseGraphic.png" alt="Papers tell you WHAT was used. Showcase tells you what's AVAILABLE NOW." class="!max-w-none mx-auto w-full">
+<figcaption class="text-center text-sm opacity-80 mt-2">
+   <em>Papers tell you WHAT was used. Showcase tells you what's AVAILABLE NOW.</em>
+</figcaption>
+</figure>
 
 When I first started working with UK Biobank, identifying relevant phenotypes from publications was straightforward. Finding the actual field IDs? That meant digging through methods sections and supplemental materials. [The UK Biobank Showcase](https://biobank.ndph.ox.ac.uk/showcase/) saved me hours of that detective work and revealed newer measurements that weren't available when those studies were published.
 
