@@ -5,7 +5,7 @@ import Button from '../../components/Button.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
 import PostPreview from '../../components/PostPreview.astro';
 import Subscribe from '../../components/Subscribe.astro';
-import { sortItemsByDateDesc } from '../../utils/data-utils';
+import { sortItemsByDateDesc, getPostsBySeries } from '../../utils/data-utils';
 import { slugify } from '../../utils/common-utils';
 
 export async function getStaticPaths() {
@@ -14,14 +14,24 @@ export async function getStaticPaths() {
     .filter((post) => post.data.publishDate <= new Date())
     .sort(sortItemsByDateDesc);
   const postCount = posts.length;
-  return posts.map((post, index) => ({
-    params: { id: post.id },
-    props: {
-      post,
-      prevPost: index + 1 !== postCount ? posts[index + 1] : null,
-      nextPost: index !== 0 ? posts[index - 1] : null,
-    },
-  }));
+  return posts.map((post, index) => {
+    let prevPost = index + 1 !== postCount ? posts[index + 1] : null;
+    let nextPost = index !== 0 ? posts[index - 1] : null;
+
+    // If this post is in a series, use series-aware prev/next
+    if (post.data.series) {
+      const seriesSlug = slugify(post.data.series.name);
+      const seriesPosts = getPostsBySeries(posts, seriesSlug);
+      const seriesIndex = seriesPosts.findIndex((p) => p.id === post.id);
+      prevPost = seriesIndex > 0 ? seriesPosts[seriesIndex - 1] : null;
+      nextPost = seriesIndex < seriesPosts.length - 1 ? seriesPosts[seriesIndex + 1] : null;
+    }
+
+    return {
+      params: { id: post.id },
+      props: { post, prevPost, nextPost },
+    };
+  });
 }
 
 type Props = {
@@ -32,7 +42,8 @@ type Props = {
 
 const { href } = Astro.url;
 const { post, prevPost, nextPost } = Astro.props;
-const { title, publishDate, updatedDate, excerpt, tags = [], seo } = post.data;
+const { title, publishDate, updatedDate, excerpt, tags = [], seo, series } = post.data;
+const seriesSlug = series ? slugify(series.name) : null;
 const { Content } = await render(post);
 ---
 
@@ -46,6 +57,16 @@ const { Content } = await render(post);
   <div class="lg:max-w-5xl max-w-full mx-auto py-8 sm:py-10">
     <article class="mb-16 sm:mb-24">
       <header class="mb-8 sm:mb-10">
+        {
+          series && seriesSlug && (
+            <a
+              href={`/blog/${seriesSlug}/`}
+              class="inline-block mb-4 text-sm font-semibold uppercase tracking-wider text-accent hover:underline"
+            >
+              &larr; {series.name} &middot; Part {series.order}
+            </a>
+          )
+        }
         <h1
           class="text-3xl sm:text-4xl lg:text-5xl leading-tight font-sans font-semibold mb-3"
         >
@@ -73,7 +94,7 @@ const { Content } = await render(post);
         </div>
       </header>
       <div
-        class="prose prose-lg sm:prose-xl max-w-none prose-headings:text-main prose-p:text-main prose-li:text-main prose-ol:text-main prose-ul:text-main prose-strong:text-main prose-a:text-accent prose-code:text-main prose-figcaption:text-main prose-figcaption:text-base prose-figcaption:sm:text-lg dark:prose-headings:text-white dark:prose-p:text-gray-200 dark:prose-li:text-gray-200 dark:prose-strong:text-white dark:prose-a:text-accent dark:prose-code:text-gray-200 dark:prose-figcaption:text-gray-200 prose-img:rounded-lg prose-img:shadow-md prose-img:mx-auto prose-img:my-8 prose-img:max-w-3xl prose-img:w-full"
+        class="prose prose-lg sm:prose-xl max-w-none prose-headings:text-main prose-p:text-main prose-li:text-main prose-ol:text-main prose-ul:text-main prose-strong:text-main prose-a:text-accent prose-code:text-main prose-figcaption:text-main prose-figcaption:text-base prose-figcaption:sm:text-lg dark:prose-headings:text-white dark:prose-p:text-gray-200 dark:prose-li:text-gray-200 dark:prose-strong:text-white dark:prose-a:text-accent dark:prose-code:text-gray-200 dark:prose-figcaption:text-gray-200 prose-img:rounded-lg prose-img:shadow-md prose-img:mx-auto prose-img:my-8 prose-img:max-w-3xl prose-img:w-full prose-td:text-main prose-th:text-main dark:prose-td:text-gray-200 dark:prose-th:text-white dark:prose-thead:border-gray-600 dark:prose-tr:border-gray-700"
       >
         <Content />
       </div>
@@ -107,7 +128,7 @@ const { Content } = await render(post);
       (prevPost || nextPost) && (
         <div class="my-16 sm:my-24">
           <h2 class="mb-12 font-serif text-xl italic sm:mb-16 sm:text-2xl">
-            Read Next
+            {series ? 'More in This Series' : 'Read Next'}
           </h2>
           {nextPost && (
             <PostPreview
