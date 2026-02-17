@@ -1,7 +1,7 @@
 ---
 title: 'Biobank Intro Series: UK Biobank Observational Data (Part II)'
 excerpt: 'Loading phenotype data in the UK Biobank RAP (Research Analysis Platform) environment'
-publishDate: 'Mar 17 2025'
+publishDate: 'Mar 17 2026'
 tags:
   - biobank
   - sql
