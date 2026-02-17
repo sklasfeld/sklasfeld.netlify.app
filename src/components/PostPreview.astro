@@ -6,42 +6,53 @@ import FormattedDate from './FormattedDate.astro';
 type Props = { post: CollectionEntry<'blog'>; class?: string; headingLevel?: 'h2' | 'h3' };
 
 const { post, class: className, headingLevel = 'h2' } = Astro.props;
-const { title, publishDate, updatedDate, excerpt } = post.data;
+const { title, publishDate, updatedDate, excerpt, seo } = post.data;
+const heroImage = seo?.image;
 const TitleTag = headingLevel;
 ---
 
 <a
   class:list={[
-    'flex justify-between items-start gap-6 group',
-    'p-6 rounded-lg border-2 border-gray-200 dark:border-gray-700',
+    'flex flex-row group',
+    'rounded-lg border-2 border-gray-200 dark:border-gray-700',
     'bg-white dark:bg-gray-800/50',
     'shadow-sm hover:shadow-md',
     'transition-all duration-200',
     'hover:-translate-y-1 hover:border-accent',
+    'overflow-hidden',
     className
   ]}
   href={`/blog/${post.id}/`}
 >
-  <div class="grow">
-    <TitleTag class="text-2xl leading-tight font-sans font-semibold text-accent group-hover:underline group-hover:underline-offset-4 sm:text-3xl">
-      {title}
-    </TitleTag>
-    <div class="mt-3 text-base opacity-60">
-      <FormattedDate date={publishDate} />
-      {
-        updatedDate && (
-          <>
-            {' '}
-            <span>
-              (Updated on <FormattedDate date={updatedDate} />)
-            </span>
-          </>
-        )
-      }
+  {heroImage && (
+    <img
+      src={heroImage.src}
+      alt={heroImage.alt || ''}
+      class="w-48 h-48 sm:w-56 sm:h-56 object-cover shrink-0"
+    />
+  )}
+  <div class="flex justify-between items-start gap-6 p-6 grow min-w-0">
+    <div class="grow min-w-0">
+      <TitleTag class="text-2xl leading-tight font-sans font-semibold text-accent group-hover:underline group-hover:underline-offset-4 sm:text-3xl">
+        {title}
+      </TitleTag>
+      <div class="mt-3 text-base opacity-60">
+        <FormattedDate date={publishDate} />
+        {
+          updatedDate && (
+            <>
+              {' '}
+              <span>
+                (Updated on <FormattedDate date={updatedDate} />)
+              </span>
+            </>
+          )
+        }
+      </div>
+      {excerpt && <p class="mt-3 text-base opacity-80 line-clamp-2">{excerpt}</p>}
     </div>
-    {excerpt && <p class="mt-3 text-base opacity-80 line-clamp-2">{excerpt}</p>}
-  </div>
-  <div class="font-sans text-base opacity-60 transition-all group-hover:opacity-100 group-hover:translate-x-1 inline-flex gap-1 items-center shrink-0">
-    Read <ArrowRight class="fill-current w-4 h-4" aria-hidden="true" />
+    <div class="font-sans text-base opacity-60 transition-all group-hover:opacity-100 group-hover:translate-x-1 inline-flex gap-1 items-center shrink-0">
+      Read <ArrowRight class="fill-current w-4 h-4" aria-hidden="true" />
+    </div>
   </div>
 </a>
