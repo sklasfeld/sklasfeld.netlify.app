@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+import SJK from '../icons/SJK.astro';
+---
+
+<BaseLayout
+  title="404 - Page Not Found"
+  description="Page not found"
+  showHeader={false}
+>
+  <div class="flex flex-col items-center justify-center py-24 text-center">
+    <div
+      class="mb-6 flex items-center justify-center w-64 h-64 border-4 rounded-full border-current opacity-90"
+    >
+      <SJK size={64} />
+    </div>
+    <h1 class="text-8xl font-bold mb-4">404</h1>
+    <p class="text-xl sm:text-2xl mb-8 opacity-80">This page doesn't exist.</p>
+    <Button href="/">Go Home</Button>
+  </div>
+</BaseLayout>
