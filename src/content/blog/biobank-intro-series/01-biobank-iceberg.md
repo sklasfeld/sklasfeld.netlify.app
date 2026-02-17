@@ -46,8 +46,8 @@ Only after you've defined your question and audience can you identify which data
 
 1. **The paranoid perfectionist**: Document every limitation, explore every confounding variable, and fall into a six-month rabbit hole about batch effects
 
-2. **The YOLO analyst:** Ignore all complexity, run the analysis, get wildly misleading results, have to redo everything anyway.
+2. **The YOLO analyst:** Ignore all complexity, run the analysis, get wildly misleading results, and have to redo everything anyway.
 
-Neither instinct serves the project. The discipline I've had to learn is this: acknowledge the complexity, but focus only on what affects your specific research question.
+Neither instinct serves the project. The discipline I've had to learn is this: acknowledge the complexity but focus only on what affects your specific research question.
 
 The good news is that this complexity isn't insurmountable. It just requires understanding the data first. I've already fallen into some of these rabbit holes, so hopefully you won't have to. In a series of posts, I hope to demystify UK Biobank and All of Us so you can navigate them confidently. But let me be clear, I cannot cover every nuance of these massive resources. Your specific research question may surface complexities I haven't encountered. What I can give you are foundational issues that matter across most use cases, the patterns to watch for, and questions to ask.
