@@ -1,25 +1,48 @@
 ---
-import type { GetStaticPathsOptions, Page } from 'astro';
+import type { GetStaticPathsOptions } from 'astro';
 import { type CollectionEntry, getCollection } from 'astro:content';
 import Pagination from '../../components/Pagination.astro';
 import PostPreview from '../../components/PostPreview.astro';
+import SeriesPreview from '../../components/SeriesPreview.astro';
 import Subscribe from '../../components/Subscribe.astro';
 import siteConfig from '../../data/site-config';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { sortItemsByDateDesc } from '../../utils/data-utils';
+import { getAllSeries } from '../../utils/data-utils';
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-  const posts = (await getCollection('blog'))
+  const allPosts = (await getCollection('blog'))
     .filter((post) => !post.data.draft)
-    .filter((post) => post.data.publishDate <= new Date())
-    .sort(sortItemsByDateDesc);
-  return paginate(posts, { pageSize: siteConfig.postsPerPage || 4 });
+    .filter((post) => post.data.publishDate <= new Date());
+
+  // Standalone posts (not in a series)
+  const standalonePosts = allPosts.filter((post) => !post.data.series);
+
+  // Get all series
+  const seriesList = getAllSeries(allPosts);
+
+  // Build a mixed list: standalone posts + series entries, sorted by date
+  type BlogItem =
+    | { type: 'post'; post: CollectionEntry<'blog'>; date: Date }
+    | { type: 'series'; series: typeof seriesList[number]; date: Date };
+
+  const items: BlogItem[] = [
+    ...standalonePosts.map((post) => ({
+      type: 'post' as const,
+      post,
+      date: new Date(post.data.publishDate),
+    })),
+    ...seriesList.map((series) => ({
+      type: 'series' as const,
+      series,
+      date: series.latestDate,
+    })),
+  ].sort((a, b) => b.date.getTime() - a.date.getTime());
+
+  return paginate(items, { pageSize: siteConfig.postsPerPage || 4 });
 }
 
-type Props = { page: Page<CollectionEntry<'blog'>> };
-
 const { page } = Astro.props;
-const blog = page.data;
+const items = page.data;
 ---
 
 <BaseLayout
@@ -33,7 +56,13 @@ const blog = page.data;
     >
       Blog Archive
     </h1>
-    {blog.map((post) => <PostPreview post={post} class="mb-10 sm:mb-12" />)}
+    {items.map((item) =>
+      item.type === 'series' ? (
+        <SeriesPreview series={item.series} class="mb-10 sm:mb-12" />
+      ) : (
+        <PostPreview post={item.post} class="mb-10 sm:mb-12" />
+      )
+    )}
     <Pagination page={page} class="my-16 sm:my-24" />
     <Subscribe class="my-16 sm:my-24" />
   </div>
