@@ -21,7 +21,7 @@ seo:
 <img src="/blog_images/biobank1/biobank_iceberg.png" alt="Iceberg diagram illustrating hidden complexities in biobank data: visible raw data above the waterline, and three categories of hidden challenges below: batch effects, population stratification, and inaccurate phenotype data." class="block dark:hidden">
 <img src="/blog_images/biobank1/biobank_iceberg_dark.png" alt="Iceberg diagram illustrating hidden complexities in biobank data: visible raw data above the waterline, and three categories of hidden challenges below: batch effects, population stratification, and inaccurate phenotype data." class="hidden dark:block">
 <figcaption class="text-center text-sm opacity-80 mt-2">
-    <strong>Image 1:</strong> <em>The Biobank Iceberg. Everyone knows there's more beneath the surface. You can't ignore the complexities, but you don't need to solve them all.</em>
+    <em>The Biobank Iceberg. Everyone knows there's more beneath the surface. You can't ignore the complexities, but you don't need to solve them all.</em>
   </figcaption>
 </figure>
 
