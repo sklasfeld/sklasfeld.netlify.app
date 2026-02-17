@@ -1,7 +1,7 @@
 ---
 title: 'Biobank Intro Series: All of Us Genetic Data'
 excerpt: 'Navigating All of Us genotype data for variant extraction and analysis'
-publishDate: 'Apr 21 2026'
+publishDate: 'Apr 14 2026'
 tags:
   - biobank
   - all-of-us

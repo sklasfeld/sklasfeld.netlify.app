@@ -1,7 +1,7 @@
 ---
 title: 'Biobank Intro Series: UK Biobank Genetic Data'
 excerpt: 'Traversing genetic data on the UK Biobank RAP (Research Analysis Platform) environment'
-publishDate: 'Apr 14 2026'
+publishDate: 'Apr 07 2026'
 tags:
   - biobank
   - uk-biobank
