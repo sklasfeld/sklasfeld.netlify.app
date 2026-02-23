@@ -1,7 +1,7 @@
 ---
 title: 'Biobank Intro Series: Getting Started'
 excerpt: 'How to do biobank analysis without losing your mind'
-publishDate: 'Feb 24 2026'
+publishDate: 'Feb 23 2025'
 tags:
   - biobank
   - research-strategy
@@ -36,7 +36,8 @@ That's it. Two questions. Answer these before you touch a single line of code.
 
 Consider my own work as an example:
 
-**During my postdoc:** I was investigating the genetic architecture of cardiomyopathy for publication. My goal was to understand how genetic variants contribute to disease risk. A large challenge, working within the context of rare disease, is overcoming limited statistical power. Therefore, to strengthen the association signal, I had to filter to individuals of white ethnicity. The healthy volunteer recruitment biases and population structure weren't just footnotes in the discussion section—they fundamentally shaped what I could and couldn't claim about cardiomyopathy genetics. I needed to understand the people making up the dataset as deeply as I understood the variants themselves.
+**During my postdoc:** I was investigating the genetic architecture of cardiomyopathy for publication. My goal was to understand how genetic variants contribute to disease risk. A large challenge, working within the context of rare disease, is overcoming limited statistical power. Therefore, to strengthen the association signal, I restricted analyses to individuals of
+White British ancestry (UK Biobank data field 22006, coding 1). The healthy volunteer recruitment biases and population structure weren't just footnotes in the discussion section—they fundamentally shaped what I could and couldn't claim about cardiomyopathy genetics. I needed to understand the people making up the dataset as deeply as I understood the variants themselves.
 
 **As a contractor:** I provide bioinformatics support for hypothesis-driven study design that could lead to drug development. The client wants to find out if a genetic signal associates with a phenotype strongly enough to justify further investigation. In other words, I'm running pilot analyses. I need clean cohort definitions, appropriate statistical methods, and enough power to detect effects. The recruitment biases? Important to document, but they don't invalidate finding a biological association in this specific dataset. My job is to answer the client's question efficiently and move the project forward.
 

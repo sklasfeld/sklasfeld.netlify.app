@@ -1,7 +1,7 @@
 ---
 title: 'Biobank Intro Series: All of Us Observational Data (Part I)'
 excerpt: 'Finding concept IDs for the All of Us Researcher Workbench'
-publishDate: 'Mar 24 2026'
+publishDate: 'Mar 23 2026'
 tags:
   - biobank
   - all-of-us

@@ -1,7 +1,7 @@
 ---
 title: 'Biobank Intro Series: Hardware Settings'
 excerpt: 'Hardware setup lessons for UK Biobank Research Analysis Platform and All of Us Workbench'
-publishDate: 'Mar 3 2026'
+publishDate: 'Mar 2 2026'
 tags:
   - biobank
   - uk-biobank

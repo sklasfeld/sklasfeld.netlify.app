@@ -1,7 +1,7 @@
 ---
 title: 'Biobank Intro Series: UK Biobank Observational Data (Part I)'
 excerpt: 'Save a clock tick with the UK Biobank Showcase'
-publishDate: 'Mar 10 2026'
+publishDate: 'Mar 09 2026'
 tags:
   - biobank
   - ukb-showcase
