@@ -1,0 +1,45 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostPreview from '../../components/PostPreview.astro';
+import { getAllSeries, getPostsBySeries } from '../../utils/data-utils';
+
+export async function getStaticPaths() {
+  const posts = (await getCollection('blog'))
+    .filter((post) => !post.data.draft)
+    .filter((post) => post.data.publishDate <= new Date());
+
+  const seriesList = getAllSeries(posts);
+
+  return seriesList.map((series) => ({
+    params: { series: series.slug },
+    props: { series },
+  }));
+}
+
+const { series } = Astro.props;
+---
+
+<BaseLayout
+  title={series.name}
+  description={`A ${series.postCount}-part series`}
+  image={series.image}
+  showHeader={false}
+>
+  <div class="lg:max-w-5xl max-w-full mx-auto py-8 sm:py-10">
+    <div class="mb-8 sm:mb-10">
+      <a href="/blog/" class="text-sm text-accent hover:underline">&larr; Back to Blog</a>
+    </div>
+    <h1
+      class="text-4xl sm:text-5xl lg:text-6xl font-sans font-semibold mb-4"
+    >
+      {series.name}
+    </h1>
+    <p class="text-lg opacity-60 mb-10 sm:mb-12">
+      {series.postCount} parts
+    </p>
+    {series.posts.map((post) => (
+      <PostPreview post={post} class="mb-10 sm:mb-12" headingLevel="h3" />
+    ))}
+  </div>
+</BaseLayout>

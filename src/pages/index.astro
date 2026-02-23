@@ -10,7 +10,10 @@ import { sortItemsByDateDesc } from '../utils/data-utils';
 const projects = (await getCollection('projects')).sort(sortItemsByDateDesc);
 const featuredProjects = projects.filter(({ data }) => data.isFeatured);
 
-const posts = (await getCollection('blog')).sort(sortItemsByDateDesc);
+const posts = (await getCollection('blog'))
+  .filter(({ data }) => !data.draft)
+  .filter(({ data }) => data.publishDate <= new Date())
+  .sort(sortItemsByDateDesc);
 const featuredPosts = posts.filter(({ data }) => data.isFeatured);
 ---
 

@@ -1,0 +1,1435 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="246.28256mm"
+   height="292.86566mm"
+   viewBox="0 0 246.28256 292.86566"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="omop_table_relationships.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   sodipodi:docname="omop_table_relationships.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:export-bgcolor="#ffffffff"
+     inkscape:zoom="0.82"
+     inkscape:cx="457.31707"
+     inkscape:cy="676.21951"
+     inkscape:window-width="1520"
+     inkscape:window-height="924"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <rect
+       x="402.43903"
+       y="145.12195"
+       width="289.02438"
+       height="75.609756"
+       id="rect23" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern11"
+       preserveAspectRatio="xMidYMid"
+       id="pattern20"
+       patternTransform="matrix(-2,0,0,-2,166.57497,200.58994)" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips2_1"
+       preserveAspectRatio="xMidYMid"
+       id="pattern18"
+       patternTransform="matrix(-0.51763808,1.9318516,-1.9318516,-0.51763808,166.57497,200.58994)"
+       x="0"
+       y="0" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="1.5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips2_1"
+       style="fill:#b7b7b7"
+       inkscape:stockid="Stripes 12 (2:1)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 12 (2:1)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect197" />
+
+    </pattern>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_4"
+       preserveAspectRatio="xMidYMid"
+       id="pattern11"
+       patternTransform="scale(2)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips1_4"
+       style="fill:#000000"
+       inkscape:stockid="Stripes 05 (1:4)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 05 (1:4)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect158" />
+
+    </pattern>
+    <rect
+       x="94.670334"
+       y="39.070297"
+       width="610.09772"
+       height="207.37311"
+       id="rect9" />
+    <rect
+       x="159.77245"
+       y="483.41406"
+       width="157.72408"
+       height="34.822197"
+       id="rect8" />
+    <rect
+       x="340.37695"
+       y="585.15863"
+       width="140.49602"
+       height="76.765862"
+       id="rect1" />
+    <rect
+       x="340.37695"
+       y="585.15863"
+       width="452.87164"
+       height="76.765862"
+       id="rect1-3" />
+    <rect
+       x="340.37695"
+       y="585.15863"
+       width="228.5757"
+       height="43.992027"
+       id="rect1-3-7" />
+    <rect
+       x="340.37695"
+       y="585.15863"
+       width="239.84171"
+       height="33.750206"
+       id="rect1-3-7-9" />
+    <rect
+       x="340.37695"
+       y="585.15863"
+       width="178.39078"
+       height="74.717499"
+       id="rect1-3-7-9-6" />
+    <rect
+       x="340.37695"
+       y="585.15863"
+       width="140.49602"
+       height="76.765862"
+       id="rect1-3-7-9-6-3" />
+    <rect
+       x="340.37695"
+       y="585.15863"
+       width="178.39078"
+       height="74.717499"
+       id="rect1-3-7-9-6-4" />
+    <marker
+       style="overflow:visible"
+       id="Triangle-4-5"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1.8"
+       markerHeight="1.8"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="userSpaceOnUse">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-6" />
+    </marker>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_4-3"
+       preserveAspectRatio="xMidYMid"
+       id="pattern11-2"
+       patternTransform="matrix(-2,0,0,-2,166.57497,200.58994)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips1_4-3"
+       style="fill:#000000"
+       inkscape:stockid="Stripes 05 (1:4)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 05 (1:4)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect158-7" />
+
+    </pattern>
+    <marker
+       style="overflow:visible"
+       id="Triangle-4-5-1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1.8"
+       markerHeight="1.8"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="userSpaceOnUse">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-6-8" />
+    </marker>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_4-0"
+       preserveAspectRatio="xMidYMid"
+       id="pattern11-4"
+       patternTransform="matrix(2,0,0,2,36.703712,18.366207)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips1_4-0"
+       style="fill:#000000"
+       inkscape:stockid="Stripes 05 (1:4)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 05 (1:4)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect158-5" />
+
+    </pattern>
+    <marker
+       style="overflow:visible"
+       id="Triangle-4-5-7"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="2.8"
+       markerHeight="2.8"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="userSpaceOnUse">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-6-0" />
+    </marker>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_4-0-3"
+       preserveAspectRatio="xMidYMid"
+       id="pattern11-4-5"
+       patternTransform="matrix(2,0,0,2,72.680095,38.770178)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips1_4-0-3"
+       style="fill:#000000"
+       inkscape:stockid="Stripes 05 (1:4)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 05 (1:4)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect158-5-33" />
+
+    </pattern>
+    <marker
+       style="overflow:visible"
+       id="Triangle-4-5-7-8"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="2.8"
+       markerHeight="2.8"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="userSpaceOnUse">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-6-0-5" />
+    </marker>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_4-0-3-2"
+       preserveAspectRatio="xMidYMid"
+       id="pattern11-4-5-4"
+       patternTransform="matrix(2,0,0,2,98.571378,11.128987)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips1_4-0-3-2"
+       style="fill:#000000"
+       inkscape:stockid="Stripes 05 (1:4)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 05 (1:4)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect158-5-33-3" />
+
+    </pattern>
+    <marker
+       style="overflow:visible"
+       id="Triangle-4-5-7-8-3"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="2.8"
+       markerHeight="2.8"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="userSpaceOnUse">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-6-0-5-7" />
+    </marker>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_4-6"
+       preserveAspectRatio="xMidYMid"
+       id="pattern11-3"
+       patternTransform="scale(2)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips1_4-6"
+       style="fill:#000000"
+       inkscape:stockid="Stripes 05 (1:4)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 05 (1:4)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect158-0" />
+
+    </pattern>
+    <marker
+       style="overflow:visible"
+       id="Triangle-4-5-4"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1.8"
+       markerHeight="1.8"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="userSpaceOnUse">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-6-09" />
+    </marker>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern11-3"
+       preserveAspectRatio="xMidYMid"
+       id="pattern20-2"
+       patternTransform="matrix(2,0,0,2,212.12452,-57.732403)" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_4-6"
+       preserveAspectRatio="xMidYMid"
+       id="pattern1"
+       patternTransform="scale(2)" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_4-3-2"
+       preserveAspectRatio="xMidYMid"
+       id="pattern11-2-9"
+       patternTransform="matrix(1.5118672,0,0,1.8951677,222.77418,-45.464248)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips1_4-3-2"
+       style="fill:#000000"
+       inkscape:stockid="Stripes 05 (1:4)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 05 (1:4)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect158-7-9" />
+
+    </pattern>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips2_1-0"
+       preserveAspectRatio="xMidYMid"
+       id="pattern18-1"
+       patternTransform="matrix(-0.28236145,-1.850528,1.5394167,-0.05846557,150.42373,-22.245085)"
+       x="0"
+       y="0" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="1.5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips2_1-0"
+       style="fill:#b7b7b7"
+       inkscape:stockid="Stripes 12 (2:1)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 12 (2:1)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect197-9" />
+
+    </pattern>
+    <marker
+       style="overflow:visible"
+       id="Triangle-4-5-1-3"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1.8"
+       markerHeight="1.8"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="userSpaceOnUse">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-6-8-0" />
+    </marker>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern11-8"
+       preserveAspectRatio="xMidYMid"
+       id="pattern20-23"
+       patternTransform="matrix(-2,0,0,-2,166.57497,200.58994)" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_4-7"
+       preserveAspectRatio="xMidYMid"
+       id="pattern11-8"
+       patternTransform="scale(2)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips1_4-7"
+       style="fill:#000000"
+       inkscape:stockid="Stripes 05 (1:4)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 05 (1:4)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect158-8" />
+
+    </pattern>
+    <marker
+       style="overflow:visible"
+       id="Triangle-4-5-0"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1.8"
+       markerHeight="1.8"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="userSpaceOnUse">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-6-4" />
+    </marker>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_4-3-7"
+       preserveAspectRatio="xMidYMid"
+       id="pattern11-2-5"
+       patternTransform="matrix(-2,0,0,-2,166.57497,200.58994)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips1_4-3-7"
+       style="fill:#000000"
+       inkscape:stockid="Stripes 05 (1:4)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 05 (1:4)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect158-7-1" />
+
+    </pattern>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips2_1-6"
+       preserveAspectRatio="xMidYMid"
+       id="pattern18-0"
+       patternTransform="matrix(-0.51763808,1.9318516,-1.9318516,-0.51763808,166.57497,200.58994)"
+       x="0"
+       y="0" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="1.5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips2_1-6"
+       style="fill:#b7b7b7"
+       inkscape:stockid="Stripes 12 (2:1)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 12 (2:1)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect197-0" />
+
+    </pattern>
+    <marker
+       style="overflow:visible"
+       id="Triangle-4-5-1-33"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1.8"
+       markerHeight="1.8"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="userSpaceOnUse">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-6-8-5" />
+    </marker>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern11-3-4"
+       preserveAspectRatio="xMidYMid"
+       id="pattern20-2-6"
+       patternTransform="matrix(2,0,0,2,212.12452,-57.732403)" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_4-6-0"
+       preserveAspectRatio="xMidYMid"
+       id="pattern11-3-4"
+       patternTransform="scale(2)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips1_4-6-0"
+       style="fill:#000000"
+       inkscape:stockid="Stripes 05 (1:4)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 05 (1:4)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect158-0-8" />
+
+    </pattern>
+    <marker
+       style="overflow:visible"
+       id="Triangle-4-5-4-2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1.8"
+       markerHeight="1.8"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="userSpaceOnUse">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-6-09-0" />
+    </marker>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_4-3-2-0"
+       preserveAspectRatio="xMidYMid"
+       id="pattern11-2-9-6"
+       patternTransform="matrix(4.9372293,0,0,1.1495954,171.39375,13.435966)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips1_4-3-2-0"
+       style="fill:#000000"
+       inkscape:stockid="Stripes 05 (1:4)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 05 (1:4)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect158-7-9-7" />
+
+    </pattern>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips2_1-0-9"
+       preserveAspectRatio="xMidYMid"
+       id="pattern18-1-2"
+       patternTransform="matrix(-0.28236145,-1.850528,1.5394167,-0.05846557,150.42373,-22.245085)"
+       x="0"
+       y="0" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="1.5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips2_1-0-9"
+       style="fill:#b7b7b7"
+       inkscape:stockid="Stripes 12 (2:1)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 12 (2:1)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect197-9-8" />
+
+    </pattern>
+    <marker
+       style="overflow:visible"
+       id="Triangle-4-5-1-3-1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1.8"
+       markerHeight="1.8"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="userSpaceOnUse">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-6-8-0-1" />
+    </marker>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern11-3-4-1"
+       preserveAspectRatio="xMidYMid"
+       id="pattern20-2-6-0"
+       patternTransform="matrix(2,0,0,2,212.12452,-57.732403)" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_4-6-0-3"
+       preserveAspectRatio="xMidYMid"
+       id="pattern11-3-4-1"
+       patternTransform="scale(2)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips1_4-6-0-3"
+       style="fill:#000000"
+       inkscape:stockid="Stripes 05 (1:4)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 05 (1:4)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect158-0-8-4" />
+
+    </pattern>
+    <marker
+       style="overflow:visible"
+       id="Triangle-4-5-4-2-3"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1.8"
+       markerHeight="1.8"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="userSpaceOnUse">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-6-09-0-7" />
+    </marker>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_4-3-2-0-5"
+       preserveAspectRatio="xMidYMid"
+       id="pattern11-2-9-6-7"
+       patternTransform="matrix(4.9372293,0,0,1.1495954,171.39375,13.435966)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips1_4-3-2-0-5"
+       style="fill:#000000"
+       inkscape:stockid="Stripes 05 (1:4)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 05 (1:4)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect158-7-9-7-1" />
+
+    </pattern>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips2_1-0-9-6"
+       preserveAspectRatio="xMidYMid"
+       id="pattern18-1-2-2"
+       patternTransform="matrix(-0.28236145,-1.850528,1.5394167,-0.05846557,150.42373,-22.245085)"
+       x="0"
+       y="0" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="1.5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips2_1-0-9-6"
+       style="fill:#b7b7b7"
+       inkscape:stockid="Stripes 12 (2:1)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 12 (2:1)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect197-9-8-6" />
+
+    </pattern>
+    <marker
+       style="overflow:visible"
+       id="Triangle-4-5-1-3-1-5"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1.8"
+       markerHeight="1.8"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="userSpaceOnUse">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-6-8-0-1-4" />
+    </marker>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_4-0-3-2-0"
+       preserveAspectRatio="xMidYMid"
+       id="pattern11-4-5-4-5"
+       patternTransform="matrix(-2,0,0,2,78.978285,11.128985)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips1_4-0-3-2-0"
+       style="fill:#000000"
+       inkscape:stockid="Stripes 05 (1:4)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 05 (1:4)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect158-5-33-3-6" />
+
+    </pattern>
+    <marker
+       style="overflow:visible"
+       id="Triangle-4-5-7-8-3-5"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="2.8"
+       markerHeight="2.8"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="userSpaceOnUse">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-6-0-5-7-3" />
+    </marker>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern11-5-2"
+       preserveAspectRatio="xMidYMid"
+       id="pattern20-4-5"
+       patternTransform="matrix(-2,0,0,-2,166.57497,200.58994)" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_4-79-0"
+       preserveAspectRatio="xMidYMid"
+       id="pattern11-5-2"
+       patternTransform="scale(2)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips1_4-79-0"
+       style="fill:#000000"
+       inkscape:stockid="Stripes 05 (1:4)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 05 (1:4)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect158-84-7" />
+
+    </pattern>
+    <marker
+       style="overflow:visible"
+       id="Triangle-4-5-5-7"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1.8"
+       markerHeight="1.8"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="userSpaceOnUse">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-6-88-9" />
+    </marker>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_4-3-70-5"
+       preserveAspectRatio="xMidYMid"
+       id="pattern11-2-94-7"
+       patternTransform="matrix(-2,0,0,-2,166.57497,200.58994)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips1_4-3-70-5"
+       style="fill:#000000"
+       inkscape:stockid="Stripes 05 (1:4)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 05 (1:4)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect158-7-4-3" />
+
+    </pattern>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips2_1-5-9"
+       preserveAspectRatio="xMidYMid"
+       id="pattern18-06-9"
+       patternTransform="matrix(-0.51763808,1.9318516,-1.9318516,-0.51763808,166.57497,200.58994)"
+       x="0"
+       y="0" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="1.5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips2_1-5-9"
+       style="fill:#b7b7b7"
+       inkscape:stockid="Stripes 12 (2:1)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 12 (2:1)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect197-3-4" />
+
+    </pattern>
+    <marker
+       style="overflow:visible"
+       id="Triangle-4-5-1-8-9"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1.8"
+       markerHeight="1.8"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="userSpaceOnUse">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-6-8-51-1" />
+    </marker>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_4-0-3-1"
+       preserveAspectRatio="xMidYMid"
+       id="pattern11-4-5-6"
+       patternTransform="matrix(0.70165814,-2.4522668,1.7366647,0.99078016,-74.269747,66.752568)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips1_4-0-3-1"
+       style="fill:#000000"
+       inkscape:stockid="Stripes 05 (1:4)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 05 (1:4)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect158-5-33-5" />
+
+    </pattern>
+    <marker
+       style="overflow:visible"
+       id="Triangle-4-5-7-8-9"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="2.8"
+       markerHeight="2.8"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="userSpaceOnUse">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-6-0-5-1" />
+    </marker>
+    <rect
+       x="402.43903"
+       y="145.12195"
+       width="289.02438"
+       height="75.609756"
+       id="rect23-6" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(34.366454,-6.3699878)">
+    <g
+       id="g8"
+       transform="translate(-121.33983,80.051035)">
+      <ellipse
+         style="fill:#d4aa00;fill-rule:evenodd;stroke:#ffd42a;stroke-width:1.066;paint-order:markers stroke fill"
+         id="path1-0"
+         cx="112.99089"
+         cy="76.679985"
+         rx="25.484514"
+         ry="24.718065" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.21271125,0,0,0.21271125,-7.558225,-54.035632)"
+         id="text1-5"
+         style="font-size:32px;line-height:1;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1-3);display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.76126;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"><tspan
+           x="477.03906"
+           y="609.98234"
+           id="tspan3">CONDITION
+</tspan><tspan
+           x="452.14062"
+           y="641.98234"
+           id="tspan4">OCCURRENCE</tspan></text>
+    </g>
+    <g
+       id="g4"
+       transform="translate(-153.41569,88.520255)">
+      <ellipse
+         style="fill:#d4aa00;fill-rule:evenodd;stroke:#ffd42a;stroke-width:1.066;paint-order:markers stroke fill"
+         id="path1-0-7"
+         cx="201.83418"
+         cy="115.95329"
+         rx="25.484514"
+         ry="24.718065" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.22393682,0,0,0.22393682,100.74549,-18.272948)"
+         id="text1-5-9"
+         style="font-size:26.6667px;line-height:1;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1-3-7);display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.76126;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"><tspan
+           x="350.95397"
+           y="605.84501"
+           id="tspan5">MEASUREMENT</tspan></text>
+    </g>
+    <g
+       id="g23"
+       transform="translate(11.293191,33.234248)">
+      <g
+         id="g7"
+         transform="translate(150.4578,7.9232121)">
+        <ellipse
+           style="fill:#d4aa00;fill-rule:evenodd;stroke:#ffd42a;stroke-width:1.066;paint-order:markers stroke fill"
+           id="path1-0-7-7"
+           cx="24.147604"
+           cy="115.95329"
+           rx="25.484514"
+           ry="24.718065" />
+        <text
+           xml:space="preserve"
+           transform="matrix(0.22201697,0,0,0.22201697,-77.926649,-16.928616)"
+           id="text1-5-9-0"
+           style="font-size:32px;line-height:1;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1-3-7-9);display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.76126;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"><tspan
+             x="347.38379"
+             y="609.98234"
+             id="tspan6">OBSERVATION</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g6"
+       transform="translate(60.04898,-24.728096)">
+      <ellipse
+         style="fill:#d4aa00;fill-rule:evenodd;stroke:#ffd42a;stroke-width:1.066;paint-order:markers stroke fill"
+         id="path1-0-7-7-7"
+         cx="64.504532"
+         cy="229.43748"
+         rx="25.484514"
+         ry="24.718065" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-49.260616,66.843297)"
+         id="text1-5-9-0-6"
+         style="font-size:32px;line-height:1;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1-3-7-9-6);display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.76126;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"><tspan
+           x="382.46289"
+           y="609.98234"
+           id="tspan7">DRUG </tspan><tspan
+           x="340.6582"
+           y="641.98234"
+           id="tspan8">EXPOSURE</tspan></text>
+    </g>
+    <g
+       id="g19"
+       transform="translate(39.009759,197.44514)">
+      <ellipse
+         style="fill:#800080;fill-rule:evenodd;stroke:#800080;stroke-width:1.066;paint-order:markers stroke fill"
+         id="path1-0-7-7-7-9"
+         cx="45.424999"
+         cy="76.539436"
+         rx="25.484514"
+         ry="24.718065" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-68.358753,-81.819353)"
+         id="text1-5-9-0-6-3"
+         style="font-size:32px;line-height:1;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1-3-7-9-6-4);display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.76126;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"><tspan
+           x="351.3457"
+           y="609.98234"
+           id="tspan10">CONCEPT</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-18.3505,-4.5172764)"
+       id="text8"
+       style="font-size:64px;line-height:1;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect9);display:inline;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#999999;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"><tspan
+         x="195.20312"
+         y="88.718596"
+         id="tspan12"><tspan
+           style="fill:#000000;stroke:#000000"
+           id="tspan11">OMOP TABLE </tspan></tspan><tspan
+         x="146.03125"
+         y="152.7186"
+         id="tspan14"><tspan
+           style="fill:#000000;stroke:#000000"
+           id="tspan13">RELATIONSHIPS</tspan></tspan></text>
+    <path
+       style="fill:url(#pattern11-4);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:7;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-4-5-7);paint-order:markers stroke fill"
+       d="M 71.434041,133.95454 60.774098,166.42649"
+       id="path16-5"
+       sodipodi:nodetypes="cc"
+       inkscape:transform-center-x="-67.576729"
+       inkscape:transform-center-y="-3.4586166" />
+    <path
+       style="fill:url(#pattern11-4-5);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:7;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-4-5-7-8);paint-order:markers stroke fill"
+       d="m 106.21766,134.0814 12.79791,34.4599"
+       id="path16-5-9"
+       sodipodi:nodetypes="cc"
+       inkscape:transform-center-x="-67.576729"
+       inkscape:transform-center-y="-3.4586166" />
+    <path
+       style="fill:url(#pattern11-4-5-6);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:7.79012;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-4-5-7-8-9);paint-order:markers stroke fill"
+       d="m 38.086773,74.127378 16.583782,0.09905"
+       id="path16-5-9-8"
+       sodipodi:nodetypes="cc"
+       inkscape:transform-center-x="-20.704656"
+       inkscape:transform-center-y="-84.571452" />
+    <path
+       style="fill:url(#pattern11-4-5-4);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:7;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-4-5-7-8-3);paint-order:markers stroke fill"
+       d="m 117.79567,120.75346 32.94202,23.05061"
+       id="path16-5-9-0"
+       sodipodi:nodetypes="cc"
+       inkscape:transform-center-x="-67.576729"
+       inkscape:transform-center-y="-3.4586166" />
+    <path
+       style="fill:url(#pattern11-4-5-4-5);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:7;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-4-5-7-8-3-5);paint-order:markers stroke fill"
+       d="m 59.753985,120.75346 -32.94202,23.05061"
+       id="path16-5-9-0-0"
+       sodipodi:nodetypes="cc"
+       inkscape:transform-center-x="67.576729"
+       inkscape:transform-center-y="-3.4586166" />
+    <g
+       id="g22"
+       transform="rotate(20,-325.56431,91.968327)">
+      <path
+         style="fill:url(#pattern20);fill-opacity:1;fill-rule:evenodd;stroke:#999999;stroke-width:5.6;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-4-5);paint-order:markers stroke fill"
+         d="m 130.25428,95.338964 3.47133,-16.073073"
+         id="path16"
+         sodipodi:nodetypes="cc"
+         inkscape:transform-center-x="67.576722"
+         inkscape:transform-center-y="3.4586184" />
+      <path
+         style="fill:url(#pattern11-2);fill-opacity:1;fill-rule:evenodd;stroke:url(#pattern18);stroke-width:5.6;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-4-5-1);paint-order:markers stroke fill"
+         d="m 130.25428,95.338964 3.12623,-13.092007"
+         id="path16-3"
+         sodipodi:nodetypes="cc"
+         inkscape:transform-center-x="67.576722"
+         inkscape:transform-center-y="3.4586184" />
+    </g>
+    <g
+       id="g22-4-9"
+       transform="rotate(78,107.8439,19.475268)">
+      <path
+         style="fill:url(#pattern20-4-5);fill-opacity:1;fill-rule:evenodd;stroke:#999999;stroke-width:5.6;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-4-5-5-7);paint-order:markers stroke fill"
+         d="m 130.25428,95.338964 3.47133,-16.073073"
+         id="path16-6-8"
+         sodipodi:nodetypes="cc"
+         inkscape:transform-center-x="67.576722"
+         inkscape:transform-center-y="3.4586184" />
+      <path
+         style="fill:url(#pattern11-2-94-7);fill-opacity:1;fill-rule:evenodd;stroke:url(#pattern18-06-9);stroke-width:5.6;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-4-5-1-8-9);paint-order:markers stroke fill"
+         d="m 130.25428,95.338964 3.12623,-13.092007"
+         id="path16-3-75-3"
+         sodipodi:nodetypes="cc"
+         inkscape:transform-center-x="67.576722"
+         inkscape:transform-center-y="3.4586184" />
+    </g>
+    <g
+       id="g22-2"
+       transform="matrix(-0.93969262,0.34202014,0.34202014,0.93969262,161.88424,115.01126)">
+      <path
+         style="fill:url(#pattern20-23);fill-opacity:1;fill-rule:evenodd;stroke:#999999;stroke-width:5.6;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-4-5-0);paint-order:markers stroke fill"
+         d="m 130.25428,95.338964 3.47133,-16.073073"
+         id="path16-32"
+         sodipodi:nodetypes="cc"
+         inkscape:transform-center-x="67.576722"
+         inkscape:transform-center-y="3.4586184" />
+      <path
+         style="fill:url(#pattern11-2-5);fill-opacity:1;fill-rule:evenodd;stroke:url(#pattern18-0);stroke-width:5.6;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-4-5-1-33);paint-order:markers stroke fill"
+         d="m 130.25428,95.338964 3.12623,-13.092007"
+         id="path16-3-7"
+         sodipodi:nodetypes="cc"
+         inkscape:transform-center-x="67.576722"
+         inkscape:transform-center-y="3.4586184" />
+    </g>
+    <g
+       id="g21"
+       transform="matrix(1,0,0,-1,-162.29039,296.74735)">
+      <path
+         style="fill:url(#pattern20-2);fill-opacity:1;fill-rule:evenodd;stroke:#999999;stroke-width:5.6;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-4-5-4);paint-order:markers stroke fill"
+         d="m 248.8428,55.072794 2.46054,103.640616"
+         id="path16-1"
+         sodipodi:nodetypes="cc"
+         inkscape:transform-center-x="-67.576729"
+         inkscape:transform-center-y="-3.4586166" />
+      <path
+         style="fill:url(#pattern11-2-9);fill-opacity:1;fill-rule:evenodd;stroke:url(#pattern18-1);stroke-width:4.73957;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-4-5-1-3);paint-order:markers stroke fill"
+         d="m 249.0125,55.462649 2.10396,100.406161"
+         id="path16-3-9"
+         sodipodi:nodetypes="cc"
+         inkscape:transform-center-x="-51.08352"
+         inkscape:transform-center-y="-3.2773281" />
+    </g>
+    <g
+       id="g21-1"
+       transform="matrix(0.81915205,0.57357645,0.57357645,-0.81915205,-118.43588,176.56033)">
+      <path
+         style="fill:url(#pattern20-2-6);fill-opacity:1;fill-rule:evenodd;stroke:#999999;stroke-width:5.6;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-4-5-4-2);paint-order:markers stroke fill"
+         d="m 248.8428,55.072794 2.46054,103.640616"
+         id="path16-1-1"
+         sodipodi:nodetypes="cc"
+         inkscape:transform-center-x="-67.576729"
+         inkscape:transform-center-y="-3.4586166" />
+      <path
+         style="fill:url(#pattern11-2-9-6);fill-opacity:1;fill-rule:evenodd;stroke:url(#pattern18-1-2);stroke-width:4.73957;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-4-5-1-3-1);paint-order:markers stroke fill"
+         d="m 249.0125,55.462649 1.05198,50.203081 1.05198,50.20308"
+         id="path16-3-9-8"
+         sodipodi:nodetypes="ccc"
+         inkscape:transform-center-x="-51.08352"
+         inkscape:transform-center-y="-3.2773281" />
+    </g>
+    <g
+       id="g21-1-7"
+       transform="rotate(145,116.59193,133.14035)">
+      <path
+         style="fill:url(#pattern20-2-6-0);fill-opacity:1;fill-rule:evenodd;stroke:#999999;stroke-width:5.6;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-4-5-4-2-3);paint-order:markers stroke fill"
+         d="m 248.8428,55.072794 2.46054,103.640616"
+         id="path16-1-1-1"
+         sodipodi:nodetypes="cc"
+         inkscape:transform-center-x="-67.576729"
+         inkscape:transform-center-y="-3.4586166" />
+      <path
+         style="fill:url(#pattern11-2-9-6-7);fill-opacity:1;fill-rule:evenodd;stroke:url(#pattern18-1-2-2);stroke-width:4.73957;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle-4-5-1-3-1-5);paint-order:markers stroke fill"
+         d="m 249.0125,55.462649 1.05198,50.203081 1.05198,50.20308"
+         id="path16-3-9-8-3"
+         sodipodi:nodetypes="ccc"
+         inkscape:transform-center-x="-51.08352"
+         inkscape:transform-center-y="-3.2773281" />
+    </g>
+    <g
+       id="g2"
+       transform="translate(-19.103236,-58.198475)">
+      <ellipse
+         style="fill:#d4aa00;fill-rule:evenodd;stroke:#ffd42a;stroke-width:1.066;paint-order:markers stroke fill"
+         id="path1"
+         cx="107.87807"
+         cy="162.29613"
+         rx="25.484514"
+         ry="24.718065" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-0.74579229,3.9373403)"
+         id="text1"
+         style="font-size:32px;line-height:1;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1);display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.76126;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"><tspan
+           x="343.05469"
+           y="609.98234"
+           id="tspan15">PERSON</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-142.45842,14.759215)"
+       id="text23"
+       style="font-size:32px;line-height:1;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect23);fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:#666666;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"><tspan
+         x="418.87305"
+         y="169.94524"
+         id="tspan16">concept ID lookup</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-134.18086,31.8677)"
+       id="text23-3"
+       style="font-size:32px;line-height:1;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect23-6);fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"><tspan
+         x="447.32617"
+         y="169.94524"
+         id="tspan17">person_id join</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 113.73568,59.286654 -0.64533,1.290651"
+       id="path23"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

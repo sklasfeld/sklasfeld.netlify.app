@@ -1,7 +1,7 @@
-# Node modules (if using Prettier via npm)
+# Node modules
 node_modules/
 
-# Prettier cache (if using Prettier with lint-staged or caching)
+# Prettier cache
 .prettier-cache/
 
 # Editor settings
@@ -18,8 +18,3 @@ Thumbs.db
 # Astro build artifacts
 .astro/
 dist/
-
-# Optional: lock files if you don't want to commit them
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
