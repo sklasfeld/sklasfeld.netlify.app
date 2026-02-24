@@ -28,12 +28,12 @@
      inkscape:document-units="mm"
      showguides="false"
      inkscape:zoom="0.92"
-     inkscape:cx="808.69565"
-     inkscape:cy="266.84783"
+     inkscape:cx="791.84783"
+     inkscape:cy="332.06522"
      inkscape:window-width="1648"
      inkscape:window-height="934"
      inkscape:window-x="68"
-     inkscape:window-y="25"
+     inkscape:window-y="33"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
@@ -237,9 +237,9 @@
        style="font-weight:bold;font-size:23.5956px;line-height:1;font-family:Pacifico;-inkscape-font-specification:'Pacifico Bold';text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect12);display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ff6600;stroke-width:7.2189;stroke-miterlimit:4.9;stroke-opacity:1;paint-order:markers stroke fill"><tspan
          x="573.31177"
          y="202.16876"
-         id="tspan2"><tspan
+         id="tspan19"><tspan
            style="font-weight:900;font-family:'Arial Black';-inkscape-font-specification:'Arial Black,  Heavy';stroke:none"
-           id="tspan1">Raw Data</tspan></tspan></text>
+           id="tspan18">Raw Data</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;line-height:1;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.91;stroke-miterlimit:4.9;stroke-opacity:1;paint-order:markers stroke fill"
@@ -268,9 +268,9 @@
        style="font-weight:bold;font-size:23.5956px;line-height:1;font-family:Pacifico;-inkscape-font-specification:'Pacifico Bold';text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect12-5-0);display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ff6600;stroke-width:7.2189;stroke-miterlimit:4.9;stroke-opacity:1;paint-order:markers stroke fill"><tspan
          x="593.1344"
          y="202.16876"
-         id="tspan4"><tspan
+         id="tspan21"><tspan
            style="font-weight:900;font-family:'Arial Black';-inkscape-font-specification:'Arial Black,  Heavy';stroke:none"
-           id="tspan3">Population Stratification</tspan></tspan></text>
+           id="tspan20">Population Stratification</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;line-height:1;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;white-space:pre;inline-size:114.464;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.91;stroke-miterlimit:4.9;stroke-opacity:1;paint-order:markers stroke fill"
@@ -280,15 +280,15 @@
        transform="translate(-6.4787016,33.588313)"><tspan
          x="266.64722"
          y="123.48815"
-         id="tspan5">Ancestry-specific linkage disequilibrium,,
+         id="tspan22">Ancestry-specific linkage disequilibrium,
 </tspan><tspan
          x="266.64722"
          y="128.42704"
-         id="tspan6">Cryptic relatedness,
+         id="tspan23">Cryptic relatedness,
 </tspan><tspan
          x="266.64722"
          y="133.36593"
-         id="tspan7">Fine-scale ancestry clustering</tspan></text>
+         id="tspan24">Fine-scale ancestry clustering</tspan></text>
     <path
        style="fill:#242461;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.078;stroke-miterlimit:4.9;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
        d="m 104.51042,94.683036 7.94569,18.791444 48.37579,7.21628 -36.34866,-22.45064 -3.4745,3.4745 -4.28497,-7.031584 -7.23296,5.480654 z"
@@ -311,9 +311,9 @@
        style="font-weight:bold;font-size:23.5956px;line-height:1;font-family:Pacifico;-inkscape-font-specification:'Pacifico Bold';text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect12-5);display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ff6600;stroke-width:7.2189;stroke-miterlimit:4.9;stroke-opacity:1;paint-order:markers stroke fill"><tspan
          x="584.27843"
          y="202.16876"
-         id="tspan9"><tspan
+         id="tspan26"><tspan
            style="font-weight:900;font-family:'Arial Black';-inkscape-font-specification:'Arial Black,  Heavy';stroke:none"
-           id="tspan8">Batch Effects</tspan></tspan></text>
+           id="tspan25">Batch Effects</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;line-height:1;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;white-space:pre;inline-size:100.101;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.91;stroke-miterlimit:4.9;stroke-opacity:1;paint-order:markers stroke fill"
@@ -323,11 +323,11 @@
        transform="translate(-8.9853035,2.4997741)"><tspan
          x="266.64722"
          y="123.48815"
-         id="tspan10">Cross-platform effects, 
+         id="tspan27">Cross-platform effects, 
 </tspan><tspan
          x="266.64722"
          y="128.42704"
-         id="tspan11">Sequencing depth variation</tspan></text>
+         id="tspan28">Sequencing depth variation</tspan></text>
     <path
        style="fill:#23235d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.24067;stroke-miterlimit:4.9;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
        d="m 45.699721,170.18639 23.403106,5.24853 2.689818,19.42674 -35.410859,-3.3744 -6.577365,-8.39125 z"
@@ -353,9 +353,9 @@
        style="font-weight:bold;font-size:23.5956px;line-height:1;font-family:Pacifico;-inkscape-font-specification:'Pacifico Bold';text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect12-5-0-3);display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ff6600;stroke-width:7.2189;stroke-miterlimit:4.9;stroke-opacity:1;paint-order:markers stroke fill"><tspan
          x="659.23372"
          y="202.16876"
-         id="tspan13"><tspan
+         id="tspan30"><tspan
            style="font-weight:900;font-family:'Arial Black';-inkscape-font-specification:'Arial Black,  Heavy';stroke:none"
-           id="tspan12">Inaccurate Phenotype Data</tspan></tspan></text>
+           id="tspan29">Inaccurate Phenotype Data</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;line-height:1;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;white-space:pre;inline-size:137.449;display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.91;stroke-miterlimit:4.9;stroke-opacity:1;paint-order:markers stroke fill"
@@ -365,11 +365,11 @@
        transform="translate(-6.7174475,67.584537)"><tspan
          x="266.64722"
          y="123.48815"
-         id="tspan16">Self-report errors, Selection bias, 
+         id="tspan31">Self-report errors, Selection bias, 
 </tspan><tspan
          x="266.64722"
          y="128.42704"
-         id="tspan17">Missing data by design, Data release drift</tspan></text>
+         id="tspan32">Missing data by design, Data release drift</tspan></text>
     <path
        style="fill:#1a1a47;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.078;stroke-miterlimit:4.9;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
        d="M 131.0363,207.22805 Z"
