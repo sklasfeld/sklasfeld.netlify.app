@@ -30,7 +30,8 @@ const blog = defineCollection({
             order: z.number(),
             image: z.object({
                 src: z.string(),
-                alt: z.string().optional()
+                alt: z.string().optional(),
+                caption: z.string().optional()
             }).optional()
         }).optional(),
         seo: seoSchema.optional()
