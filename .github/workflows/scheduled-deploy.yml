@@ -1,0 +1,13 @@
+name: Scheduled Weekly Deploy
+
+on:
+  schedule:
+    - cron: '0 14 * * 1'  # Every Monday at 9am ET (14:00 UTC)
+  workflow_dispatch:       # Also allows manual trigger from GitHub Actions tab
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Netlify deploy
+        run: curl -s -X POST ${{ secrets.NETLIFY_BUILD_HOOK }}
