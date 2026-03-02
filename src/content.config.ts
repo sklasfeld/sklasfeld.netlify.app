@@ -27,7 +27,11 @@ const blog = defineCollection({
         tags: z.array(z.string()).default([]),
         series: z.object({
             name: z.string(),
-            order: z.number()
+            order: z.number(),
+            image: z.object({
+                src: z.string(),
+                alt: z.string().optional()
+            }).optional()
         }).optional(),
         seo: seoSchema.optional()
     })

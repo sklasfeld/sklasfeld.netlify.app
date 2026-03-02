@@ -13,7 +13,7 @@ const TitleTag = headingLevel;
 
 <a
   class:list={[
-    'flex flex-row group',
+    'flex flex-col sm:flex-row group',
     'rounded-lg border-2 border-gray-200 dark:border-gray-700',
     'bg-white dark:bg-gray-800/50',
     'shadow-sm hover:shadow-md',
@@ -25,11 +25,13 @@ const TitleTag = headingLevel;
   href={`/blog/${post.id}/`}
 >
   {heroImage && (
-    <img
-      src={heroImage.src}
-      alt={heroImage.alt || ''}
-      class="w-48 h-48 sm:w-56 sm:h-56 object-cover shrink-0"
-    />
+    <div class="w-full h-48 sm:w-56 sm:h-56 sm:shrink-0 dark:bg-white">
+      <img
+        src={heroImage.src}
+        alt={heroImage.alt || ''}
+        class="w-full h-full object-cover"
+      />
+    </div>
   )}
   <div class="flex justify-between items-start gap-6 p-6 grow min-w-0">
     <div class="grow min-w-0">
