@@ -11,6 +11,9 @@ draft: false
 series:
   name: 'Biobank Intro Series'
   order: 1
+  image:
+    src: '/blog_images/biobank1/full_blogseries_graphic.png'
+    alt: 'Subway-map style illustration of the Biobank Intro Series showing the journey through UK Biobank and All of Us topics.'
 seo:
   image:
     src: '/blog_images/biobank1/biobank_iceberg.png'
