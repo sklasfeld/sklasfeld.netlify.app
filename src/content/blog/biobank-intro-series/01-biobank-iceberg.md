@@ -14,6 +14,7 @@ series:
   image:
     src: '/blog_images/biobank1/full_blogseries_graphic.png'
     alt: 'Subway-map style illustration of the Biobank Intro Series showing the journey through UK Biobank and All of Us topics.'
+    caption: 'Think of this as your subway map: each stop in this blog series builds the foundation you need before diving into biobank analysis.'
 seo:
   image:
     src: '/blog_images/biobank1/biobank_iceberg.png'

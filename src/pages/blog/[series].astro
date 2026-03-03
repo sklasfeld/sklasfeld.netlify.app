@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostPreview from '../../components/PostPreview.astro';
-import { getAllSeries, getPostsBySeries } from '../../utils/data-utils';
+import { getAllSeries } from '../../utils/data-utils';
 
 export async function getStaticPaths() {
   const posts = (await getCollection('blog'))
@@ -30,6 +30,22 @@ const { series } = Astro.props;
     <div class="mb-8 sm:mb-10">
       <a href="/blog/" class="text-sm text-accent hover:underline">&larr; Back to Blog</a>
     </div>
+    {series.image && (
+      <figure class="mb-8 sm:mb-10">
+        <div class="rounded-lg overflow-hidden dark:bg-white">
+          <img
+            src={series.image.src}
+            alt={series.image.alt || ''}
+            class="w-full object-contain"
+          />
+        </div>
+        {series.imageCaption && (
+          <figcaption class="text-center text-sm opacity-60 mt-2">
+            <em>{series.imageCaption}</em>
+          </figcaption>
+        )}
+      </figure>
+    )}
     <h1
       class="text-4xl sm:text-5xl lg:text-6xl font-sans font-semibold mb-4"
     >

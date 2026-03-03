@@ -48,6 +48,7 @@ export function getAllSeries(posts: CollectionEntry<'blog'>[]) {
             latestDate: new Date(Math.max(...sorted.map(p => new Date(p.data.publishDate).getTime()))),
             firstDate: new Date(Math.min(...sorted.map(p => new Date(p.data.publishDate).getTime()))),
             image: firstPost.data.series!.image ?? firstPost.data.seo?.image,
+            imageCaption: firstPost.data.series!.image?.caption,
         };
     });
 }
