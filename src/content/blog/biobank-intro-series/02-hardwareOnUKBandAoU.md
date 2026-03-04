@@ -39,25 +39,25 @@ Think of your workspace and the platform's data storage as two separate floating
 
 **UK Biobank RAP: The dx toolkit**
 
-The dx CLI is your friend for navigating the RAP filesystem:
+The dx CLI is your friend for navigating the RAP filesystem. Since `dx cat` doesn't stream VCFs reliably for tools like bcftools, generating a temporary HTTPS URL with `dx make_download_url` gives bcftools a direct URL it can handle natively.
 
 ```bash
-# List files in a directory within the platform's data storage
+# Navigate the RAP filesystem
 dx ls
 
-# Stream file contents (don't download!) from data storage
-dx cat file-xxxx | bcftools view
+# Stream a file directly by generating a temporary download URL (the right way)
+bcftools view "$(dx make_download_url /path/to/file.vcf.gz --duration 2h)" > output.txt
 
-# Upload local files from your workspace to data storage
-dx upload local_file.txt --path /file/path/in/workspace/
+# Upload results back to data storage
+dx upload local_file.txt --path /results/
 
-# Download files (only if absolutely necessary) to your workspace
+# Download `file-xxxx` locally (only if absolutely necessary)
 dx download file-xxxx --output local_file.txt
 ```
 
 **All of Us: gsutil for Google Cloud Storage**
 
-All of Us data lives in Google Cloud Storage (GCS) buckets and uses `gsutil` to identify, stream, and move data between your workspace and these buckets.
+All of Us data lives in Google Cloud Storage (GCS) buckets and uses `gsutil` to identify, stream, and move data between your workspace and these buckets. Unlike `dx cat`, `gsutil` can stream VCFs with the `cat` command.
 
 ```bash
 # List files in the controlled data-repository (CDR) bucket
