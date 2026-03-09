@@ -36,9 +36,19 @@ To understand why the showcase is so useful, it helps to know the scale of what 
 
 The Showcase doesn't just catalog measurements. It lovingly documents the shape of the data itself. On the main page for each field, the 'Data' tab provides key details about coding, instances, and array indices that will save you real headaches downstream.
 
-**Coding** is how categorical responses are stored. Rather than storing "Yes" or "No", many fields store numeric codes: `1` for "Yes", `0` for "No", and `-7` for "None of the above". The Showcase provides a data coding table for each such field. More on working with complex codes in the next post.
+**Coding** is how categorical responses are stored. Rather than storing "Yes" or "No", many fields store numeric codes: **1** for "Yes", **0** for "No", and **-3** for "Prefer not to answer". The Showcase provides a data coding table for each such field. More on working with complex codes in the next post.
 
-**Instances** are timepoints. For example, if a measurement reports using Instancing 2, it will report measurements collected at four visits. In other words, a single field can have data from Instance 0 (initial assessment), Instance 1 (first repeat), and so on. For most phenotypes, Instance 0 has the largest sample size. If you need longitudinal data, expect much smaller numbers at later instances.
+**Instances** are timepoints. For example, if a measurement reports using instancing type 2, it will report measurements collected at four visits:
+
+- instance 0: the initial assessment
+
+- instance 1: the first repeat vist
+
+- instance 2: the imagining vist
+
+- instance 3: the first repeat imaging visit
+
+For most phenotypes, Instance 0 has the largest sample size. If you need longitudinal data, expect much smaller numbers at later instances.
 
 **Arrays** are repeated measurements within a single visit. Diastolic and systolic blood pressure (4079, 4080), for example, are taken twice in one sitting. Each repeat is stored as a separate array index (0,1). The Showcase tells you how many array values a field has so you can plan how to handle them.
 
