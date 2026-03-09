@@ -87,6 +87,6 @@ After working with the Showcase on multiple projects, I've developed a workflow 
 - Like any great love, the Showcase is not perfect. Sometimes a data field has the status set to "Not available", meaning it is listed before release. If the release date is listed and it is not set in the future, reach out to UK Biobank support for clarification.
 - Sometimes data that appears in the Showcase is missing from your RAP workspace entirely. This can happen if your project is running an outdated version of the UK Biobank data release.
   - If you are the project admin, go to the **Settings** page of your dispensed project and click **"Check for Updates"** in the UK Biobank section.
-  - If you are not the admin or the update does not resolve it, reach out to the UKB support team directly. Tell them upfront if you have already searched the community forums. They are genuinely helpful and worth contacting.
+  - If you are not the admin or the update does not resolve it, reach out to the UK Biobank support team directly. Tell them upfront if you have already searched the community forums. They are genuinely helpful and worth contacting.
 
 The more time I spend with the Showcase, the more I appreciate what it actually is: not just a catalog, but a guide to making good decisions about your data. For features not covered here, Part III of the [Showcase user guide](https://biobank.ndph.ox.ac.uk/showcase/ukb/exinfo/ShowcaseUserGuide.pdf) (page 4) is worth bookmarking. In the next post, we'll dive into actually loading this data for analysis.
