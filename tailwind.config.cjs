@@ -59,6 +59,21 @@ module.exports = {
                             fontFamily: theme('fontFamily.serif'),
                             fontWeight: 500
                         },
+                        'code::before': {
+                            content: 'none'
+                        },
+                        'code::after': {
+                            content: 'none'
+                        },
+                        code: {
+                            backgroundColor: 'rgb(var(--color-bg-muted))',
+                            borderRadius: '0.25rem',
+                            paddingTop: '0.125rem',
+                            paddingBottom: '0.125rem',
+                            paddingLeft: '0.3rem',
+                            paddingRight: '0.3rem',
+                            fontWeight: 'normal'
+                        },
                         blockquote: {
                             border: 0,
                             fontFamily: theme('fontFamily.serif'),
