@@ -34,23 +34,29 @@ To understand why the showcase is so useful, it helps to know the scale of what 
 
 ## Reading Between the Data Fields: Arrays, Instances, and Codes
 
-The Showcase doesn't just catalog measurements. It lovingly documents the shape of the data itself. On the main page for each field, the 'Data' tab provides key details about coding, instances, and array indices that will save you real headaches downstream.
+The Showcase doesn't just catalog measurements. It lovingly documents the shape of the data itself. On the main page for each field, the **Data** tab provides key details about coding, instances, and array indices that will save you real headaches downstream.
 
-**Coding** is how categorical responses are stored. Rather than storing "Yes" or "No", many fields store numeric codes: **1** for "Yes", **0** for "No", and **-3** for "Prefer not to answer". The Showcase provides a data coding table for each such field. More on working with complex codes in the next post.
+### Coding
 
-**Instances** are timepoints. For example, if a measurement reports using instancing type 2, it will report measurements collected at four visits:
+Coding is how categorical responses are stored. Rather than storing "Yes" or "No", many fields store numeric codes: `1` for "Yes", `0` for "No", and `-3` for "Prefer not to answer". The Showcase provides a data coding table for each such field. More on working with complex codes in the next post.
 
-- instance 0: the initial assessment
+### Instances
 
-- instance 1: the first repeat vist
+Instances are timepoints. For example, if a measurement reports using instancing type 2, it will report measurements collected at four visits:
 
-- instance 2: the imagining vist
+- instance `0`: the initial assessment
 
-- instance 3: the first repeat imaging visit
+- instance `1`: the first repeat visit
 
-For most phenotypes, Instance 0 has the largest sample size. If you need longitudinal data, expect much smaller numbers at later instances.
+- instance `2`: the imaging visit
 
-**Arrays** are repeated measurements within a single visit. Diastolic and systolic blood pressure (4079, 4080), for example, are taken twice in one sitting. Each repeat is stored as a separate array index (0,1). The Showcase tells you how many array values a field has so you can plan how to handle them.
+- instance `3`: the first repeat imaging visit
+
+For most phenotypes, Instance `0` has the largest sample size. If you need longitudinal data, expect much smaller numbers at later instances.
+
+### Arrays
+
+Arrays are repeated measurements within a single visit. Diastolic and systolic blood pressure (`4079`, `4080`), for example, are taken twice in one sitting. Each repeat is stored as a separate array index (`0`, `1`). The Showcase tells you how many array values a field has so you can plan how to handle them.
 
 The Data tab gives you the architecture of a field: how its values are structured, repeated, and encoded. What it does not tell you is whether those values are reliable, comparable, or the best available option for your phenotype. For that, you need the category-level context, and the Showcase delivers it.
 
