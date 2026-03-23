@@ -28,10 +28,6 @@ seo:
 
 Continuing from [Part I](../05-aou-omop), you know how to find OMOP concept IDs. Now let's look at how to actually pull data in the All of Us (AoU) Researcher Workbench. Not everything lives in SQL tables, and not everything requires writing SQL.
 
-## Beyond SQL: CDR Directory Files
-
-If you have access to the [Controlled CDR directory](https://support.researchallofus.org/hc/en-us/articles/29475233432212-Controlled-CDR-Directory), you'll find pre-computed genomic data (e.g., precomputed genetic ancestry, admixture estimates, relatedness, etc.) stored outside the OMOP tables entirely. These genetically-derived estimates can complement or replace the self-reported race and ethnicity values in the BigQuery tables.
-
 ## Cohort and Dataset Builders
 
 Before writing any SQL, it's worth trying the AoU [Cohort and Dataset Builders](https://www.researchallofus.org/data-tools/workbench/). These point-and-click tools work in two steps: define your participant criteria (the Cohort Builder), then build your data features (the Dataset Builder). If this gives you everything you need then that is awesome. I did not find that to be the case, but I found them useful for exploration and seeing what's available without dealing with OMOP codes directly. A hack click "Analyze" → "See Code Preview" to see the underlying BigQuery SQL.
@@ -116,3 +112,7 @@ full_df = pd.merge(
 After the left join, participants with an Alzheimer's diagnosis will have `has_az = True` and a diagnosis date, while everyone else will have null values. You can fill the null values with `full_df['has_az'] = full_df['has_az'].fillna(False)` for a clean boolean column. This gives you a case/control column without needing a separate query for controls. Add more condition, measurement, or drug exposure queries and merge them the same way.
 
 This pattern scales to any study: find your concept IDs ([Part I](../05-aou-omop)), query the relevant OMOP tables, join to `concept` for readable labels, and merge the resulting dataframes in pandas.
+
+## Beyond OMOP-DCM: CDR Directory Files
+
+In addition beyond observational data, note that some pre-computed data in the Researcher Workbench lives outside of OMOP-CDM data tables. If you have access to the [Controlled CDR directory](https://support.researchallofus.org/hc/en-us/articles/29475233432212-Controlled-CDR-Directory), you'll find pre-computed genomic data (e.g., precomputed genetic ancestry, admixture estimates, relatedness, etc.) are made readily available in tab-delimited tables. These genetically-derived estimates can complement or replace the self-reported race and ethnicity values in the BigQuery tables.
