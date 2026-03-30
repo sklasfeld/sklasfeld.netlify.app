@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="304.84601mm"
+   height="297.94382mm"
+   viewBox="0 0 304.84601 297.94382"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   sodipodi:docname="omop_table_relationships_basic.svg"
+   inkscape:export-filename="omop_table_relationships_basic.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="false"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.46"
+     inkscape:cx="540.21739"
+     inkscape:cy="614.13043"
+     inkscape:window-width="1344"
+     inkscape:window-height="924"
+     inkscape:window-x="640"
+     inkscape:window-y="46"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g2"
+     showguides="false"
+     inkscape:export-bgcolor="#ffffff00" />
+  <defs
+     id="defs1">
+    <rect
+       x="30.434784"
+       y="10.869565"
+       width="1115.2174"
+       height="169.56522"
+       id="rect14" />
+    <rect
+       x="28.26087"
+       y="34.782608"
+       width="317.3913"
+       height="89.130432"
+       id="rect13" />
+    <rect
+       x="539.31116"
+       y="618.32648"
+       width="218.06358"
+       height="103.09524"
+       id="rect11" />
+    <rect
+       x="342.39987"
+       y="470.32947"
+       width="200.08627"
+       height="83.111687"
+       id="rect8" />
+    <linearGradient
+       id="linearGradient7"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#d45500;stop-opacity:1;"
+         offset="0"
+         id="stop7" />
+      <stop
+         style="stop-color:#d49165;stop-opacity:1;"
+         offset="1"
+         id="stop8" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#d100d1;stop-opacity:1;"
+         offset="0"
+         id="stop6" />
+      <stop
+         style="stop-color:#800080;stop-opacity:1;"
+         offset="1"
+         id="stop5" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#008000;stop-opacity:1;"
+         offset="0"
+         id="stop3" />
+      <stop
+         style="stop-color:#00c100;stop-opacity:1;"
+         offset="1"
+         id="stop4" />
+    </linearGradient>
+    <rect
+       x="65.219025"
+       y="460.29578"
+       width="174.28233"
+       height="134.21837"
+       id="rect1" />
+    <rect
+       x="65.219025"
+       y="460.29578"
+       width="238.30026"
+       height="112.87907"
+       id="rect1-4" />
+    <rect
+       x="65.219025"
+       y="460.29578"
+       width="238.30026"
+       height="112.87907"
+       id="rect1-9" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3"
+       id="linearGradient4"
+       x1="65.502014"
+       y1="192.25487"
+       x2="54.149166"
+       y2="172.6761"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-8.3875887,8.9089723)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5"
+       id="linearGradient6"
+       x1="81.029762"
+       y1="133.17918"
+       x2="91.387077"
+       y2="151.43057"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-5.8692297,27.809137)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7"
+       id="linearGradient8"
+       x1="131.23111"
+       y1="169.8997"
+       x2="117.22005"
+       y2="187.15555"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(21.367216,3.7543063)" />
+    <rect
+       x="342.39987"
+       y="470.32947"
+       width="210.95584"
+       height="76.589943"
+       id="rect8-8" />
+    <rect
+       x="342.39987"
+       y="470.32947"
+       width="295.07104"
+       height="105.43682"
+       id="rect8-8-9" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5"
+       id="linearGradient12"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="rotate(-150,54.578963,109.73588)"
+       x1="81.029762"
+       y1="133.17918"
+       x2="91.387077"
+       y2="151.43057" />
+    <rect
+       x="342.39987"
+       y="470.32947"
+       width="150.08627"
+       height="52.676903"
+       id="rect8-7" />
+    <rect
+       x="65.219025"
+       y="460.29578"
+       width="238.30026"
+       height="112.87907"
+       id="rect1-6" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(38.537136,13.804348)">
+    <g
+       id="g12"
+       transform="translate(29.710443,30.373915)">
+      <rect
+         style="fill:#b3b3b3;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.09345;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect12"
+         width="52.882072"
+         height="13.635023"
+         x="144.88112"
+         y="163.26703" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-0.20561537,-0.46735755)"
+         id="text11"
+         style="font-weight:bold;font-size:40px;line-height:1.2;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';text-align:center;letter-spacing:0.98px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect11);display:inline;fill:#d45500;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:4.91339;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"><tspan
+           x="557.70402"
+           y="654.93764"
+           id="tspan4"><tspan
+             style="font-weight:normal;font-family:'Arial Unicode MS';-inkscape-font-specification:'Arial Unicode MS';fill:#1a1a1a"
+             id="tspan3">person_id</tspan></tspan></text>
+    </g>
+    <g
+       id="g2"
+       transform="translate(50.606098,18.018799)">
+      <circle
+         style="fill:#008000;fill-rule:evenodd;stroke:#1a1a1a;stroke-width:1.3;stroke-linejoin:round;paint-order:markers stroke fill"
+         id="path1-2-1"
+         cx="50.091026"
+         cy="216.79031"
+         r="40.484917" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.45821911,0,0,0.45821911,-19.947928,-18.107014)"
+         id="text1"
+         style="font-weight:bold;font-size:21.5569px;line-height:1.2;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';text-align:center;letter-spacing:0.98px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1);display:inline;fill:#008000;fill-rule:evenodd;stroke:none;stroke-width:4.91339;stroke-linejoin:round;paint-order:markers stroke fill"><tspan
+           x="98.637935"
+           y="480.02566"
+           id="tspan6"><tspan
+             style="fill:#ffffff"
+             id="tspan5">CLINICAL
+</tspan></tspan><tspan
+           x="115.27039"
+           y="505.89395"
+           id="tspan8"><tspan
+             style="fill:#ffffff"
+             id="tspan7">TABLE
+</tspan></tspan><tspan
+           x="67.587143"
+           y="531.76224"
+           id="tspan11"><tspan
+             style="fill:#ffffff"
+             id="tspan9"> </tspan><tspan
+             style="font-size:16.9376px"
+             id="tspan10">(e.g., observation, </tspan></tspan><tspan
+           x="89.078167"
+           y="557.63052"
+           id="tspan13"><tspan
+             style="font-size:16.9376px"
+             id="tspan12">measurement)</tspan></tspan></text>
+    </g>
+    <g
+       id="g3"
+       transform="translate(6.4125054,-10.625223)"
+       style="stroke:#a000a0;stroke-opacity:1">
+      <circle
+         style="fill:#c700c7;fill-rule:evenodd;stroke:#a000a0;stroke-width:1.3;stroke-linejoin:round;paint-order:markers stroke fill;stroke-opacity:1;fill-opacity:1"
+         id="path1"
+         cx="38.171501"
+         cy="131.48459"
+         r="40.484917" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.45821911,0,0,0.45821911,-46.492534,-85.528737)"
+         id="text1-4"
+         style="font-weight:bold;font-size:21.5569px;line-height:1.2;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';text-align:center;letter-spacing:0.98px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1-4);display:inline;fill:#008000;fill-rule:evenodd;stroke:none;stroke-width:4.91339;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"><tspan
+           x="128.73157"
+           y="480.02566"
+           id="tspan15"><tspan
+             style="fill:#ffffff"
+             id="tspan14">CONCEPT</tspan></tspan></text>
+    </g>
+    <g
+       id="g4"
+       transform="translate(12.717534,-14.892664)">
+      <circle
+         style="fill:#d45500;fill-rule:evenodd;stroke:#1a1a1a;stroke-width:1.3;stroke-linejoin:round;paint-order:markers stroke fill"
+         id="path1-2"
+         cx="150.39774"
+         cy="135.75203"
+         r="40.484917" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.45821911,0,0,0.45821911,65.830356,-81.261295)"
+         id="text1-5"
+         style="font-weight:bold;font-size:24px;line-height:1.2;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';text-align:center;letter-spacing:0.98px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1-9);display:inline;fill:#008000;fill-rule:evenodd;stroke:none;stroke-width:4.91339;stroke-linejoin:round;paint-order:markers stroke fill"><tspan
+           x="131.24141"
+           y="482.2618"
+           id="tspan17"><tspan
+             style="fill:#ffffff"
+             id="tspan16">PERSON</tspan></tspan></text>
+    </g>
+    <path
+       style="fill:url(#linearGradient4);fill-rule:evenodd;stroke:#000000;stroke-width:1.02442;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+       d="m 48.797798,179.62305 6.275948,10.87027 5.510619,-3.18155 -3.232095,13.49119 -13.299766,-3.94652 5.510623,-3.18156 -6.275953,-10.87027 z"
+       id="path4"
+       sodipodi:nodetypes="cccccccc" />
+    <path
+       style="fill:url(#linearGradient6);fill-rule:evenodd;stroke:#000000;stroke-width:1.02442;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+       d="m 83.47716,181.20173 -6.27595,-10.87027 -5.51062,3.18155 3.2321,-13.49119 13.29976,3.94652 -5.51062,3.18156 6.27595,10.87027 z"
+       id="path6"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:transform-center-x="-74.996644"
+       inkscape:transform-center-y="16.924025" />
+    <path
+       style="fill:url(#linearGradient12);fill-rule:evenodd;stroke:#000000;stroke-width:1.02442;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+       d="m 46.297856,54.544333 -3e-6,12.551906 6.363111,6e-6 -9.544676,10.067664 -9.54467,-10.067667 6.363117,-2e-6 3e-6,-12.551904 z"
+       id="path6-5"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:transform-center-x="57.09114"
+       inkscape:transform-center-y="-51.585327" />
+    <path
+       style="fill:url(#linearGradient8);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.02442;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+       d="m 136.18649,188.54184 8.06821,-9.61531 -4.87442,-4.09014 13.78302,-1.57708 0.84026,13.84748 -4.87442,-4.09014 -8.06822,9.61532 z"
+       id="path6-9"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:transform-center-x="-9.777465"
+       inkscape:transform-center-y="77.23666" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-16.358262,56.677848)"
+       id="text8"
+       style="font-weight:bold;font-size:40px;line-height:1.2;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';text-align:center;letter-spacing:3px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect8);display:inline;fill:#c700c7;fill-opacity:1;fill-rule:evenodd;stroke:#c700c7;stroke-width:1.88976;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"><tspan
+         x="343.04688"
+         y="506.94154"
+         id="tspan18">3. LABEL</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.469076,0,0,0.469076,-152.86948,-178.73003)"
+       id="text8-4"
+       style="font-weight:bold;font-size:22.5621px;line-height:1.2;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';text-align:center;letter-spacing:1.69216px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect8-7);display:inline;fill:#c700c7;fill-opacity:1;fill-rule:evenodd;stroke:#c700c7;stroke-width:1.06593;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"><tspan
+         x="345.89351"
+         y="490.98087"
+         id="tspan19">1. LOOK UP</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-77.688878,39.406558)"
+       id="text8-8"
+       style="font-weight:bold;font-size:40px;line-height:1.2;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';text-align:center;letter-spacing:3px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect8-8);display:inline;fill:#008000;fill-opacity:1;fill-rule:evenodd;stroke:#008000;stroke-width:1.88976;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"><tspan
+         x="344.75098"
+         y="506.94154"
+         id="tspan20">2. QUERY</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,66.444231,53.161159)"
+       id="text8-8-1"
+       style="font-weight:bold;font-size:40px;line-height:1.2;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';text-align:center;letter-spacing:3px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect8-8-9);display:inline;fill:#d45500;fill-opacity:1;fill-rule:evenodd;stroke:#d45500;stroke-width:1.88976;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"><tspan
+         x="347.86914"
+         y="506.94154"
+         id="tspan21">4. JOIN WITH</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text12"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.2;font-family:'Arial Unicode MS';-inkscape-font-specification:'Arial Unicode MS';text-align:center;letter-spacing:0.98px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect13);display:inline;fill:#f9f9f9;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:4.91339;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-43.138586,-10.353261)"
+       id="text14"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.2;font-family:'Arial Unicode MS';-inkscape-font-specification:'Arial Unicode MS';text-align:center;letter-spacing:3px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect14);display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:5.29134;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       x="0"
+       y="0"><tspan
+         x="99.606445"
+         y="69.447486"
+         id="tspan23"><tspan
+           style="font-weight:bold;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold'"
+           id="tspan22">BUILDING A COHORT TABLE 
+</tspan></tspan><tspan
+         x="170.29395"
+         y="148.75171"
+         id="tspan25"><tspan
+           style="font-weight:bold;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold'"
+           id="tspan24">WITH OMOP WORKFLOW</tspan></tspan></text>
+  </g>
+</svg>
