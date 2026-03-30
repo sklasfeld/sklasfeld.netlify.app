@@ -25,7 +25,9 @@ seo:
 </figcaption>
 </figure>
 
-Finally, the blog post where I get to the juicy genetic data — and I barely know where to begin. Coming from my Ph.D. in plant epigenetics, I was used to raw sequencing data from one replicate at a time. The UK Biobank (UKB) has around 500,000 participants, so the genetic data is massive. But here's the thing I eventually figured out: I never needed all of it. In my work, I've only focused on a single region or a handful of variants. I never needed to download any genetic data, and neither should you. Not to your workspace (it will cost you time and money; see [my previous blog on UKB hardware](../02-hardwareOnUKBandAoU)) and not to your local computer (that's a [crime](https://community.ukbiobank.ac.uk/hc/en-gb/articles/31972311370013-Guidance-on-Data-Downloads-and-Exemptions)). Instead, I was able to stream and filter directly on the RAP using DNAnexus. The first step, though, is knowing what genetic data UKB actually has and where to find it.
+Genetic data. We made it. Coming from my Ph.D. in plant epigenetics, I was used to raw sequencing data from one replicate at a time. In contrast, the UK Biobank (UKB) has around 500,000 participants. The scale of it can become the problem if you let it. The fix is straightforward: fit the data to your analysis, not the other way around. In my work, I've focused on a single region or a handful of variants at a time. That means streaming and filtering directly on the RAP rather than pulling down full files (see [my previous blog on UKB hardware](../02-hardwareOnUKBandAoU)). The first step is knowing what genetic data UKB actually has, where it lives, and how to filter it before it becomes your problem.
+
+But here's the thing I eventually figured out: I never needed all of it. In my work, I've only focused on a single region or a handful of variants. I never needed to download any genetic data, and neither should you. Not to your workspace (it will cost you time and money; see [my previous blog on UKB hardware](../02-hardwareOnUKBandAoU)) and not to your local computer (that's a ). Instead, I was able to stream and filter directly on the RAP using DNAnexus. The first step, though, is knowing what genetic data UKB actually has and where to find it.
 
 ## The Showcase Knows About Genetics Too
 
@@ -77,12 +79,9 @@ The file structure inside Bulk can be confusing, but here's the trick: filenames
 If you've made it this far, you know more about UKB genetic data than I did
 for an embarrassingly long time. Here's the short version: there are five
 types of genetic data, the whole genome sequencing is the most comprehensive,
-and it all lives in the Bulk directory of your project workspace. You don't
-need to memorize the timeline — just know that earlier releases sometimes had
-issues that later ones fixed, and when in doubt, use the most recent data
-available.
+and it all lives in the Bulk directory of your project workspace.You don't need to memorize the timeline. Just know that earlier releases sometimes had issues that later ones fixed, and when in doubt, use the most recent data available.
 
-In the next post, I'll walk through how All of Us handles its genetic data. Spoiler: the documentation isn't better.
+One last thing: do not download genetic data to your local computer. It is not just inefficient, it is [against UK Biobank's data access terms](https://community.ukbiobank.ac.uk/hc/en-gb/articles/31972311370013-Guidance-on-Data-Downloads-and-Exemptions). This series is focused on working within the RAP, so if your organization has UKB data on an HPC, follow your data access agreement accordingly. In the next post, I'll walk through how All of Us handles its genetic data. Spoiler: the documentation isn't better.
 
 ## References
 
