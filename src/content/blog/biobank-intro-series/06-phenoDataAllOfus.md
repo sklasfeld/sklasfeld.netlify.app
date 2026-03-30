@@ -47,6 +47,11 @@ The `person` table is the anchor table of the schema. It holds one row per parti
 
 The OMOP CDM tables live in Google BigQuery. The examples below use Python's `pandas.read_gbq` function, which takes a SQL string and returns a dataframe. R users can likely query them with the `bigrquery` package. The examples assume the following setup:
 
+<details>
+<summary>Environment versions</summary>
+Python 3.10.16, pandas 2.0.3, google-cloud-bigquery 2.34.4, CDR C2024Q3R9
+</details>
+
 ```python
 import pandas as pd
 import os
@@ -112,7 +117,7 @@ gender_query = f'''
     person.person_id,
     pgc.concept_name as gender,
     person.gender_source_value,
-    pgsc.concept_name as gender_source_concept_name,
+    pgsc.concept_name as gender_source_concept_name
   FROM `{CDR}.person` person
   LEFT JOIN `{CDR}.concept` pgc ON pgc.concept_id = person.gender_concept_id
   LEFT JOIN `{CDR}.concept` pgsc ON pgsc.concept_id = person.gender_source_concept_id
