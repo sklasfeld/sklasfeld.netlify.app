@@ -37,18 +37,15 @@ In my previous post about the [UKB Showcase](../03-ukb-showcase), I focused on o
 - **Whole genome sequencing** — full genome coverage
 - **Phased haplotypes** — estimates of which alleles sit on the same chromosome (i.e., are inherited together)
 
-Depending on the research question, you may need multiple data types. For example, phased haplotype data provides haplotype structure but excludes rare variants, so you might pair it with whole genome sequencing calls to get both. These data types were generated using different tools and released at
-different times, and I find it helpful to know that context to not only
-pick the right data, but also to understand the publications that
-used UKB genetic data before me. UKB provides a [comprehensive timeline](https://community.ukbiobank.ac.uk/hc/en-gb/articles/26655145866269-Past-data-releases) of their data releases, but coming from a sequencing background, the terminology didn't sit well with me. For example, "genotyping data" actually means microarray data — not sequencing. Here are the current releases you'll most likely use:
+Depending on the research question, you may need multiple data types. For example, phased data captures haplotype structure, but phasing algorithms rely on population-level LD patterns that break down for rare variants. If your analysis involves rare variants, use the unphased WGS calls. If you need both haplotype context and rare variant calls, use both. These data types were generated using different tools and released at different times, and I find it helpful to know that context to not only pick the right data, but also to understand the publications that used UKB genetic data before me. UKB provides a [comprehensive timeline](https://community.ukbiobank.ac.uk/hc/en-gb/articles/26655145866269-Past-data-releases) of their data releases, but coming from a sequencing background, the terminology didn't sit well with me. For example, "genotyping data" actually means microarray data — not sequencing. Here are the current releases you'll most likely use:
 
-| Year | Data Type                | Field ID | Participants | Notes                             |
-| ---- | ------------------------ | -------- | ------------ | --------------------------------- |
-| 2017 | Microarray + imputation  | 22418    | 488,377      | ~800K measured; ~96M imputed [^1] |
-| 2022 | Exome sequencing (final) | 23141    | ~470,000     |                                   |
-| 2022 | Imputation (new panels)  | 21007    | 488,377      | GEL and TOPMed; now in GRCh38     |
-| 2023 | Whole genome sequencing  | 24311    | ~500,000     | ML corrections; DRAGEN; unphased  |
-| 2025 | WGS (updated)            | 30108    | ~500,000     | phased VCFs                       |
+| Year | Data Type                        | Field ID | Participants | Notes                             |
+| ---- | -------------------------------- | -------- | ------------ | --------------------------------- |
+| 2017 | Microarray + imputation          | 22418    | 488,377      | ~800K measured; ~96M imputed [^1] |
+| 2022 | Exome sequencing (final)         | 23141    | ~470,000     |                                   |
+| 2022 | Imputation (new panels)          | 21007    | 488,377      | GEL and TOPMed; now in GRCh38     |
+| 2023 | Unphased Whole genome sequencing | 24311    | ~500,000     | ML corrections; DRAGEN; unphased  |
+| 2025 | Phased Whole genome sequencing   | 30108    | ~500,000     | phased VCFs                       |
 
 And here are the earlier releases you may encounter in older publications:
 
@@ -68,11 +65,13 @@ And here are the earlier releases you may encounter in older publications:
  </figcaption>
 </figure>
 
-If you need a refresher on the two storage spaces, see the [hardware post](../02-hardwareOnUKBandAoU). The genetic data lives in data storage under a directory called "Bulk". Filenames contain field ID numbers, so you can cross-reference them with the UK Biobank Showcase. For WGS data, field ID 24311 corresponds to the ML-corrected DRAGEN release. As of the latest release, this is often the one you want.
+If you need a refresher on the two storage spaces, see the [hardware post](../02-hardwareOnUKBandAoU). The genetic data lives in data storage under a directory called "Bulk". Filenames contain field ID numbers, so you can cross-reference them with the UK Biobank Showcase. Field ID 24311 is the 2023 ML-corrected DRAGEN release (unphased). The 2025 release (field ID 30108) provides phased VCFs. Since my work focuses on rare variants, the examples below use 24311.
 
 Start broad to learn the file structure, then narrow down. Running `dx find data --name "ukb24311*.vcf.gz" --folder /Bulk | head` reveals that files follow the pattern:
 
-`/Bulk/DRAGEN WGS/ML-corrected DRAGEN population level WGS variants, pVCF format [500k release]/chr{CHROMOSOME}/ukb24311_c{CHROMOSOME}_b{BATCH}_v1.vcf.gz`
+```
+/Bulk/DRAGEN WGS/ML-corrected DRAGEN population level WGS variants, pVCF format [500k release]/chr{CHROMOSOME}/ukb24311_c{CHROMOSOME}_b{BATCH}_v1.vcf.gz
+```
 
 Yes, the path has spaces. Always quote it. Once you know that, you can search by chromosome directly:
 
@@ -104,11 +103,9 @@ your file. Then comes the next question: what do you do with it?
 
 ## What's Actually in These Files?
 
-A VCF is a giant matrix. Lines starting with `#` are metadata: pipeline details, descriptions for variant annotations in the INFO column, chromosome descriptions, and so on. The last `#` line is the column header for the data rows below it. Each data row is one variant. The first nine columns describe that variant: chromosome, position, ID, reference allele, alternate allele, quality score, filter status, info fields, and format. Everything after column nine is per-sample genotype data. At biobank scale that's 500,000 columns. The good news is that bcftools can filter by position before it touches any of that.
+A VCF is a giant matrix. Lines starting with `#` are metadata: pipeline details, descriptions for variant annotations in the INFO column, chromosome descriptions, and so on. The last `#` line is the column header for the data rows below it. Each data row is one variant. The first nine columns describe that variant: chromosome, position, ID, reference allele, alternate allele, quality score, filter status, info fields, and format. Everything after column nine is per-sample genotype data. At biobank scale that's 500,000 columns. The good news is that bcftools can filter by position before it touches any of that, which is the whole reason streaming works at scale.
 
 ## Code to Stream Genetic Data in UK Biobank
-
-That's exactly what the `--regions` flag does.
 
 ```{bash}
 FILE="/Bulk/DRAGEN WGS/ML-corrected DRAGEN population level WGS variants, pVCF format [500k release]/chr11/ukb24311_c11_b2366_v1.vcf.gz"
@@ -118,16 +115,11 @@ bcftools view "$URL" \
   -O z -o my_region.vcf.gz
 ```
 
-The `--regions` flag means bcftools reads only what it needs and stops. That's
-the whole game: 500,000 participants, one small region, no downloading required.
+The `--regions` flag means bcftools reads only what it needs and stops. That's the whole game: 500,000 participants, one small region, no downloading required.
 
 ## The Short Version
 
-Don't worry about memorizing the release timeline. Just know that earlier
-releases sometimes had issues that later ones fixed. When in doubt, use the most
-recent data available. Once you've hunted down the right batch file with
-`dx make_download_url`, the same command will cheerfully hand bcftools a URL to
-a file half a terabyte in size and let it take only what it needs.
+The release timeline is worth knowing for reading older papers, but you don't need to memorize it. For most analyses, start with the DRAGEN WGS release (field ID 24311). If your analysis requires haplotype structure, reach for the phased release (field ID 30108) instead, or use both if you need rare variant calls in haplotype context. Once you've found the right batch file, `dx make_download_url`, hands bcftools a URL to a file that may be half a terabyte in size and lets it take only what it needs.
 
 In the next post, I'll walk through how All of Us handles its genetic data. Spoiler: the documentation isn't better.
 
