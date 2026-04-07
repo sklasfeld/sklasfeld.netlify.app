@@ -104,12 +104,11 @@ Checking the next batch:
 
 `bash firstpos.sh 11 2367`
 
-returns 47,339,029, meaning batch 2366 covers 47,319,031 - 47,339,028. My region ends at 47,352,702, so I check batch 2368 to find where that's covered. Once you've identified which batches bracket your full region, you have your files. If the 20,000 bp estimate puts you nowhere near the right chromosome positions, jump by a larger increment and binary search from there. Eventually you'll find
-your file. Then comes the next question: what do you do with it?
+returns 47,339,029, meaning batch 2366 covers 47,319,031 - 47,339,028. My region ends at 47,352,702, so I check batch 2368 to find where that's covered. Once you've identified which batches bracket your full region, you have your files. If the 20,000 bp estimate puts you nowhere near the right chromosome positions, jump by a larger increment and binary search from there. Eventually you'll find your file. Then comes the next question: what do you do with it?
 
 ## What's Actually in These Files?
 
-A VCF is a giant matrix. Lines starting with `#` are metadata: pipeline details, descriptions for variant annotations in the INFO column, chromosome descriptions, and so on. The last `#` line is the column header for the data rows below it. Each data row is one variant. The first nine columns describe that variant: chromosome, position, ID, reference allele, alternate allele, quality score, filter status, info fields, and format. Everything after column nine is per-sample genotype data. At biobank scale that's 500,000 columns. The good news is that bcftools can filter by position before it touches any of that, which is the whole reason streaming works at scale.
+A VCF is a giant matrix. Lines starting with `#` are metadata: pipeline details, descriptions for variant annotations in the INFO column, chromosome descriptions, and so on. The last `#` line is the column header for the data rows below it. Each data row is one variant. The first nine columns describe that variant: chromosome, position, ID, reference allele, alternate allele, quality score, filter status, info fields, and format. Everything after column nine is per-sample genotype data. At biobank scale that's 500,000 columns. The good news is that bcftools can filter by position without loading the entire matrix into memory, which is the whole reason streaming works at scale.
 
 ## Code to Stream Genetic Data in UK Biobank
 
@@ -121,7 +120,7 @@ bcftools view "$URL" \
   -O z -o my_region.vcf.gz
 ```
 
-The `--regions` flag means bcftools reads only what it needs and stops. That's the whole game: 500,000 participants, one small region, no downloading required.
+Bcftools reads only what it needs and stops. That's the whole game: 500,000 participants, one small region, no downloading required.
 
 ## The Short Version
 
