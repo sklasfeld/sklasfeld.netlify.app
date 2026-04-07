@@ -67,17 +67,23 @@ And here are the earlier releases you may encounter in older publications:
 
 If you need a refresher on the two storage spaces, see the [hardware post](../02-hardwareOnUKBandAoU). The genetic data lives in data storage under a directory called "Bulk". Filenames contain field ID numbers, so you can cross-reference them with the UK Biobank Showcase. Field ID 24311 is the 2023 ML-corrected DRAGEN release (unphased). The 2025 release (field ID 30108) provides phased VCFs. Since my work focuses on rare variants, the examples below use 24311.
 
-Start broad to learn the file structure, then narrow down. Running `dx find data --name "ukb24311*.vcf.gz" --folder /Bulk | head` reveals that files follow the pattern:
+Start broad to learn the file structure, then narrow down. Running
 
+```{bash}
+dx find data --name "ukb24311*.vcf.gz" --folder /Bulk | head
 ```
-/Bulk/DRAGEN WGS/ML-corrected DRAGEN population level WGS variants, pVCF format [500k release]/chr{CHROMOSOME}/ukb24311_c{CHROMOSOME}_b{BATCH}_v1.vcf.gz
+
+reveals that files follow the pattern:
+
+`/Bulk/DRAGEN WGS/ML-corrected DRAGEN population level WGS variants, pVCF format [500k release]/chr{CHROMOSOME}/ukb24311_c{CHROMOSOME}_b{BATCH}_v1.vcf.gz`
+
+Yes, the path has spaces. Always quote it. Once you know that, you can narrow the search to a specific chromosome. Even then, WGS data is split across many batch files, so `| head` is still warranted:
+
+```{bash}
+dx find data --name "ukb24311_c11_*.vcf.gz" --folder "/Bulk/DRAGEN WGS/ML-corrected DRAGEN population level WGS variants, pVCF format [500k release]/chr11" | head
 ```
 
-Yes, the path has spaces. Always quote it. Once you know that, you can search by chromosome directly:
-
-`dx find data --name "ukb24311_c11_*.vcf.gz" --folder /Bulk`
-
-That's still a long list, because WGS data is split across many batch files per chromosome. Unfortunately the official documentation is no help here. The best I found was a
+Unfortunately the official documentation is no help here. The best I found was a
 [two-year-old community forum reply](https://community.ukbiobank.ac.uk/hc/en-gb/community/posts/16790347396253-Question-regarding-batches) suggesting each batch covers roughly 20,000 bp. Thanks, George F. You saved me more time than UKB's own docs did. Take the estimate as a ballpark, not a guarantee.
 
 Here is the approach in practice. To find positions 47,331,406 - 47,352,702 on chromosome 11, you can divide 47,331,406 by 20,000 to derive batch 2366 as a reasonable first guess. I wrote a small script (`firstpos.sh`) to check the first position of any candidate file:
@@ -98,12 +104,11 @@ Checking the next batch:
 
 `bash firstpos.sh 11 2367`
 
-returns 47,339,029, meaning batch 2366 covers 47,319,031 - 47,339,028. My region ends at 47,352,702, so I check batch 2368 to find where that's covered. Once you've identified which batches bracket your full region, you have your files. If the 20,000 bp estimate puts you nowhere near the right chromosome positions, jump by a larger increment and binary search from there. Eventually you'll find
-your file. Then comes the next question: what do you do with it?
+returns 47,339,029, meaning batch 2366 covers 47,319,031 - 47,339,028. My region ends at 47,352,702, so I check batch 2368 to find where that's covered. Once you've identified which batches bracket your full region, you have your files. If the 20,000 bp estimate puts you nowhere near the right chromosome positions, jump by a larger increment and binary search from there. Eventually you'll find your file. Then comes the next question: what do you do with it?
 
 ## What's Actually in These Files?
 
-A VCF is a giant matrix. Lines starting with `#` are metadata: pipeline details, descriptions for variant annotations in the INFO column, chromosome descriptions, and so on. The last `#` line is the column header for the data rows below it. Each data row is one variant. The first nine columns describe that variant: chromosome, position, ID, reference allele, alternate allele, quality score, filter status, info fields, and format. Everything after column nine is per-sample genotype data. At biobank scale that's 500,000 columns. The good news is that bcftools can filter by position before it touches any of that, which is the whole reason streaming works at scale.
+A VCF is a giant matrix. Lines starting with `#` are metadata: pipeline details, descriptions for variant annotations in the INFO column, chromosome descriptions, and so on. The last `#` line is the column header for the data rows below it. Each data row is one variant. The first nine columns describe that variant: chromosome, position, ID, reference allele, alternate allele, quality score, filter status, info fields, and format. Everything after column nine is per-sample genotype data. At biobank scale that's 500,000 columns. The good news is that bcftools can filter by position without loading the entire matrix into memory, which is the whole reason streaming works at scale.
 
 ## Code to Stream Genetic Data in UK Biobank
 
@@ -115,7 +120,7 @@ bcftools view "$URL" \
   -O z -o my_region.vcf.gz
 ```
 
-The `--regions` flag means bcftools reads only what it needs and stops. That's the whole game: 500,000 participants, one small region, no downloading required.
+Bcftools reads only what it needs and stops. That's the whole game: 500,000 participants, one small region, no downloading required.
 
 ## The Short Version
 
