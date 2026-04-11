@@ -98,9 +98,6 @@ The internet has fancier solutions, but I just wrote a script to loop through in
 <details open>
 <summary>Show Python code</summary>
 
-<details open>
-<summary>Show Python code</summary>
-
 ```python
 import pandas as pd
 import subprocess
@@ -141,11 +138,6 @@ for i in tqdm(range(0, 20016)):
 ```
 
 </details>
-<<<<<<< HEAD
-
-### Extracting and Merging Your Region
-=======
->>>>>>> 4b01a030 (edited blog post using more current experience)
 
 If you're planning to do this repeatedly, build an index of shard positions once and query that instead. Why one doesn't already exist is a great question.
 
@@ -200,32 +192,10 @@ As I mentioned in [post 02](../02-hardwareOnUKBandAoU), Hail requires an expensi
 <details open>
 <summary>Show Python code</summary>
 
-<details open>
-<summary>Show Python code</summary>
-
 ```python
 import hail as hl
 import os
 
-<<<<<<< HEAD
-clinvar_srwgs_path = os.getenv("WGS_EXOME_MULTI_HAIL_PATH")
-mt = hl.read_matrix_table(clinvar_srwgs_path)
-```
-
-</details>
-
-**Critical lesson:** Always filter at read time using the `_intervals` parameter. With the default cluster (15 GB RAM, 4 CPUs), reading the full genome MatrixTable will crash.
-
-<details open>
-<summary>Show Python code</summary>
-
-```python
-import hail as hl
-import os
-
-# SET YOUR REGION OF INTEREST HERE
-=======
->>>>>>> 4b01a030 (edited blog post using more current experience)
 chrom = "11"
 region_start = 47331406
 region_end = 47352702
