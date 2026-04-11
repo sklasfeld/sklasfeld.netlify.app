@@ -7,7 +7,7 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
+:root {
     --color-text-main: 23 23 23; /* #171717 */
     --color-bg-main: 242 241 236; /* #F2F1EC */
     --color-bg-muted: 234 233 225; /* #EAE9E1 */
