@@ -49,6 +49,9 @@ Click a category to see participant counts and value distributions. For example,
 
 Query the `CONCEPT` table directly to translate medical concepts into IDs:
 
+<details open>
+<summary>Show Python code</summary>
+
 ```python
 import pandas as pd
 import os
@@ -66,6 +69,8 @@ sbp_query = pd.io.gbq.read_gbq(concept_query, dialect='standard') # Returns 221 
 # Or query a known concept ID directly
 concept_id_query = f'''SELECT * FROM `{CDR}.concept` WHERE concept_id = 3004249
 ```
+
+</details>
 
 Use `CONCEPT_RELATIONSHIP` to explore how concepts relate - for example, which ICD-10 codes map to SNOMED concept 3004249.
 

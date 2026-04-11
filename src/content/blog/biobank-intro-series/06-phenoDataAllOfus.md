@@ -55,15 +55,23 @@ If the builders aren't enough, it's time for SQL. The full [OMOP CDM schema](htt
 
 All code below assumes the following setup:
 
+<details open>
+<summary>Show setup code</summary>
+
 ```{python}
 import pandas as pd
 import os
 CDR = os.environ['WORKSPACE_CDR']
 ```
 
+</details>
+
 ### The `person` Table
 
 The person table is the starting point. There is one row per participant. Demographic fields like gender are stored three ways: gender_concept_id, gender_source_value, and gender_source_concept_id. The source value contains the raw data from each contributing site, which can be inconsistent ("Female", "F", "female"). To get standardized labels, join to the concept table:
+
+<details open>
+<summary>Show Python code</summary>
 
 ```{python}
 gender_query = f'''
@@ -78,11 +86,16 @@ gender_query = f'''
 gender_df = pd.io.gbq.read_gbq(gender_query, dialect='standard')
 ```
 
+</details>
+
 This JOIN pattern of linking a concept ID column to `concept.concept_id` to get `concept_name` repeats throughout OMOP. It works the same way for race, ethnicity, and any other coded field.
 
 ### The `condition_occurrence` Table
 
 This table is useful for identifying cases and controls. For example, to find all participants diagnosed with Alzheimer's disease (concept ID 378419) and their earliest diagnosis date:
+
+<details open>
+<summary>Show Python code</summary>
 
 ```{python}
 az_query = f'''
@@ -96,11 +109,16 @@ az_query = f'''
 az_df = pd.io.gbq.read_gbq(az_query, dialect='standard')
 ```
 
+</details>
+
 This returns only participants with the diagnosis. To turn it into a case/control flag, merge it with a table that has all participants.
 
 ### Putting it all together
 
 Each query above produces its own dataframe. To build a cohort table, merge them:
+
+<details open>
+<summary>Show Python code</summary>
 
 ```{python}
 az_df['has_az'] = True
@@ -112,6 +130,8 @@ full_df = pd.merge(
   how='left'
 )
 ```
+
+</details>
 
 After the left join, participants with an Alzheimer's diagnosis will have `has_az = True` and a diagnosis date, while everyone else will have null values. You can fill the null values with `full_df['has_az'] = full_df['has_az'].fillna(False)` for a clean boolean column. This gives you a case/control column without needing a separate query for controls. Add more condition, measurement, or drug exposure queries and merge them the same way.
 

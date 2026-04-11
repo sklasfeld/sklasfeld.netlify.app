@@ -33,6 +33,9 @@ First, you'll need your dataset identifier to eventually specify to every dx com
 
 python:
 
+<details open>
+<summary>Show Python code</summary>
+
 ```{python}
 import dxpy
 import subprocess
@@ -52,7 +55,12 @@ project_id = dxpy.find_one_project()["id"]
 dataset = f"{project_id}:{dispensed_dataset_id}"
 ```
 
+</details>
+
 bash:
+
+<details open>
+<summary>Show bash code</summary>
 
 ```{bash}
 # Get project ID
@@ -64,6 +72,8 @@ dispensed_dataset_id=$(dx find data --name "app*.dataset" --brief)
 # Combine them
 dataset="${project_id}:${dispensed_dataset_id}"
 ```
+
+</details>
 
 With that in hand, let's get some data.
 
@@ -82,9 +92,14 @@ With a list of field IDs you gathered from the UKB Showcase, your next step is t
 
 When I'm in "just get it working" mode (which, let's be honest, is most of research), I found that the command-line approach is faster for quick lookups. I simply list all the field names in the terminal and grep for the ones I need.
 
+<details open>
+<summary>Show terminal command</summary>
+
 ```bash
 dx extract_dataset ${dataset}  --entities participant --list-fields | grep "22420"
 ```
+
+</details>
 
 ### Dictionary approach
 
@@ -96,12 +111,17 @@ The dictionary approach requires more setup: extracting CSVs, loading them into 
 
 To extract the actual dataset values, use DNAnexus' `extract_dataset` command with the `--fields` flag set to the relevant field names:
 
+<details open>
+<summary>Show extract_dataset command</summary>
+
 ```bash
 dx extract_dataset <project_id>:<dispensed_dataset_id> \
   --fields participant.eid,participant.p22420_i2,participant.p22420_i3 \
   --delimiter "," \
   --output lvef_pheno.csv
 ```
+
+</details>
 
 ## Step 3: Translate the dataset values
 
@@ -117,6 +137,9 @@ Fortunately, the UKB Showcase maintains various data coding tables for each of t
 
 You could also extract all the coding dictionaries once and have them ready as searchable dataframes. For example,
 
+<details open>
+<summary>Show Python code</summary>
+
 ```python
 # Extract dictionaries once with -ddd flag
 cmd = ["dx", "extract_dataset", dataset, "-ddd", "--delimiter", ","]
@@ -131,6 +154,8 @@ cardiomyopathy_codes = icd10_coding[
     icd10_coding['meaning'].str.contains('cardiomyopathy', case=False)
 ][["meaning", "code"]]
 ```
+
+</details>
 
 Now you can filter your extracted data to only participants with those specific codes, without tab-switching back to the Showcase every time you need to decode something.
 
