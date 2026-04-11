@@ -72,9 +72,13 @@ The bad news: you need to check 20,016 files to find your region.
 
 The internet is full of ways to optimize this search, but if I am being honest, I just wrote a quick script to loop through each file and check if my region of interest is within the start and stop positions listed in the interval list. I eventually got impatient and skipped ahead until I found the right chromosome and eventually got close enough to my region of interest.
 
+<details open>
+<summary>Show Python code</summary>
+
 ```python
 import pandas as pd
 import subprocess
+from tqdm import tqdm
 
 # SET YOUR REGION OF INTEREST HERE
 chrom = "11"
@@ -109,6 +113,8 @@ for i in tqdm(range(0,20016)):
             print(file_int)
             break
 ```
+
+</details>
 
 ### Extracting and Merging Your Region
 
@@ -158,6 +164,9 @@ gsutil -u $GOOGLE_PROJECT cp merged_AOU_v8_unphased.vcf.gz $WORKSPACE_BUCKET/dat
 
 The Hail MatrixTable for All of Us WGS data is stored in an environment variable. You can access it like this:
 
+<details open>
+<summary>Show Python code</summary>
+
 ```python
 import hail as hl
 import os
@@ -166,7 +175,12 @@ clinvar_srwgs_path = os.getenv("WGS_EXOME_MULTI_HAIL_PATH")
 mt = hl.read_matrix_table(clinvar_srwgs_path)
 ```
 
+</details>
+
 **Critical lesson:** Always filter at read time using the `_intervals` parameter. With the default cluster (15 GB RAM, 4 CPUs), reading the full genome MatrixTable will crash.
+
+<details open>
+<summary>Show Python code</summary>
 
 ```python
 import hail as hl
@@ -186,6 +200,8 @@ mt = hl.read_matrix_table(
     _intervals=[your_interval]  # Only load this region!
 )
 ```
+
+</details>
 
 ## Bonus: The Variant Annotation Table (VAT)
 
