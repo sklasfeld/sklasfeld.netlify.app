@@ -83,6 +83,7 @@ sbp_query = f'''
 sbp_df = pd.io.gbq.read_gbq(sbp_query, dialect='standard')
 sbp_df
 ```
+
 </details>
 
 The SELECT statement exports these columns:
@@ -120,6 +121,7 @@ LEFT JOIN `{CDR}.concept` mtc ON mtc.concept_id = m.measurement_type_concept_id
 WHERE measurement_concept_id = 3004249'''
 pd.io.gbq.read_gbq(sbp_query, dialect='standard')
 ```
+
 </details>
 
 This JOIN pattern repeats throughout OMOP and works the same way for any coded field across any clinical table, including the `person` table. The query below decodes gender values:
@@ -141,6 +143,7 @@ gender_query = f'''
 gender_df = pd.io.gbq.read_gbq(gender_query, dialect='standard')
 gender_df
 ```
+
 </details>
 
 The `gender_source_value` column is the shortcut that feels right but isn't. It contains raw, unstandardized values from the original data source, think of it as the "close enough" column. For any real analysis, always use the decoded `gender` column obtained through the `concept` join. Keep `gender_source_value` around for reference, but DO NOT let it anywhere near your results.
@@ -160,6 +163,7 @@ cohort_df = pd.merge(
   how='left'
 )
 ```
+
 </details>
 
 This pattern scales to any study: find your concept IDs ([Part I](../05-aou-omop)), query the relevant OMOP tables, join to `concept` for readable labels, and merge the resulting dataframes in pandas.
