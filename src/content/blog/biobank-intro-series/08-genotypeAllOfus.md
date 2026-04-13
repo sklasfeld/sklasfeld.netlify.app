@@ -1,7 +1,7 @@
 ---
 title: 'Biobank Intro Series: All of Us Genetic Data'
 excerpt: 'Navigating All of Us genotype data for variant extraction and analysis'
-publishDate: 'Mar 13 2026'
+publishDate: 'Apr 13 2026'
 tags:
   - biobank
   - all-of-us
@@ -252,6 +252,6 @@ echo "Upload complete at $(date)"
 
 If there's a theme to this post, it's this: All of Us has enormous data and almost no indexes to help you navigate it. The unphased VCFs are sharded into 20,016 files with no chromosome in the filename. The VAT is 150 GB compressed with no tabix support. The documentation points you to environment variables and leaves the rest to you. You're not doing something wrong when it takes a while. That's just the deal. Start the script, set your idle timeout, and go do something else.
 
-Could someone build proper indexes for all of this? Yes. Should they? Absolutely. Is that a job for a skilled computational biologist who understands the data well enough to do it right? Also yes. If you're reading this and thinking "someone should fix that," that someone could be you, and you should probably get paid for it.
+Could someone build proper indexes for all of this? Yes. Should they? Absolutely. Is that a job for a skilled computational biologist who understands the data well enough to do it right? Also yes. If you're reading this and thinking "someone should fix that," that someone could be you.
 
-I cobbled together these paths from [this documentation on data organization](https://support.researchallofus.org/hc/en-us/articles/29475228181908-How-the-All-of-Us-Genomic-data-are-organized#01JQ7EW4SE044N3Y9350Z299PW) and [this table of CDR paths](https://support.researchallofus.org/hc/en-us/articles/29475233432212-Controlled-CDR-Directory), with a helpful nudge from the All of Us support team. You could have figured this out on your own eventually, but hopefully I've saved you 45 minutes of creative googling.
+Go forth and blob on.
