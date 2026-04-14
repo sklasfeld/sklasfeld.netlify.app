@@ -71,7 +71,6 @@ gs://fc-aou-datasets-controlled/v8/wgs/short_read/snpindel/aux/vat/vat_complete.
 On UKB RAP, we worked around `dx cat` buffering problems by generating a temporary HTTPS URL with `dx make_download_url` and pointing bcftools at that directly (see [post 02](../02-hardwareOnUKBandAoU)). On AoU, `gsutil cat` actually streams without buffering, so you can pipe it straight into bcftools. No URL workaround needed. If your environment is authenticated via `GOOGLE_APPLICATION_CREDENTIALS` or `gcloud auth`, bcftools may be able to read gs:// paths directly, though I haven't tested this.
 
 <details open>
-<summary>Code</summary>
 
 ```bash
 # Phased VCF
@@ -96,7 +95,7 @@ The unphased VCF files live at `gs://fc-aou-datasets-controlled/v8/wgs/short_rea
 The internet has fancier solutions, but I just wrote a script to loop through interval lists until it found my region. I also got impatient and skipped ahead once I was on the right chromosome:
 
 <details open>
-<summary>Code</summary>
+<summary>Show Python code</summary>
 
 ```python
 import pandas as pd
@@ -146,7 +145,7 @@ If you're planning to do this repeatedly, build an index of shard positions once
 Once you have your shard list, stream each one through bcftools to subset to your region, then merge:
 
 <details open>
-<summary>Code</summary>
+<summary>Show bash code</summary>
 
 ```bash
 # SET YOUR REGION OF INTEREST HERE
@@ -190,7 +189,7 @@ gsutil -u $GOOGLE_PROJECT cp merged_AOU_v8_unphased.vcf.gz $WORKSPACE_BUCKET/dat
 As I mentioned in [post 02](../02-hardwareOnUKBandAoU), Hail requires an expensive Spark cluster and is overkill for single-gene or single-region work. For those cases, bcftools is faster and cheaper. If you're doing something genuinely genome-wide that needs distributed computing, the MatrixTable is available at `$WGS_EXOME_MULTI_HAIL_PATH`. If you go that route, always filter at read time using the `_intervals` parameter. Loading the full genome MatrixTable on the default cluster will crash it.
 
 <details open>
-<summary>Code</summary>
+<summary>Show Python code</summary>
 
 ```python
 import hail as hl
@@ -217,7 +216,7 @@ mt = hl.read_matrix_table(
 If you need variant annotations like gene names and predicted consequences, All of Us provides a massive TSV file you can grep by gene name:
 
 <details open>
-<summary>Code</summary>
+<summary>Show bash script</summary>
 
 ```bash
 #!/bin/bash
@@ -252,6 +251,6 @@ echo "Upload complete at $(date)"
 
 If there's a theme to this post, it's this: All of Us has enormous data and almost no indexes to help you navigate it. The unphased VCFs are sharded into 20,016 files with no chromosome in the filename. The VAT is 150 GB compressed with no tabix support. The documentation points you to environment variables and leaves the rest to you. You're not doing something wrong when it takes a while. That's just the deal. Start the script, set your idle timeout, and go do something else.
 
-Could someone build proper indexes for all of this? Yes. Should they? Absolutely. Is that a job for a skilled computational biologist who understands the data well enough to do it right? Also yes. If you're reading this and thinking "someone should fix that," that someone could be you.
+Could someone build proper indexes for all of this? Yes. Should they? Absolutely. Is that a job for a skilled computational biologist who understands the data well enough to do it right? Also yes. If you're reading this and thinking "someone should fix that," that someone could be you, and you should probably get paid for it.
 
-Go forth and blob on.
+I cobbled together these paths from [this documentation on data organization](https://support.researchallofus.org/hc/en-us/articles/29475228181908-How-the-All-of-Us-Genomic-data-are-organized#01JQ7EW4SE044N3Y9350Z299PW) and [this table of CDR paths](https://support.researchallofus.org/hc/en-us/articles/29475233432212-Controlled-CDR-Directory), with a helpful nudge from the All of Us support team. You could have figured this out on your own eventually, but hopefully I've saved you 45 minutes of creative googling.
