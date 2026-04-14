@@ -24,7 +24,7 @@ seo:
 <img src="/blog_images/biobank1/omop_table_relationships_basic.png" alt='Diagram showing the four-step OMOP workflow: look up concept IDs, query a clinical table (e.g., measurement, observation), label values with concept names, and join with person_id to build a cohort table.' style="max-height: 600px; width: auto;" />
 </div>
 <figcaption class="text-center text-sm opacity-80 mt-2">
-   <em>The core OMOP workflow: (1) look up your concept IDs in the concept table, (2) query a clinical table, (3) label coded values by joining back to concept, and (4) join to the `person` table via` person_id` to link participants.</em>
+   <em>The core OMOP workflow: (1) look up your concept IDs in the concept table, (2) query a clinical table, (3) label coded values by joining back to concept, and (4) join to the `person` table via `person_id` to link participants.</em>
  </figcaption>
 </figure>
 
@@ -52,13 +52,21 @@ The OMOP CDM tables live in Google BigQuery. The examples below use Python's `pa
 Python 3.10.16, pandas 2.0.3, google-cloud-bigquery 2.34.4, CDR C2024Q3R9
 </details>
 
+<details open>
+<summary>Code</summary>
+
 ```python
 import pandas as pd
 import os
 CDR = os.environ['WORKSPACE_CDR']
 ```
 
+</details>
+
 In Part I, we found that systolic blood pressure maps to concept ID 3004249 in the `measurement` table. Let's use that as our worked example:
+
+<details open>
+<summary>Code</summary>
 
 ```python
 sbp_query = f'''
@@ -76,6 +84,8 @@ sbp_df = pd.io.gbq.read_gbq(sbp_query, dialect='standard')
 sbp_df
 ```
 
+</details>
+
 The SELECT statement exports these columns:
 
 - **measurement_id**: unique row identifier
@@ -90,6 +100,9 @@ The WHERE clause limits the measurement table to this field. Since we will stack
 ### Decode Coded Values via the `concept` Table
 
 Coded fields across all OMOP tables store numeric IDs. To translate them, join to the `concept` table. The query below decodes the systolic blood pressure measurements:
+
+<details open>
+<summary>Code</summary>
 
 ```python
 sbp_query = f'''SELECT
@@ -109,7 +122,12 @@ WHERE measurement_concept_id = 3004249'''
 pd.io.gbq.read_gbq(sbp_query, dialect='standard')
 ```
 
+</details>
+
 This JOIN pattern repeats throughout OMOP and works the same way for any coded field across any clinical table, including the `person` table. The query below decodes gender values:
+
+<details open>
+<summary>Code</summary>
 
 ```python
 gender_query = f'''
@@ -126,11 +144,16 @@ gender_df = pd.io.gbq.read_gbq(gender_query, dialect='standard')
 gender_df
 ```
 
+</details>
+
 The `gender_source_value` column is the shortcut that feels right but isn't. It contains raw, unstandardized values from the original data source, think of it as the "close enough" column. For any real analysis, always use the decoded `gender` column obtained through the `concept` join. Keep `gender_source_value` around for reference, but DO NOT let it anywhere near your results.
 
 ### Merge Everything into a Cohort Table
 
 Each query produces its own dataframe. Merge them on `person_id` to build your cohort:
+
+<details open>
+<summary>Code</summary>
 
 ```python
 cohort_df = pd.merge(
@@ -141,9 +164,14 @@ cohort_df = pd.merge(
 )
 ```
 
+</details>
+
 This pattern scales to any study: find your concept IDs ([Part I](../05-aou-omop)), query the relevant OMOP tables, join to `concept` for readable labels, and merge the resulting dataframes in pandas.
 
 The pandas approach above is readable and easy to follow, but it loads each table into memory separately before joining. For larger cohorts, it's more efficient to do the join entirely in SQL so BigQuery returns only the final result:
+
+<details open>
+<summary>Code</summary>
 
 ```python
 cohort_query = f'''
@@ -161,17 +189,17 @@ LEFT JOIN `{CDR}.concept` pgc ON pgc.concept_id = p.gender_concept_id
 
 -- Get the most recent SBP measurement per person
 LEFT JOIN (
-  SELECT
-    person_id,
-    value_as_number,
-    measurement_concept_id,
-    measurement_type_concept_id,
-    ROW_NUMBER() OVER (
-      PARTITION BY person_id, measurement_concept_id
-      ORDER BY measurement_date DESC, measurement_datetime DESC, measurement_id DESC
-    ) AS recency_rank  -- 1 = most recent
-  FROM `{CDR}.measurement`
-  WHERE measurement_concept_id = 3004249  -- systolic blood pressure
+SELECT
+person_id,
+value_as_number,
+measurement_concept_id,
+measurement_type_concept_id,
+ROW_NUMBER() OVER (
+PARTITION BY person_id, measurement_concept_id
+ORDER BY measurement_date DESC, measurement_datetime DESC, measurement_id DESC
+) AS recency_rank -- 1 = most recent
+FROM `{CDR}.measurement`
+WHERE measurement_concept_id = 3004249 -- systolic blood pressure
 ) m ON m.person_id = p.person_id AND m.recency_rank = 1
 
 -- Decode measurement_concept_id and measurement_type_concept_id
@@ -182,9 +210,14 @@ cohort_df = pd.io.gbq.read_gbq(cohort_query, dialect='standard')
 cohort_df
 ```
 
+</details>
+
 In the above example, we are only exporting one measurement from the clinical table `measurement`. However, you will likely need to export multiple data fields from a single clinical table. Unfortunately, the query grows linearly with the number of measurements. A UNION_ALL approach followed by a pivot will make your query a lot cleaner. The query below exports a cohort table with gender, systolic blood pressure, and BMI (Concept ID:3038553).
 
-```{python}
+<details open>
+<summary>Code</summary>
+
+```python
 cohort_query = f'''
 WITH measurements AS (
   -- Stack all measurements into one table, keeping only the most recent per person
@@ -227,6 +260,8 @@ GROUP BY p.person_id, pgc.concept_name, p.gender_source_value
 cohort_df = pd.io.gbq.read_gbq(cohort_query, dialect='standard')
 cohort_df
 ```
+
+</details>
 
 ## Cohort and Dataset Builders
 

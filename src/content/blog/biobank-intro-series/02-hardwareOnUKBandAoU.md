@@ -41,6 +41,9 @@ Think of your workspace and the platform's data storage as two separate floating
 
 The dx CLI is your friend for navigating the RAP filesystem. Since `dx cat` doesn't stream VCFs reliably for tools like bcftools, generating a temporary HTTPS URL with `dx make_download_url` gives bcftools a direct URL it can handle natively.
 
+<details open>
+<summary>Code</summary>
+
 ```bash
 # Navigate the RAP filesystem
 dx ls
@@ -55,9 +58,14 @@ dx upload local_file.txt --path /results/
 dx download file-xxxx --output local_file.txt
 ```
 
+</details>
+
 **All of Us: gsutil for Google Cloud Storage**
 
 All of Us data lives in Google Cloud Storage (GCS) buckets and uses `gsutil` to identify, stream, and move data between your workspace and these buckets. Unlike `dx cat`, `gsutil` can stream VCFs with the `cat` command.
+
+<details open>
+<summary>Code</summary>
 
 ```bash
 # List files in the controlled data-repository (CDR) bucket
@@ -70,13 +78,23 @@ gsutil ls gs://fc-aou-datasets-controlled/v7/wgs/short_read/snpindel/
 gsutil cat gs://path/to/file.vcf.gz | bcftools view
 ```
 
+</details>
+
 **Important:** Add a `-u` flag to `gsutil` commands to attribute the operation to your project for proper billing and access control:
+
+<details open>
+<summary>Code</summary>
 
 ```bash
 gsutil -u $GOOGLE_PROJECT [command]
 ```
 
+</details>
+
 Use the environment variables `$GOOGLE_PROJECT` and `$WORKSPACE_BUCKET` to avoid hardcoding paths:
+
+<details open>
+<summary>Code</summary>
 
 ```bash
 # Upload local file from your workspace to your storage bucket
@@ -85,6 +103,8 @@ gsutil -u $GOOGLE_PROJECT cp local_file.txt $WORKSPACE_BUCKET/
 # Download files (only if absolutely necessary) to your workspace
 gsutil -u $GOOGLE_PROJECT cp gs://path/to/file.txt local_file.txt
 ```
+
+</details>
 
 ## Tip #2: Don't Bring the Cloud Home With You
 
@@ -99,6 +119,9 @@ Now that you know how to upload and download files, I must restate that **you sh
 
 **Don't do this:**
 
+<details open>
+<summary>Code</summary>
+
 ```bash
 # UK Biobank: Copying a 500GB VCF locally
 dx download file-xxxx
@@ -107,7 +130,12 @@ dx download file-xxxx
 gsutil cp gs://path/to/huge.vcf.gz .
 ```
 
+</details>
+
 **Do this instead:**
+
+<details open>
+<summary>Code</summary>
 
 ```bash
 # UK Biobank: Stream with dx
@@ -116,6 +144,8 @@ dx cat file-xxxx | bcftools view | your_analysis
 # All of Us: Stream with gsutil
 gsutil cat gs://path/to/file.vcf.gz | bcftools view | your_analysis
 ```
+
+</details>
 
 The data is already where it needs to be. It sits in the cloud, on fast storage, ready to be streamed. Copying wastes time, burns through storage quotas, and risks running out of disk space mid-analysis. Both platforms are designed for streaming access. Use it.
 

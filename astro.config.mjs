@@ -14,7 +14,11 @@ export default defineConfig({
         // Applied to .md and .mdx files
         remarkPlugins: [remarkMermaid],
       },
-    integrations: [expressiveCode(), mdx(), sitemap(), tailwind({
+    integrations: [expressiveCode({
+        styleOverrides: {
+            codeFontSize: '1.05rem'
+        }
+    }), mdx(), sitemap(), tailwind({
         applyBaseStyles: false
     })]
 });

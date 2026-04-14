@@ -35,6 +35,9 @@ To query the data, you need a fully qualified dataset reference combining your p
 
 python:
 
+<details open>
+<summary>Code</summary>
+
 ```{python}
 import dxpy
 import glob
@@ -51,7 +54,12 @@ project_id = dxpy.find_one_project()["id"]
 dataset = f"{project_id}:{dispensed_dataset_id}"
 ```
 
+</details>
+
 bash:
+
+<details open>
+<summary>Code</summary>
 
 ```{bash}
 # Get project ID
@@ -63,6 +71,8 @@ dispensed_dataset_id=$(dx find data --name "app*.dataset" --brief)
 # Combine them
 dataset="${project_id}:${dispensed_dataset_id}"
 ```
+
+</details>
 
 With that in hand, let's get some data.
 
@@ -81,9 +91,14 @@ With a list of field IDs you gathered from the UKB Showcase, your next step is t
 
 When I'm in "just get it working" mode (which, let's be honest, is most of research), I found that the command-line approach is faster for quick lookups. I simply list all the field names in the terminal and grep for the ones I need.
 
+<details open>
+<summary>Code</summary>
+
 ```bash
 dx extract_dataset ${dataset}  --entities participant --list-fields | grep "22420"
 ```
+
+</details>
 
 ### Dictionary approach
 
@@ -95,12 +110,17 @@ The dictionary approach requires more setup: extracting CSVs, loading them into 
 
 To extract the actual dataset values, use DNAnexus' `extract_dataset` command with the `--fields` flag set to the relevant field names:
 
+<details open>
+<summary>Code</summary>
+
 ```bash
 dx extract_dataset <project_id>:<dispensed_dataset_id> \
   --fields participant.eid,participant.p22420_i2,participant.p22420_i3 \
   --delimiter "," \
   --output lvef_pheno.csv
 ```
+
+</details>
 
 ## Step 3: Translate the dataset values
 
@@ -115,6 +135,9 @@ I extracted the field names easily enough with `dx` commands. However, the raw d
 Fortunately, the UKB Showcase maintains various data coding tables for each of their coded data fields. Specifically ICD-10 diagnosis codes are given coding 19 in UKB. Similarly ICD9 codes are found in coding 87.
 
 You could also extract all the coding dictionaries once and have them ready as searchable dataframes. For example,
+
+<details open>
+<summary>Code</summary>
 
 ```python
 import subprocess
@@ -133,6 +156,8 @@ cardiomyopathy_codes = icd10_coding[
     icd10_coding['meaning'].str.contains('cardiomyopathy', case=False)
 ][["meaning", "code"]]
 ```
+
+</details>
 
 Now you can filter your extracted data to only participants with those specific codes, without tab-switching back to the Showcase every time you need to decode something.
 
