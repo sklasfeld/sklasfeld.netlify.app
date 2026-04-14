@@ -29,7 +29,9 @@ If UK Biobank RAP gives you a filing cabinet with labeled drawers, All of Us giv
 
 Yes, "blobs" is the technical term for flat storage objects, organized by path conventions rather than a true directory hierarchy. There are no folders, just prefixes that cosplay as folders. Until you internalize this, you may spend a lot of time fishing in the bucket.
 
-## Quick Overview: What's Available
+```
+gs://fc-aou-datasets-controlled/v8/wgs/short_read/snpindel/aux/phasing/chr${CHROM}_AOU_v8.2_allsamples_phased.vcf.gz
+```
 
 <figure class="my-8 mx-auto !max-w-lg">
 <img src="/blog_images/biobank1/aou_genetic_data.png" alt="Woman with a flashlight searching through a dark basement packed with disorganized filing cabinets, papers, and boxes, representing the scattered data organization within All of Us." class="!max-w-none mx-auto w-full" >
