@@ -53,7 +53,7 @@ Python 3.10.16, pandas 2.0.3, google-cloud-bigquery 2.34.4, CDR C2024Q3R9
 </details>
 
 <details open>
-<summary>Show Python code</summary>
+<summary>Code</summary>
 
 ```python
 import pandas as pd
@@ -66,7 +66,7 @@ CDR = os.environ['WORKSPACE_CDR']
 In Part I, we found that systolic blood pressure maps to concept ID 3004249 in the `measurement` table. Let's use that as our worked example:
 
 <details open>
-<summary>Show Python code</summary>
+<summary>Code</summary>
 
 ```python
 sbp_query = f'''
@@ -102,7 +102,7 @@ The WHERE clause limits the measurement table to this field. Since we will stack
 Coded fields across all OMOP tables store numeric IDs. To translate them, join to the `concept` table. The query below decodes the systolic blood pressure measurements:
 
 <details open>
-<summary>Show Python code</summary>
+<summary>Code</summary>
 
 ```python
 sbp_query = f'''SELECT
@@ -127,7 +127,7 @@ pd.io.gbq.read_gbq(sbp_query, dialect='standard')
 This JOIN pattern repeats throughout OMOP and works the same way for any coded field across any clinical table, including the `person` table. The query below decodes gender values:
 
 <details open>
-<summary>Show Python code</summary>
+<summary>Code</summary>
 
 ```python
 gender_query = f'''
@@ -153,7 +153,7 @@ The `gender_source_value` column is the shortcut that feels right but isn't. It 
 Each query produces its own dataframe. Merge them on `person_id` to build your cohort:
 
 <details open>
-<summary>Show Python code</summary>
+<summary>Code</summary>
 
 ```python
 cohort_df = pd.merge(
@@ -171,7 +171,7 @@ This pattern scales to any study: find your concept IDs ([Part I](../05-aou-omop
 The pandas approach above is readable and easy to follow, but it loads each table into memory separately before joining. For larger cohorts, it's more efficient to do the join entirely in SQL so BigQuery returns only the final result:
 
 <details open>
-<summary>Show Python code</summary>
+<summary>Code</summary>
 
 ```python
 cohort_query = f'''
@@ -215,7 +215,7 @@ cohort_df
 In the above example, we are only exporting one measurement from the clinical table `measurement`. However, you will likely need to export multiple data fields from a single clinical table. Unfortunately, the query grows linearly with the number of measurements. A UNION_ALL approach followed by a pivot will make your query a lot cleaner. The query below exports a cohort table with gender, systolic blood pressure, and BMI (Concept ID:3038553).
 
 <details open>
-<summary>Show Python code</summary>
+<summary>Code</summary>
 
 ```python
 cohort_query = f'''

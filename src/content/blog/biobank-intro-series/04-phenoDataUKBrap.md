@@ -36,7 +36,7 @@ To query the data, you need a fully qualified dataset reference combining your p
 python:
 
 <details open>
-<summary>Show Python code</summary>
+<summary>Code</summary>
 
 ```{python}
 import dxpy
@@ -59,7 +59,7 @@ dataset = f"{project_id}:{dispensed_dataset_id}"
 bash:
 
 <details open>
-<summary>Show bash code</summary>
+<summary>Code</summary>
 
 ```{bash}
 # Get project ID
@@ -92,7 +92,7 @@ With a list of field IDs you gathered from the UKB Showcase, your next step is t
 When I'm in "just get it working" mode (which, let's be honest, is most of research), I found that the command-line approach is faster for quick lookups. I simply list all the field names in the terminal and grep for the ones I need.
 
 <details open>
-<summary>Show terminal command</summary>
+<summary>Code</summary>
 
 ```bash
 dx extract_dataset ${dataset}  --entities participant --list-fields | grep "22420"
@@ -111,7 +111,7 @@ The dictionary approach requires more setup: extracting CSVs, loading them into 
 To extract the actual dataset values, use DNAnexus' `extract_dataset` command with the `--fields` flag set to the relevant field names:
 
 <details open>
-<summary>Show extract_dataset command</summary>
+<summary>Code</summary>
 
 ```bash
 dx extract_dataset <project_id>:<dispensed_dataset_id> \
@@ -137,7 +137,7 @@ Fortunately, the UKB Showcase maintains various data coding tables for each of t
 You could also extract all the coding dictionaries once and have them ready as searchable dataframes. For example,
 
 <details open>
-<summary>Show Python code</summary>
+<summary>Code</summary>
 
 ```python
 import subprocess

@@ -56,7 +56,7 @@ Click a category to see participant counts and value distributions. For example,
 Query the `CONCEPT` table directly to translate medical concepts into IDs:
 
 <details open>
-<summary>Show Python code</summary>
+<summary>Code</summary>
 
 ```python
 import pandas as pd

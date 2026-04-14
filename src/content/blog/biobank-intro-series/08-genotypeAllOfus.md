@@ -71,7 +71,7 @@ gs://fc-aou-datasets-controlled/v8/wgs/short_read/snpindel/aux/vat/vat_complete.
 On UKB RAP, we worked around `dx cat` buffering problems by generating a temporary HTTPS URL with `dx make_download_url` and pointing bcftools at that directly (see [post 02](../02-hardwareOnUKBandAoU)). On AoU, `gsutil cat` actually streams without buffering, so you can pipe it straight into bcftools. No URL workaround needed. If your environment is authenticated via `GOOGLE_APPLICATION_CREDENTIALS` or `gcloud auth`, bcftools may be able to read gs:// paths directly, though I haven't tested this.
 
 <details open>
-<summary>Show bash code</summary>
+<summary>Code</summary>
 
 ```bash
 # Phased VCF
@@ -96,7 +96,7 @@ The unphased VCF files live at `gs://fc-aou-datasets-controlled/v8/wgs/short_rea
 The internet has fancier solutions, but I just wrote a script to loop through interval lists until it found my region. I also got impatient and skipped ahead once I was on the right chromosome:
 
 <details open>
-<summary>Show Python code</summary>
+<summary>Code</summary>
 
 ```python
 import pandas as pd
@@ -146,7 +146,7 @@ If you're planning to do this repeatedly, build an index of shard positions once
 Once you have your shard list, stream each one through bcftools to subset to your region, then merge:
 
 <details open>
-<summary>Show bash code</summary>
+<summary>Code</summary>
 
 ```bash
 # SET YOUR REGION OF INTEREST HERE
@@ -190,7 +190,7 @@ gsutil -u $GOOGLE_PROJECT cp merged_AOU_v8_unphased.vcf.gz $WORKSPACE_BUCKET/dat
 As I mentioned in [post 02](../02-hardwareOnUKBandAoU), Hail requires an expensive Spark cluster and is overkill for single-gene or single-region work. For those cases, bcftools is faster and cheaper. If you're doing something genuinely genome-wide that needs distributed computing, the MatrixTable is available at `$WGS_EXOME_MULTI_HAIL_PATH`. If you go that route, always filter at read time using the `_intervals` parameter. Loading the full genome MatrixTable on the default cluster will crash it.
 
 <details open>
-<summary>Show Python code</summary>
+<summary>Code</summary>
 
 ```python
 import hail as hl
@@ -217,7 +217,7 @@ mt = hl.read_matrix_table(
 If you need variant annotations like gene names and predicted consequences, All of Us provides a massive TSV file you can grep by gene name:
 
 <details open>
-<summary>Show bash script</summary>
+<summary>Code</summary>
 
 ```bash
 #!/bin/bash
