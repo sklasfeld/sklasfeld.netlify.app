@@ -29,7 +29,9 @@ If UK Biobank RAP gives you a filing cabinet with labeled drawers, All of Us giv
 
 Yes, "blobs" is the technical term for flat storage objects, organized by path conventions rather than a true directory hierarchy. There are no folders, just prefixes that cosplay as folders. Until you internalize this, you may spend a lot of time fishing in the bucket.
 
-## Quick Overview: What's Available
+```
+gs://fc-aou-datasets-controlled/v8/wgs/short_read/snpindel/aux/phasing/chr${CHROM}_AOU_v8.2_allsamples_phased.vcf.gz
+```
 
 <figure class="my-8 mx-auto !max-w-lg">
 <img src="/blog_images/biobank1/aou_genetic_data.png" alt="Woman with a flashlight searching through a dark basement packed with disorganized filing cabinets, papers, and boxes, representing the scattered data organization within All of Us." class="!max-w-none mx-auto w-full" >
@@ -42,35 +44,19 @@ The All of Us documentation assures us that the data exists. Somewhere. In some 
 
 Similar to the [recent WGS releases in UK Biobank](../07-genotypeUKB), All of Us provides whole genome sequencing data in phased and unphased VCF formats. The concepts covered there, what “phased” means and when you’d choose one format over the other, carry over directly so I won’t re-explain them here. What’s different is where the files live and how you get data out of them.
 
-**Phased VCFs** (organized by chromosome, easiest to access)
-
-```
-gs://fc-aou-datasets-controlled/v8/wgs/short_read/snpindel/aux/phasing/chr${CHROM}_AOU_v8.2_allsamples_phased.vcf.gz
-```
-
-**Unphased VCFs** (sharded into 20,016 files)
-
-```
-gs://fc-aou-datasets-controlled/v8/wgs/short_read/snpindel/exome/vcf/${BATCH}.vcf.bgz`
-```
-
-**Hail MatrixTable** (for distributed computing, if you really need it)
-
-```
-$WGS_EXOME_MULTI_HAIL_PATH
-```
-
-**Variant Annotation Table (VAT)** (gene-level annotations)
-
-```
-gs://fc-aou-datasets-controlled/v8/wgs/short_read/snpindel/aux/vat/vat_complete.bgz.tsv.gz
-```
+| Format                         | Notes                            | Path                                                                                                                   |
+| ------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Phased VCFs                    | By chromosome, easiest to access | `gs://fc-aou-datasets-controlled/v8/wgs/short_read/snpindel/aux/phasing/chr${CHROM}_AOU_v8.2_allsamples_phased.vcf.gz` |
+| Unphased VCFs                  | Sharded into 20,016 files        | `gs://fc-aou-datasets-controlled/v8/wgs/short_read/snpindel/exome/vcf/${BATCH}.vcf.bgz`                                |
+| Hail MatrixTable               | For distributed computing        | `$WGS_EXOME_MULTI_HAIL_PATH`                                                                                           |
+| Variant Annotation Table (VAT) | Gene-level annotations           | `gs://fc-aou-datasets-controlled/v8/wgs/short_read/snpindel/aux/vat/vat_complete.bgz.tsv.gz`                           |
 
 ## Streaming VCFs from GCS
 
 On UKB RAP, we worked around `dx cat` buffering problems by generating a temporary HTTPS URL with `dx make_download_url` and pointing bcftools at that directly (see [post 02](../02-hardwareOnUKBandAoU)). On AoU, `gsutil cat` actually streams without buffering, so you can pipe it straight into bcftools. No URL workaround needed. If your environment is authenticated via `GOOGLE_APPLICATION_CREDENTIALS` or `gcloud auth`, bcftools may be able to read gs:// paths directly, though I haven't tested this.
 
 <details open>
+<summary>Code</summary>
 
 ```bash
 # Phased VCF
@@ -86,16 +72,16 @@ gsutil -u $GOOGLE_PROJECT cat ${UNPHASED_VCF} \
 
 </details>
 
-The phased files do come with `.tbi` indexes, but since piped input isn't seekable, bcftools can't use them. Bcftools parameter `-t` streams and filters for both file types. The index is there if you ever download a file locally and query it repeatedly, but for the streaming workflow it doesn't factor in.
+The phased files do come with `.tbi` indexes, but since piped input isn't seekable, bcftools can't use them. The `-t` flag streams and filters for both file types. The index is there if you ever download a file locally and query it repeatedly, but for the streaming workflow it doesn't factor in.
 
 ## Finding Your Unphased Shard
 
-The unphased VCF files live at `gs://fc-aou-datasets-controlled/v8/wgs/short_read/snpindel/exome/vcf`, sharded by genomic position into files numbered `0000000000` to `0000020016`. Unlike the UKB batch files, there's no chromosome in the filename and no documented estimate of how many base pairs each shard covers. Each shard does have a companion `.interval_list` file that tells you what regions it contains. However, that means checking up to 20,016 files to find your region.
+The unphased VCF files live at `gs://fc-aou-datasets-controlled/v8/wgs/short_read/snpindel/exome/vcf`, sharded by genomic position into files numbered `0000000000` to `0000020016`. There is no chromosome in the filename and no documented estimate of how many base pairs each shard covers. Each shard has a companion `.interval_list` file that tells you what regions it contains, which means the only way to find your region is to open interval lists until you find it.
 
-The internet has fancier solutions, but I just wrote a script to loop through interval lists until it found my region. I also got impatient and skipped ahead once I was on the right chromosome:
+The internet has fancy solutions for finding your regions of choice, but if you only need one region and you're willing to be a little scrappy, a manual binary search is often faster than building proper infrastructure: jump to the middle of the file range, check the interval list with gsutil, then halve the range again based on whether your region fell above or below. Looping through all 20,016 files programmatically would be painfully slow. Use the script below as a verification tool, not a search engine, unless you have a long weekend and a lot of patience.
 
 <details open>
-<summary>Show Python code</summary>
+<summary>Code</summary>
 
 ```python
 import pandas as pd
@@ -145,7 +131,7 @@ If you're planning to do this repeatedly, build an index of shard positions once
 Once you have your shard list, stream each one through bcftools to subset to your region, then merge:
 
 <details open>
-<summary>Show bash code</summary>
+<summary>Code</summary>
 
 ```bash
 # SET YOUR REGION OF INTEREST HERE
@@ -189,7 +175,7 @@ gsutil -u $GOOGLE_PROJECT cp merged_AOU_v8_unphased.vcf.gz $WORKSPACE_BUCKET/dat
 As I mentioned in [post 02](../02-hardwareOnUKBandAoU), Hail requires an expensive Spark cluster and is overkill for single-gene or single-region work. For those cases, bcftools is faster and cheaper. If you're doing something genuinely genome-wide that needs distributed computing, the MatrixTable is available at `$WGS_EXOME_MULTI_HAIL_PATH`. If you go that route, always filter at read time using the `_intervals` parameter. Loading the full genome MatrixTable on the default cluster will crash it.
 
 <details open>
-<summary>Show Python code</summary>
+<summary>Code</summary>
 
 ```python
 import hail as hl
@@ -199,12 +185,12 @@ chrom = "11"
 region_start = 47331406
 region_end = 47352702
 
-clinvar_srwgs_path = os.getenv("WGS_EXOME_MULTI_HAIL_PATH")
+aou_wgs_mt = os.getenv("WGS_EXOME_MULTI_HAIL_PATH")
 
 # Filter at READ time, not after loading
 your_interval = hl.eval(hl.parse_locus_interval(f'{chrom}:{region_start}-{region_end}'))
 mt = hl.read_matrix_table(
-    clinvar_srwgs_path,
+    aou_wgs_mt,
     _intervals=[your_interval]  # Only load this region!
 )
 ```
@@ -216,7 +202,7 @@ mt = hl.read_matrix_table(
 If you need variant annotations like gene names and predicted consequences, All of Us provides a massive TSV file you can grep by gene name:
 
 <details open>
-<summary>Show bash script</summary>
+<summary>Code</summary>
 
 ```bash
 #!/bin/bash
@@ -251,6 +237,6 @@ echo "Upload complete at $(date)"
 
 If there's a theme to this post, it's this: All of Us has enormous data and almost no indexes to help you navigate it. The unphased VCFs are sharded into 20,016 files with no chromosome in the filename. The VAT is 150 GB compressed with no tabix support. The documentation points you to environment variables and leaves the rest to you. You're not doing something wrong when it takes a while. That's just the deal. Start the script, set your idle timeout, and go do something else.
 
-Could someone build proper indexes for all of this? Yes. Should they? Absolutely. Is that a job for a skilled computational biologist who understands the data well enough to do it right? Also yes. If you're reading this and thinking "someone should fix that," that someone could be you, and you should probably get paid for it.
+Could someone build proper indexes for all of this? Yes. Should they? Absolutely. Is that a job for a skilled computational biologist who understands the data well enough to do it right? Also yes. If you're reading this and thinking "someone should fix that," that someone could be you.
 
-I cobbled together these paths from [this documentation on data organization](https://support.researchallofus.org/hc/en-us/articles/29475228181908-How-the-All-of-Us-Genomic-data-are-organized#01JQ7EW4SE044N3Y9350Z299PW) and [this table of CDR paths](https://support.researchallofus.org/hc/en-us/articles/29475233432212-Controlled-CDR-Directory), with a helpful nudge from the All of Us support team. You could have figured this out on your own eventually, but hopefully I've saved you 45 minutes of creative googling.
+Go forth and blob on.
