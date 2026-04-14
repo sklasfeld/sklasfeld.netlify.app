@@ -22,6 +22,11 @@
     --color-accent: 99 179 237; /* #63B3ED - lighter gray for dark mode */
   }
 
+  summary {
+    color: rgb(var(--color-text-main));
+    cursor: pointer;
+  }
+
   /* Cyan */
   /*
     :root {
