@@ -1,7 +1,7 @@
 ---
 title: 'Biobank Intro Series: You Have What You Need'
 excerpt: 'A wrap-up of the series and a checklist before you start your analysis'
-publishDate: 'Apr 20 2026'
+publishDate: 'Apr 19 2026'
 tags:
   - biobank
   - research-strategy
@@ -17,64 +17,57 @@ seo:
     alt: 'Subway-map style illustration of the Biobank Intro Series showing the journey through UK Biobank and All of Us topics.'
 ---
 
-If you've made it here, you've covered a lot of ground. This series was never meant to be exhaustive. It was meant to get you to the point where you can start your analysis without hitting the walls I hit. Let's take stock of what you now have.
+<figure class="my-8 mx-auto">
+<img src="/blog_images/biobank1/full_blogseries_graphic.png" alt="Subway-map style illustration of the Biobank Intro Series showing the journey through UK Biobank and All of Us topics." class="mx-auto w-full" >
+</figure>
 
-## What This Series Covered
+If you've made it here, you've covered a lot of ground in UK biobank and All of Us:
 
-**Posts 1–2: Both biobanks together**
+- The research enviroments
+- The observational data
+- The genetic data
 
-Post 1 set the frame: define your research question before you worry about the complexity. The data is messy, but the messiness only matters in ways that are specific to your question.
-
-Post 2 covered the infrastructure differences between UK Biobank and All of Us — how they're accessed, how compute works, and what to expect from each platform before you write a single line of code.
-
-**Posts 3–4: UK Biobank observational data**
-
-Post 3 was a love letter to the UK Biobank Showcase. Use it to find fields, check data quality, understand instances and arrays, and confirm your field exists and has enough participants before committing to it.
-
-Post 4 walked through actually loading that data in the RAP environment — from field selection to a usable dataframe.
-
-**Posts 5–6: All of Us observational data**
-
-Post 5 introduced the OMOP data model that underlies All of Us. Concept IDs, domain tables, and why the same phenotype can live in multiple places.
-
-Post 6 put that into practice — querying the All of Us controlled tier for phenotype data you can use in analysis.
-
-**Posts 7–8: Genotype data**
-
-Post 7 covered UK Biobank genotype data — the plink files, the imputed data, and how to subset to your region of interest on the RAP.
-
-Post 8 covered All of Us genotype data — phased VCFs, the unphased shard hunt, Hail MatrixTables, and the Variant Annotation Table.
+This series was never meant to be exhaustive, but I hope it compressed your learning curve.
 
 ## Before You Start Analysis
 
 Use this as a gut check. If you can answer yes to everything here, you're ready.
 
-**Phenotype**
+**Platform**
 
-- [ ] You've identified the right field or concept for your phenotype of interest
+- [ ] You understand the compute model you're working in (DNAnexus vs. Google Cloud)
+- [ ] You have a plan for saving outputs that won't disappear when your session ends
+
+**Phenotypes and Covariates**
+
+- [ ] You've identified the right fields or concepts for your phenotypes of interest and covariates
 - [ ] You've checked for data quality warnings and understand what they mean for your analysis
-- [ ] You know which instances have data and which one you're using
+- [ ] You know which timepoints or visits have data and which one you're using (instances on UKB, enrollment/EHR timing on AoU)
 - [ ] You've checked the sample size and confirmed it's sufficient for your question
 
-**Covariates**
+**Genetic Data**
 
-- [ ] You've identified the covariates your analysis requires
-- [ ] You know where to find them and in what format
-- [ ] You've checked that they overlap with your phenotype sample
-
-**Genotype**
-
-- [ ] You've located the genotype data format you need (imputed, WGS, array)
+- [ ] You've located the genotype data format you need (unphased Whole Genome Sequencing (WGS), phased WGS, or exome sequencing)
+- [ ] You've confirmed your files are indexed (.tbi or .csi) before running any region queries
 - [ ] You've subset to your region or variant list
 - [ ] You've confirmed sample overlap between your phenotype and genotype data
 
-**Platform**
-
-- [ ] You understand the compute model you're working in (RAP job vs. notebook, AoU workspace)
-- [ ] You have a plan for saving outputs that won't disappear when your session ends
-
 ## What Comes Next
 
-This series ends here, but its also where analysis begins . Depending on your question, you might be headed toward GWAS, PheWAS, rare variant burden testing, or cross-biobank comparisons. Those are topics for a future series.
+These posts will update if I find mistakes. If something looks off, feel free to reach out to me.
 
-For now: you have the data, you know where it lives, and you know enough to not be surprised by what you find. That's further than a lot of people get before they start. Go do the analysis.
+This series ends here, but, as the cliché goes, the journey is only beginning. Depending on your question, you might be headed toward GWAS, PheWAS, rare variant burden testing, or cross-biobank comparisons. Topics that may appear ub a future series.
+
+For now: you have the data, you know where it lives, and you know enough to not be too surprised by what you find. That's further than a lot of people get before they start. Good luck!
+
+## Reflections
+
+None of these posts would have happened without a few people.
+
+Thank you to Sneha Grandhi who helped me recognize my strengths in this field. The biobank work I did at Genscience with her is what this series is built on.
+
+Almost a year ago, Lina Faller's dedication to sharing her data management work on the Boston Women in Bioinformatics website was the push I needed to finally write something of my own.
+
+Thank you to Mitibketa Ilboudo and Sharvari Narendra for editing. Taking time to give feedback on a stranger's blog posts is not a small thing, and it's the reason I could post these with confidence.
+
+Thank you to Lance and my family for the blind support. They may never understand what it is that I do, but I still love them.
