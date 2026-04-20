@@ -23,7 +23,7 @@ seo:
 
 If you've made it here, you've covered a lot of ground in UK biobank and All of Us:
 
-- The research enviroments
+- The research environments
 - The observational data
 - The genetic data
 
@@ -56,7 +56,7 @@ Use this as a gut check. If you can answer yes to everything here, you're ready.
 
 These posts will update if I find mistakes. If something looks off, feel free to reach out to me.
 
-This series ends here, but, as the cliché goes, the journey is only beginning. Depending on your question, you might be headed toward GWAS, PheWAS, rare variant burden testing, or cross-biobank comparisons. Topics that may appear ub a future series.
+This series ends here, but, as the cliché goes, the journey is only beginning. Depending on your question, you might be headed toward GWAS, PheWAS, rare variant burden testing, or cross-biobank comparisons. Topics that may appear in a future series.
 
 For now: you have the data, you know where it lives, and you know enough to not be too surprised by what you find. That's further than a lot of people get before they start. Good luck!
 
