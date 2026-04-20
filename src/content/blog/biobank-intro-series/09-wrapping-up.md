@@ -66,8 +66,8 @@ None of these posts would have happened without a few people.
 
 Thank you to Sneha Grandhi who helped me recognize my strengths in this field. The biobank work I did at Genscience with her is what this series is built on.
 
-Almost a year ago, Lina Faller's dedication to sharing her data management work on the Boston Women in Bioinformatics website was the push I needed to finally write something of my own.
+Almost a year ago, [Lina Faller's](https://www.linkedin.com/in/linafaller/) dedication to sharing her data management work on the Boston Women in Bioinformatics website was the push I needed to finally write something of my own.
 
-Thank you to Mitibketa Ilboudo and Sharvari Narendra for editing. Taking time to give feedback on a stranger's blog posts is not a small thing, and it's the reason I could post these with confidence.
+Thank you to Mitibketa Ilboudo and [Sharvari Narendra](https://www.linkedin.com/in/sharvarinarendra/) for editing. Taking time to give feedback on a stranger's blog posts is not a small thing, and it's the reason I could post these with confidence.
 
 Thank you to Lance and my family for the blind support. They may never understand what it is that I do, but I still love them.
