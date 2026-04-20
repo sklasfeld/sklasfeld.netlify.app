@@ -7,7 +7,7 @@
 @tailwind utilities;
 
 @layer base {
-:root {
+  :root {
     --color-text-main: 23 23 23; /* #171717 */
     --color-bg-main: 242 241 236; /* #F2F1EC */
     --color-bg-muted: 234 233 225; /* #EAE9E1 */
@@ -25,6 +25,20 @@
   summary {
     color: rgb(var(--color-text-main));
     cursor: pointer;
+  }
+
+  li:has(> input[type='checkbox']) {
+    list-style: none !important;
+    margin-left: -1.5rem;
+    padding-left: 1.75rem;
+    text-indent: -1.75rem;
+  }
+
+  li:has(> input[type='checkbox']) input[type='checkbox'] {
+    transform: scale(1.3);
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    flex-shrink: 0;
   }
 
   /* Cyan */
