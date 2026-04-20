@@ -42,7 +42,7 @@ Think of your workspace and the platform's data storage as two separate floating
 The dx CLI is your friend for navigating the RAP filesystem. Since `dx cat` doesn't stream VCFs reliably for tools like bcftools, generating a temporary HTTPS URL with `dx make_download_url` gives bcftools a direct URL it can handle natively.
 
 <details open>
-<summary>Show dx toolkit commands</summary>
+<summary>Code</summary>
 
 ```bash
 # Navigate the RAP filesystem
@@ -65,7 +65,7 @@ dx download file-xxxx --output local_file.txt
 All of Us data lives in Google Cloud Storage (GCS) buckets and uses `gsutil` to identify, stream, and move data between your workspace and these buckets. Unlike `dx cat`, `gsutil` can stream VCFs with the `cat` command.
 
 <details open>
-<summary>Show gsutil commands</summary>
+<summary>Code</summary>
 
 ```bash
 # List files in the controlled data-repository (CDR) bucket
@@ -83,7 +83,7 @@ gsutil cat gs://path/to/file.vcf.gz | bcftools view
 **Important:** Add a `-u` flag to `gsutil` commands to attribute the operation to your project for proper billing and access control:
 
 <details open>
-<summary>Show gsutil -u flag example</summary>
+<summary>Code</summary>
 
 ```bash
 gsutil -u $GOOGLE_PROJECT [command]
@@ -94,7 +94,7 @@ gsutil -u $GOOGLE_PROJECT [command]
 Use the environment variables `$GOOGLE_PROJECT` and `$WORKSPACE_BUCKET` to avoid hardcoding paths:
 
 <details open>
-<summary>Show upload/download commands</summary>
+<summary>Code</summary>
 
 ```bash
 # Upload local file from your workspace to your storage bucket
@@ -120,7 +120,7 @@ Now that you know how to upload and download files, I must restate that **you sh
 **Don't do this:**
 
 <details open>
-<summary>Show what not to do</summary>
+<summary>Code</summary>
 
 ```bash
 # UK Biobank: Copying a 500GB VCF locally
@@ -135,7 +135,7 @@ gsutil cp gs://path/to/huge.vcf.gz .
 **Do this instead:**
 
 <details open>
-<summary>Show streaming commands</summary>
+<summary>Code</summary>
 
 ```bash
 # UK Biobank: Stream with dx

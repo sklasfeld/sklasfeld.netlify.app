@@ -25,22 +25,21 @@ seo:
 </figcaption>
 </figure>
 
-Once you've been browsing phenotype Field IDs on the [UK Biobank Showcase](../03-ukb-showcase), you're ready to pull the data into a workspace for analysis. When you get approved for a UK Biobank project you are gifted a VIP pass to a secure data wonderland called the UK Biobank Research Analysis Platform (UKB RAP). The UKB-RAP is a cloud-based venue (built on DNAnexus infrastructure) where you can spin up coding environments (JupyterLab, RStudio, take your pick) and analyze data without the nightmare of downloading 500,000+ participant records to your poor laptop.
+When you get approved for a UK Biobank project you are gifted a VIP pass to a secure data wonderland called the UK Biobank Research Analysis Platform (UKB RAP). The UKB RAP is a cloud-based venue (built on DNAnexus infrastructure) where you can spin up coding environments (JupyterLab, RStudio, take your pick) and analyze data without the nightmare of downloading 500,000+ participant records to your poor laptop.
 
-Setting up your first environment in UKB RAP is its own special adventure (covered in a [previous post](../02-hardwareonukbandaou)). For now, let's assume you've already battled through that process and you've got JupyterLab humming along. Now you're ready to get your hands on some of that sweet, sweet phenotype data.
+I enjoy working in JupyterLab, but the concepts transfer regardless of your preferred environment. Opening JupyterLab on UKB RAP is straightforward: click "Tools" in the navigation menu and hit the teal "+ New JupyterLab" button. This opens a setup GUI where you can configure your compute specs. For most analyses, the defaults work just fine (see my tips on hardware in a [previous post](../02-hardwareonukbandaou)).
 
-First, you'll need your dataset identifier to eventually specify to every dx command which dataset to query. This can be set in both python and bash.
+In this post, we'll focus on the phenotype data. Here I define phenotype data as essentially anything that is not genetic data. This includes not just questionnaire responses, physical measurements, and hospital records, but proteomics data as well.
+
+To query the data, you need a fully qualified dataset reference combining your project ID (your workspace on RAP) and your dispensed dataset ID (the UK Biobank data object provisioned to that project). Below I have cheatcodes for finding these values in python and BASH.
 
 python:
 
 <details open>
-<summary>Show Python code</summary>
+<summary>Code</summary>
 
 ```{python}
 import dxpy
-import subprocess
-import pandas as pd
-import os
 import glob
 
 # Get your dataset identifier
@@ -60,7 +59,7 @@ dataset = f"{project_id}:{dispensed_dataset_id}"
 bash:
 
 <details open>
-<summary>Show bash code</summary>
+<summary>Code</summary>
 
 ```{bash}
 # Get project ID
@@ -93,7 +92,7 @@ With a list of field IDs you gathered from the UKB Showcase, your next step is t
 When I'm in "just get it working" mode (which, let's be honest, is most of research), I found that the command-line approach is faster for quick lookups. I simply list all the field names in the terminal and grep for the ones I need.
 
 <details open>
-<summary>Show terminal command</summary>
+<summary>Code</summary>
 
 ```bash
 dx extract_dataset ${dataset}  --entities participant --list-fields | grep "22420"
@@ -112,7 +111,7 @@ The dictionary approach requires more setup: extracting CSVs, loading them into 
 To extract the actual dataset values, use DNAnexus' `extract_dataset` command with the `--fields` flag set to the relevant field names:
 
 <details open>
-<summary>Show extract_dataset command</summary>
+<summary>Code</summary>
 
 ```bash
 dx extract_dataset <project_id>:<dispensed_dataset_id> \
@@ -138,9 +137,12 @@ Fortunately, the UKB Showcase maintains various data coding tables for each of t
 You could also extract all the coding dictionaries once and have them ready as searchable dataframes. For example,
 
 <details open>
-<summary>Show Python code</summary>
+<summary>Code</summary>
 
 ```python
+import subprocess
+import pandas as pd
+
 # Extract dictionaries once with -ddd flag
 cmd = ["dx", "extract_dataset", dataset, "-ddd", "--delimiter", ","]
 subprocess.check_call(cmd)
@@ -161,7 +163,7 @@ Now you can filter your extracted data to only participants with those specific 
 
 ## The Gotchas Nobody Tells You
 
-**Authentication weirdness:** Sometimes `dx` commands work fine in terminal but throw mysterious errors when called through `subprocess` in Jupyter. I've never figured out exactly why (token refresh issues?), but when you hit this, just run the command in terminal instead.
+**Authentication weirdness:** Sometimes `dx` commands work fine in terminal but throw mysterious errors when called through `subprocess` in Jupyter. I've never pinned down exactly why. It possible that the Jupyter notebook does not inherit the same environment variables that your interactive terminal session has. Either way, when you hit this, just run the command in terminal instead.
 
 **Spark is not optional for big extractions:** If you're pulling more than ~30 fields, you'll need a Spark cluster. The [UKB RAP documentation](https://dnanexus.gitbook.io/uk-biobank-rap/working-on-the-research-analysis-platform/accessing-data/accessing-phenotypic-data) covers this, but fair warning: Spark uses lazy evaluation, which means errors can show up way downstream from where they actually originated. Fun times.
 
