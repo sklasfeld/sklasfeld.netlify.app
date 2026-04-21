@@ -13,7 +13,7 @@ series:
   order: 9
 seo:
   image:
-    src: '/blog_images/biobank1/full_blogseries_graphic.png'
+    src: '/blog_images/biobank1/square_blogseries_graphic.png'
     alt: 'Subway-map style illustration of the Biobank Intro Series showing the journey through UK Biobank and All of Us topics.'
 ---
 
@@ -35,22 +35,22 @@ Use this as a gut check. If you can answer yes to everything here, you're ready.
 
 **Platform**
 
-- [ ] You understand the compute model you're working in (DNAnexus vs. Google Cloud)
-- [ ] You have a plan for saving outputs that won't disappear when your session ends
+- [ ] Identified the compute model you're working in (DNAnexus vs. Google Cloud)
+- [ ] A plan is made for saving outputs that won't disappear when your session ends
 
 **Phenotypes and Covariates**
 
-- [ ] You've identified the right fields or concepts for your phenotypes of interest and covariates
-- [ ] You've checked for data quality warnings and understand what they mean for your analysis
-- [ ] You know which timepoints or visits have data and which one you're using (instances on UKB, enrollment/EHR timing on AoU)
-- [ ] You've checked the sample size and confirmed it's sufficient for your question
+- [ ] Identified the right fields or concepts for your phenotypes of interest and covariates
+- [ ] Checked for data quality warnings and understand what they mean for your analysis
+- [ ] Know which timepoints or visits have data and which one you're using (instances on UKB, enrollment/EHR timing on AoU)
+- [ ] Confirmed the sample size is sufficient for your question
 
 **Genetic Data**
 
-- [ ] You've located the genotype data format you need (unphased Whole Genome Sequencing (WGS), phased WGS, or exome sequencing)
-- [ ] You've confirmed your files are indexed (.tbi or .csi) before running any region queries
-- [ ] You've subset to your region or variant list
-- [ ] You've confirmed sample overlap between your phenotype and genotype data
+- [ ] Located the genotype data format you need (unphased WGS, phased WGS, or exome sequencing)
+- [ ] Confirmed files are indexed (.tbi or .csi) before running any region queries
+- [ ] Subset to your region or variant list
+- [ ] Confirmed sample overlap between your phenotype and genotype data
 
 ## What Comes Next
 
