@@ -18,7 +18,10 @@ seo:
 ---
 
 <figure class="my-8 mx-auto">
-<img src="/blog_images/biobank1/full_blogseries_graphic.png" alt="Subway-map style illustration of the Biobank Intro Series showing the journey through UK Biobank and All of Us topics." class="mx-auto w-full" >
+<img src="/blog_images/biobank1/square_blogseries_graphic.png" alt="Subway-map style illustration of the Biobank Intro Series showing the journey through UK Biobank and All of Us topics." class="mx-auto w-full" >
+<figcaption class="text-center text-sm opacity-80 mt-2">
+   <em>The Biobank Intro Series, visualized as a subway map: each stop builds the foundation you need before diving into biobank analysis.</em>
+ </figcaption>
 </figure>
 
 If you've made it here, you've covered a lot of ground in UK biobank and All of Us:
